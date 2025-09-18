@@ -65,6 +65,7 @@ class _Text {
   final Map<String, TextStyle> _quoteFonts = {
     'en': TextStyle(fontFamily: 'Cinzel'),
     'zh': TextStyle(fontFamily: 'MaShanZheng'),
+    'fr': TextStyle(fontFamily: 'Cinzel'),
   };
 
   final Map<String, TextStyle> _wonderTitleFonts = {
@@ -73,6 +74,9 @@ class _Text {
 
   final Map<String, TextStyle> _contentFonts = {
     'en': TextStyle(fontFamily: 'Raleway', fontFeatures: const [
+      FontFeature.enable('kern'),
+    ]),
+    'fr': TextStyle(fontFamily: 'Raleway', fontFeatures: const [
       FontFeature.enable('kern'),
     ]),
   };

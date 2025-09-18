@@ -150,10 +150,8 @@ class _PhotoGalleryState extends State<PhotoGallery> {
         FullscreenUrlImgViewer(urls: urls, index: _index),
       );
 
-      if (newIndex != null) {
-        _setIndex(newIndex, skipAnimation: true);
-      }
-    } else {
+      if (newIndex != null) _setIndex(newIndex, skipAnimation: true);
+        } else {
       _setIndex(index);
     }
   }
