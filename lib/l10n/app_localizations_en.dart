@@ -9,10 +9,10 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appName => 'Wonderous';
+  String get appName => 'Wonder Martinique';
 
   @override
-  String get localeSwapButton => '简体中文';
+  String get localeSwapButton => 'Français';
 
   @override
   String animatedArrowSemanticSwipe(Object title) {

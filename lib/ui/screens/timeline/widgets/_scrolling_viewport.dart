@@ -2,8 +2,6 @@ part of '../timeline_screen.dart';
 
 class _ScrollingViewport extends StatefulWidget {
   const _ScrollingViewport({
-    super.key,
-    // ignore: unused_element
     this.onInit,
     required this.scroller,
     required this.minSize,

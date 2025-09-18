@@ -12,7 +12,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get appName => 'Wonderous';
 
   @override
-  String get localeSwapButton => 'English';
+  String get localeSwapButton => 'Français';
 
   @override
   String animatedArrowSemanticSwipe(Object title) {
