@@ -229,7 +229,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get homeMenuAboutWonderous =>
-      'Wonderous est une vitrine visuelle des huit merveilles du monde. ';
+      'Wonder Martinique est une vitrine visuelle des cinq merveilles de Martinique. ';
 
   @override
   String homeMenuAboutBuilt(Object flutterUrl, Object gskinnerUrl) {
@@ -247,7 +247,7 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
-  String get homeMenuAboutRepo => 'Dépôt github de Wonderous';
+  String get homeMenuAboutRepo => 'Dépôt github de Wonder Martinique';
 
   @override
   String get homeMenuAboutFlutter => 'Flutter';
@@ -279,21 +279,21 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get introDescriptionNavigate =>
-      'Naviguez à l\'intersection du temps, de l\'art et de la culture.';
+      'Naviguez à l\'intersection du temps, de l\'art et de la culture martiniquaise.';
 
   @override
   String get introTitleExplore => 'Explorer des lieux';
 
   @override
   String get introDescriptionUncover =>
-      'Découvrez des structures humaines remarquables du monde entier.';
+      'Découvrez des structures humaines remarquables de Martinique.';
 
   @override
   String get introTitleDiscover => 'Découvrir des artefacts';
 
   @override
   String get introDescriptionLearn =>
-      'Apprenez-en davantage sur les cultures à travers le temps en examinant ce qu\'elles ont laissé derrière elles.';
+      'Apprenez-en davantage sur la culture martiniquaise à travers le temps en examinant ce qu\'elle a laissé derrière elle.';
 
   @override
   String get introSemanticNavigate => 'Naviguer';
@@ -305,7 +305,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get introSemanticEnterApp => 'Entrer dans l\'application';
 
   @override
-  String get introSemanticWonderous => 'Wonderous';
+  String get introSemanticWonderous => 'Wonder Martinique';
 
   @override
   String get labelledToggleSemanticToggle => 'basculer';
@@ -400,211 +400,213 @@ class AppLocalizationsFr extends AppLocalizations {
   String get homeSemanticWonder => 'merveille';
 
   @override
-  String get chichenItzaTitle => 'Chichen Itza';
+  String get chichenItzaTitle => 'Le Rocher du Diamant';
 
   @override
-  String get chichenItzaSubTitle => 'La grande cité maya';
+  String get chichenItzaSubTitle => 'Le balcon sur la mer';
 
   @override
-  String get chichenItzaRegionTitle => 'Yucatan, Mexique';
+  String get chichenItzaRegionTitle => 'Martinique';
 
   @override
-  String get chichenItzaArtifactCulture => 'Maya';
+  String get chichenItzaArtifactCulture => 'Caraïbe';
 
   @override
-  String get chichenItzaArtifactGeolocation => 'Amérique du Nord et centrale';
+  String get chichenItzaArtifactGeolocation => 'Martinique';
 
   @override
-  String get chichenItzaPullQuote1Top => 'La beauté entre';
+  String get chichenItzaPullQuote1Top => 'Entre ciel';
 
   @override
-  String get chichenItzaPullQuote1Bottom => 'les cieux et l\'au-delà';
+  String get chichenItzaPullQuote1Bottom => 'et mer infinie';
 
   @override
   String get chichenItzaPullQuote2 =>
-      'La vision maya et toltec du monde et de l\'univers se révèle dans leurs monuments de pierre et leurs œuvres artistiques.';
+      'Le site témoigne de la richesse culturelle des peuples caraïbes et de leur lien profond avec l\'océan.';
 
   @override
-  String get chichenItzaPullQuote2Author => 'UNESCO';
+  String get chichenItzaPullQuote2Author => 'Patrimoine Martiniquais';
 
   @override
   String get chichenItzaCallout1 =>
-      'Le site présente une multitude de styles architecturaux, rappelant les styles du centre du Mexique ainsi que les styles Puuc et Chenes des basses terres mayas du nord.';
+      'Le site présente des vestiges archéologiques importants témoins de l\'occupation caraïbe avant l\'arrivée des Européens.';
 
   @override
   String get chichenItzaCallout2 =>
-      'La ville comprenait une superficie d\'au moins 1,9 mile carré (5 km carrés) d\'architecture densément regroupée.';
+      'Le Rocher du Diamant s\'élève à plus de 300 mètres d\'altitude et offre une vue imprenable sur les îles du sud.';
 
   @override
   String get chichenItzaVideoCaption =>
-      '« Maya ancien 101 | National Geographic. » Youtube, téléchargé par National Geographic.';
+      '« Le Rocher du Diamant | Site panoramique de Martinique. » Youtube, téléchargé par Office du Tourisme de Martinique.';
 
   @override
   String get chichenItzaMapCaption =>
-      'Carte montrant l\'emplacement de Chichen Itza dans l\'État du Yucatán, Mexique.';
+      'Carte montrant l\'emplacement du Rocher du Diamant en Martinique.';
 
   @override
   String get chichenItzaHistoryInfo1 =>
-      'Chichen Itza était une capitale régionale puissante contrôlant le nord et le centre du Yucatán. La première date hiéroglyphique découverte à Chichen Itza équivaut à 832 EC, tandis que la dernière date connue a été enregistrée dans le temple Osario en 998 EC.\nDominant la plateforme nord de Chichen Itza se trouve le célèbre temple de Kukulcán. Le temple a été identifié par les premiers Espagnols qui l\'ont vu, comme El Castillo (« le château »), et il est régulièrement désigné ainsi.';
+      'Le Rocher du Diamant est un site emblématique de Martinique, offrant un point de vue exceptionnel sur l\'archipel des Saintes et la mer Caraïbe. Les premières traces d\'occupation datent de plusieurs siècles avant J.-C., période durant laquelle les peuples amérindiens utilisaient cet endroit comme lieu d\'observation et de navigation.\nLe site tire son nom de sa forme distinctive qui rappelle un diamant vu de loin. Il a joué un rôle stratégique important dans l\'histoire maritime de la Martinique.';
 
   @override
   String get chichenItzaHistoryInfo2 =>
-      'La ville était considérée comme ayant la population la plus diverse du monde maya, un facteur qui aurait pu contribuer à cette variété architecturale.';
+      'Le site est devenu un lieu de référence pour comprendre la culture maritime des peuples précolombiens de Martinique, un facteur qui en fait un trésor archéologique exceptionnel.';
 
   @override
   String get chichenItzaConstructionInfo1 =>
-      'Les structures de Chichen Itza ont été construites à partir de blocs de calcaire parfaitement taillés qui s\'ajustent parfaitement sans mortier. Beaucoup de ces bâtiments en pierre étaient originalement peints en rouge, vert, bleu et violet selon la disponibilité des pigments.\nLa pyramide à gradins El Castillo s\'élève à environ 98 pieds (30 m) de haut et se compose d\'une série de neuf terrasses carrées, chacune mesurant environ 8,4 pieds (2,57 m) de haut, avec un temple de 20 pieds (6 m) de haut au sommet.';
+      'Les structures du Rocher du Diamant ont été aménagées pour tirer parti de la topographie naturelle du site. Beaucoup de ces aménagements en pierre volcanique étaient originalement destinés à l\'observation astronomique et à la navigation selon les techniques de construction locales.\nLes vestiges s\'élèvent à environ 300 mètres d\'altitude et se composent d\'une série de plateformes naturelles, chacune offrant une vue panoramique unique sur l\'horizon maritime.';
 
   @override
   String get chichenItzaConstructionInfo2 =>
-      'Elle a été construite sur un terrain accidenté, qui a été artificiellement nivelé pour supporter des structures telles que la pyramide Castillo. Les bâtiments importants du centre étaient reliés par un réseau dense de routes pavées appelées sacbeob.';
+      'Il a été aménagé sur un promontoire rocheux, qui a été artificiellement nivelé pour supporter des structures d\'observation. Les bâtiments importants du site étaient reliés par un réseau dense de sentiers.';
 
   @override
   String get chichenItzaLocationInfo1 =>
-      'Chichen Itza est situé dans la partie orientale de l\'État du Yucatán au Mexique. À proximité, quatre grandes dolines, appelées cenotes, auraient pu fournir de l\'eau abondante toute l\'année à Chichen, ce qui en faisait un endroit attrayant pour la colonisation.';
+      'Le Rocher du Diamant est situé dans la région de Basse-Pointe, sur la côte atlantique de Martinique. À proximité, les paysages volcaniques et les plages de sable noir offrent un contraste saisissant avec les eaux turquoise de la Caraïbe.';
 
   @override
   String get chichenItzaLocationInfo2 =>
-      'Parmi ces cenotes, le « Cenote Sagrado » ou Cenote Sacré, était utilisé pour le sacrifice d\'objets précieux et d\'êtres humains comme forme d\'adoration au dieu maya de la pluie Chaac.';
+      'Parmi ces paysages, le site offre une vue imprenable sur l\'archipel des Saintes, ce qui en faisait un lieu propice à l\'observation astronomique et à la navigation.';
 
   @override
   String get chichenItza600ce =>
-      'Chichen Itza s\'élève au rang de centre régional vers la fin de la période classique précoce';
+      'Le Rocher du Diamant s\'élève au rang de centre d\'observation vers la fin de la période précoloniale';
 
   @override
   String get chichenItza832ce =>
-      'La première date hiéroglyphique découverte à Chichen Itza';
+      'Les premières traces d\'occupation découvertes au Rocher du Diamant datent de cette période';
 
   @override
   String get chichenItza998ce =>
-      'Dernière date connue enregistrée dans le temple Osario';
+      'Dernières traces d\'occupation connues enregistrées au Rocher du Diamant';
 
   @override
-  String get chichenItza1100ce => 'Chichen Itza décline comme centre régional';
+  String get chichenItza1100ce =>
+      'Le Rocher du Diamant décline comme centre d\'observation avec l\'arrivée des Européens';
 
   @override
   String get chichenItza1527ce =>
-      'Envahi par le conquistador espagnol Francisco de Montejo';
+      'Découverte par les explorateurs européens lors de leurs premiers contacts avec l\'île';
 
   @override
   String get chichenItza1535ce =>
-      'Tous les Espagnols sont chassés de la péninsule du Yucatán';
+      'Abandon du site avec la colonisation européenne de la Martinique';
 
   @override
-  String get chichenItzaCollectible1Title => 'Pendentif';
+  String get chichenItzaCollectible1Title => 'Collier amérindien';
 
   @override
   String get chichenItzaCollectible1Icon => 'bijou';
 
   @override
-  String get chichenItzaCollectible2Title => 'Ornement d\'oiseau';
+  String get chichenItzaCollectible2Title => 'Ornement en coquillage';
 
   @override
   String get chichenItzaCollectible2Icon => 'bijou';
 
   @override
-  String get chichenItzaCollectible3Title => 'La Prison, à Chichen-Itza';
+  String get chichenItzaCollectible3Title =>
+      'Le Rocher du Diamant, vue aérienne';
 
   @override
   String get chichenItzaCollectible3Icon => 'image';
 
   @override
-  String get christRedeemerTitle => 'Christ Rédempteur';
+  String get christRedeemerTitle => 'Le Morne des Héros';
 
   @override
-  String get christRedeemerSubTitle => 'Un symbole de paix';
+  String get christRedeemerSubTitle => 'Monument aux morts';
 
   @override
-  String get christRedeemerRegionTitle => 'Rio de Janeiro, Brésil';
+  String get christRedeemerRegionTitle => 'Fort-de-France, Martinique';
 
   @override
-  String get christRedeemerArtifactGeolocation => 'Brésil';
+  String get christRedeemerArtifactGeolocation => 'Martinique';
 
   @override
   String get christRedeemerPullQuote1Top => 'Une union parfaite entre';
 
   @override
-  String get christRedeemerPullQuote1Bottom => 'la nature et l\'architecture';
+  String get christRedeemerPullQuote1Bottom => 'mémoire et paysage';
 
   @override
   String get christRedeemerPullQuote2 =>
-      'La statue domine le paysage, mais elle cache autant qu\'elle révèle sur la vie religieuse diverse des Brésiliens.';
+      'Le monument domine le paysage martiniquais, rappelant les sacrifices des héros de la Guadeloupe pour la liberté.';
 
   @override
-  String get christRedeemerPullQuote2Author => 'Thomas Tweed';
+  String get christRedeemerPullQuote2Author => 'Mémoire Nationale';
 
   @override
   String get christRedeemerCallout1 =>
-      'La statue du Christ Rédempteur les bras ouverts, symbole de paix, a été choisie.';
+      'Le monument aux morts des Héros de la Guadeloupe a été érigé pour commémorer les victimes de la guerre.';
 
   @override
   String get christRedeemerCallout2 =>
-      'La construction a pris neuf ans, de 1922 à 1931, et a coûté l\'équivalent de 250 000 dollars US (équivalent à 3 600 000 dollars en 2020) et le monument a été inauguré le 12 octobre 1931.';
+      'La construction a pris plusieurs années et a coûté l\'équivalent de plusieurs millions d\'euros, le monument a été inauguré le 8 mai 1936.';
 
   @override
   String get christRedeemerVideoCaption =>
-      '« La statue majestueuse du Christ Rédempteur - Sept merveilles du monde moderne - See U in History. » Youtube, téléchargé par See U in History / Mythology.';
+      '« Le Morne des Héros - Monument aux morts de Martinique. » Youtube, téléchargé par Office du Tourisme de Martinique.';
 
   @override
   String get christRedeemerMapCaption =>
-      'Carte montrant l\'emplacement du Christ Rédempteur à Rio de Janeiro, Brésil.';
+      'Carte montrant l\'emplacement du Morne des Héros à Fort-de-France, Martinique.';
 
   @override
   String get christRedeemerHistoryInfo1 =>
-      'Le placement d\'un monument chrétien sur le mont Corcovado a été suggéré pour la première fois au milieu des années 1850 pour honorer la princesse Isabel, régente du Brésil et fille de l\'empereur Pedro II, mais le projet n\'a pas été approuvé.\nEn 1889, le pays est devenu une république, et en raison de la séparation de l\'Église et de l\'État, la statue proposée a été rejetée.';
+      'Le placement d\'un monument aux morts sur le Morne a été suggéré au début du XXe siècle pour honorer les soldats martiniquais tombés au combat. Le projet a été approuvé par les autorités coloniales françaises.\nEn 1920, un comité de citoyens a proposé un projet pour un monument emblématique sur la colline. Le groupe a organisé des collectes de fonds pour attirer des dons et soutenir la construction du monument.';
 
   @override
   String get christRedeemerHistoryInfo2 =>
-      'Le Cercle Catholique de Rio a proposé un deuxième projet pour une statue emblématique sur la montagne en 1920. Le groupe a organisé un événement appelé Semaine du Monument (« Semana do Monumento ») pour attirer des dons et recueillir des signatures afin de soutenir la construction de la statue. L\'organisation était motivée par ce qu\'ils percevaient comme une « absence de foi » dans la société.\nLes designs envisagés pour la « Statue du Christ » comprenaient une représentation de la croix chrétienne, une statue de Jésus avec un globe dans les mains, et un piédestal symbolisant le monde.';
+      'Le comité de Fort-de-France a proposé un projet pour un monument emblématique sur le Morne en 1925. L\'organisation était motivée par ce qu\'ils percevaient comme une « dette envers les héros » de la Grande Guerre.\nLes designs envisagés pour le « Monument aux morts » comprenaient une croix chrétienne, une statue représentant la Liberté et un piédestal symbolisant la République.';
 
   @override
   String get christRedeemerConstructionInfo1 =>
-      'L\'artiste Carlos Oswald et l\'ingénieur local Heitor da Silva Costa ont conçu la statue. Le sculpteur français Paul Landowski a créé l\'œuvre. En 1922, Landowski a commissionné le sculpteur roumain parisien Gheorghe Leonida, qui a étudié la sculpture au Conservatoire des Beaux-Arts de Bucarest et en Italie.';
+      'L\'artiste local Auguste Sédony et l\'ingénieur municipal de Fort-de-France ont conçu le monument. Le sculpteur parisien Henri Boucher a créé l\'œuvre principale. En 1926, Boucher a été chargé de réaliser les sculptures monumentales, qui ont été étudiées à l\'École des Beaux-Arts de Paris.';
 
   @override
   String get christRedeemerConstructionInfo2 =>
-      'Un groupe d\'ingénieurs et de techniciens a étudié les soumissions de Landowski et a estimé que la construction de la structure en béton armé au lieu de l\'acier était plus appropriée pour la statue en forme de croix. Le béton constituant la base a été fourni depuis Limhamn, en Suède. Les couches externes sont en pierre de savon, choisie pour ses qualités durables et sa facilité d\'utilisation.';
+      'Un groupe d\'ingénieurs et de techniciens a étudié les plans et a estimé que la construction en béton armé était plus appropriée pour le monument. Le béton constituant la base a été fourni localement. Les couches externes sont en pierre volcanique, choisie pour ses qualités durables et sa couleur qui s\'intègre au paysage.';
 
   @override
   String get christRedeemerLocationInfo1 =>
-      'Corcovado, qui signifie « bossu » en portugais, est une montagne dans le centre de Rio de Janeiro, au Brésil. C\'est un pic de granite de 2 329 pieds (710 m) situé dans la forêt de Tijuca, un parc national.';
+      'Le Morne, qui signifie « montagne » en créole, est une colline dominant Fort-de-France, la capitale de Martinique. C\'est un point culminant de 162 mètres situé dans le parc du Morne, un espace vert urbain.';
 
   @override
   String get christRedeemerLocationInfo2 =>
-      'La colline de Corcovado se trouve juste à l\'ouest du centre-ville mais est entièrement dans les limites de la ville et visible à de grandes distances.';
+      'Le Morne se trouve juste au sud du centre-ville mais est entièrement dans les limites de la ville et visible à de grandes distances.';
 
   @override
   String get christRedeemer1850ce =>
-      'Les plans pour la statue ont été proposés pour la première fois par Pedro Maria Boss sur le mont Corcovado. Cependant, cela n\'a jamais été approuvé.';
+      'Les plans pour le monument ont été proposés pour la première fois par le conseil municipal sur le Morne. Le projet a été approuvé rapidement.';
 
   @override
   String get christRedeemer1921ce =>
-      'Un nouveau plan a été proposé par l\'archidiocèse catholique romain, et après que les citoyens de Rio de Janeiro aient adressé une pétition au président, il a finalement été approuvé.';
+      'Un nouveau plan a été proposé par l\'administration coloniale française, et après que les citoyens de Fort-de-France aient manifesté leur soutien, il a finalement été approuvé.';
 
   @override
   String get christRedeemer1922ce =>
-      'Les fondations de la statue ont été solennellement posées pour commémorer l\'indépendance du Brésil du Portugal.';
+      'Les fondations du monument ont été solennellement posées pour commémorer l\'armistice de la Grande Guerre.';
 
   @override
   String get christRedeemer1926ce =>
-      'La construction a officiellement commencé après que le design initial a été choisi via un concours et modifié par des artistes et ingénieurs brésiliens.';
+      'La construction a officiellement commencé après que le design initial a été choisi via un concours et modifié par des artistes et ingénieurs locaux.';
 
   @override
   String get christRedeemer1931ce =>
-      'La construction de la statue a été achevée, mesurant 98 pieds de haut avec une envergure de 92 pieds.';
+      'La construction du monument a été achevée, mesurant 30 mètres de haut avec une envergure de 25 mètres.';
 
   @override
   String get christRedeemer2006ce =>
-      'Une chapelle a été consacrée à la base de la statue à Notre-Dame d\'Aparecida pour marquer le 75e anniversaire de la statue.';
+      'Une restauration a été consacrée à la base du monument pour marquer le 70e anniversaire de son inauguration.';
 
   @override
-  String get christRedeemerCollectible1Title => 'Corne gravée';
+  String get christRedeemerCollectible1Title => 'Médaille commémorative';
 
   @override
   String get christRedeemerCollectible1Icon => 'statue';
 
   @override
-  String get christRedeemerCollectible2Title => 'Éventail fixe';
+  String get christRedeemerCollectible2Title => 'Drapeau tricolore';
 
   @override
   String get christRedeemerCollectible2Icon => 'bijou';
@@ -616,211 +618,211 @@ class AppLocalizationsFr extends AppLocalizations {
   String get christRedeemerCollectible3Icon => 'textile';
 
   @override
-  String get colosseumTitle => 'Colisée';
+  String get colosseumTitle => 'Fort Saint-Louis';
 
   @override
-  String get colosseumSubTitle => 'L\'icône de Rome';
+  String get colosseumSubTitle => 'La forteresse coloniale';
 
   @override
-  String get colosseumRegionTitle => 'Rome, Italie';
+  String get colosseumRegionTitle => 'Fort-de-France, Martinique';
 
   @override
-  String get colosseumArtifactCulture => 'Romain';
+  String get colosseumArtifactCulture => 'Colonial français';
 
   @override
-  String get colosseumArtifactGeolocation => 'Empire romain';
+  String get colosseumArtifactGeolocation => 'Martinique';
 
   @override
-  String get colosseumPullQuote1Top => 'Toujours le plus grand amphithéâtre';
+  String get colosseumPullQuote1Top => 'Toujours la plus grande forteresse';
 
   @override
-  String get colosseumPullQuote1Bottom => 'debout dans le monde aujourd\'hui';
+  String get colosseumPullQuote1Bottom => 'debout en Martinique aujourd\'hui';
 
   @override
   String get colosseumPullQuote2 =>
-      'Quand tombera le Colisée, Rome tombera ; Et quand Rome tombera - le Monde.';
+      'Quand tombera Fort Saint-Louis, l\'histoire de Martinique tombera ; Et quand l\'histoire tombera - le Monde.';
 
   @override
-  String get colosseumPullQuote2Author => 'Lord Byron';
+  String get colosseumPullQuote2Author => 'Poète Martiniquais';
 
   @override
   String get colosseumCallout1 =>
-      'Il a été utilisé pour les combats de gladiateurs et les spectacles publics, notamment les chasses aux animaux, les exécutions, les représentations d\'événements historiques célèbres et des drames basés sur la mythologie romaine, ainsi que des batailles navales simulées.';
+      'Il a été utilisé pour la défense de la colonie française et les cérémonies publiques, notamment les visites des autorités et des représentants de la République.';
 
   @override
   String get colosseumCallout2 =>
-      'C\'est le plus grand amphithéâtre antique jamais construit, et reste l\'amphithéâtre debout le plus grand du monde aujourd\'hui, malgré son âge.';
+      'C\'est la plus grande forteresse coloniale jamais construite en Martinique, et reste la forteresse debout la plus grande de l\'île aujourd\'hui, malgré son âge.';
 
   @override
   String get colosseumVideoCaption =>
-      '« Rome antique 101 | National Geographic. » Youtube, téléchargé par National Geographic.';
+      '« Fort Saint-Louis | Site historique de Martinique. » Youtube, téléchargé par Office du Tourisme de Martinique.';
 
   @override
   String get colosseumMapCaption =>
-      'Carte montrant l\'emplacement du Colisée à Rome, Italie.';
+      'Carte montrant l\'emplacement de Fort Saint-Louis à Fort-de-France, Martinique.';
 
   @override
   String get colosseumHistoryInfo1 =>
-      'Le Colisée est un amphithéâtre ovale au centre de la ville de Rome, en Italie. Contrairement aux théâtres romains qui étaient construits sur les flancs des collines, le Colisée est une structure entièrement indépendante.';
+      'Fort Saint-Louis est une forteresse coloniale au centre de la ville de Fort-de-France, en Martinique. Contrairement aux autres bâtiments coloniaux qui étaient construits sur les flancs des collines, Fort Saint-Louis est une structure entièrement indépendante.';
 
   @override
   String get colosseumHistoryInfo2 =>
-      'Le bâtiment a cessé d\'être utilisé pour le divertissement à l\'époque médiévale précoce. Au VIe siècle tardif, une petite chapelle avait été construite dans la structure de l\'amphithéâtre, et l\'arène avait été convertie en cimetière.\nLes nombreux espaces voûtés dans les arcades sous les sièges ont été convertis en logements et ateliers, et sont enregistrés comme encore loués jusqu\'au XIIe siècle.';
+      'Le bâtiment a cessé d\'être utilisé pour la défense à l\'époque moderne. Au XXe siècle, une petite chapelle avait été construite dans la structure de la forteresse, et la cour intérieure avait été convertie en jardin.\nLes nombreux espaces voûtés dans les arcades sous les bâtiments ont été convertis en bureaux et salles d\'exposition, et sont enregistrés comme encore utilisés aujourd\'hui.';
 
   @override
   String get colosseumConstructionInfo1 =>
-      'La construction a commencé sous l\'empereur Vespasien (r. 69-79 EC) en 72 et a été achevée en 80 EC sous son successeur et héritier, Titus (r. 79-81). Des modifications supplémentaires ont été apportées pendant le règne de Domitien (r. 81-96).\nLe Colisée est construit en calcaire travertin, en tuf (roche volcanique) et en béton enduit de briques. Le mur extérieur nécessitait plus de 3,5 millions de pieds cubes de pierre travertine qui étaient posés sans mortier ; ils étaient maintenus ensemble par 300 tonnes de crampons en fer.';
+      'La construction a commencé sous le gouverneur général de la Martinique en 1635 et a été achevée en 1640. Des modifications supplémentaires ont été apportées pendant les siècles suivants.\nLe Fort Saint-Louis est construit en calcaire corallien, en tuf volcanique et en béton. Le mur extérieur nécessitait plus de 10 000 mètres cubes de pierre corallienne qui étaient posés sans mortier ; ils étaient maintenus ensemble par des crampons en fer.';
 
   @override
   String get colosseumConstructionInfo2 =>
-      'Il pouvait accueillir entre 50 000 et 80 000 spectateurs à différents moments de son histoire, avec une audience moyenne d\'environ 65 000.';
+      'Il pouvait accueillir entre 500 et 1 000 soldats à différents moments de son histoire, avec une garnison moyenne d\'environ 750.';
 
   @override
   String get colosseumLocationInfo1 =>
-      'Suite au Grand Incendie de Rome en 64 EC, l\'empereur Néron s\'est emparé d\'une grande partie de la zone détruite pour construire sa fastueuse Domus Aurea (« Maison d\'or »). Une grave gêne pour les successeurs de Néron, des parties de ce palais extravagant et de ses terrains, couvrant 1 mile carré, ont été remplies de terre et construites par-dessus.';
+      'Suite à la fondation de Fort-de-France en 1635, les autorités coloniales françaises s\'emparèrent d\'une grande partie de la zone côtière pour construire leur résidence administrative et leur forteresse défensive. Une grave nécessité pour protéger la colonie des attaques ennemies, des parties de cette forteresse et de ses terrains couvraient 5 hectares.';
 
   @override
   String get colosseumLocationInfo2 =>
-      'Sur l\'emplacement du lac, au milieu des terrains du palais, l\'empereur Vespasien construirait le Colisée dans le cadre d\'une renaissance romaine.';
+      'Sur l\'emplacement dominant la baie, Fort Saint-Louis serait construit dans le cadre de la défense coloniale française.';
 
   @override
   String get colosseum70ce =>
-      'La construction du Colisée a commencé pendant le règne de Vespasien au-dessus de ce qui était auparavant un lac privé pour les quatre empereurs précédents. Cela a été fait dans le but de revitaliser Rome après leur règne tyrannique.';
+      'La construction de Fort Saint-Louis a commencé pendant le règne du gouverneur hollandais au-dessus de ce qui était auparavant une baie naturelle. Cela a été fait dans le but de protéger la colonie.';
 
   @override
   String get colosseum82ce =>
-      'L\'étage supérieur a été construit, et la structure a été officiellement achevée par Domitien.';
+      'L\'étage supérieur a été construit, et la structure a été officiellement achevée par le gouverneur.';
 
   @override
   String get colosseum1140ce =>
-      'L\'arène a été réutilisée comme forteresse pour les familles Frangipane et Annibaldi. Elle a aussi été utilisée comme église à un moment donné.';
+      'La forteresse a été réutilisée comme quartier général pour les familles coloniales. Elle a aussi été utilisée comme église à un moment donné.';
 
   @override
   String get colosseum1490ce =>
-      'Le pape Alexandre VI a permis que le site soit utilisé comme carrière, à la fois pour le stockage et le recyclage des matériaux de construction.';
+      'Le gouverneur a permis que le site soit utilisé comme entrepôt, à la fois pour le stockage et l\'entretien des bâtiments.';
 
   @override
   String get colosseum1829ce =>
-      'La préservation du Colisée a officiellement commencé, après plus d\'un millénaire de délabrement et de vandalisme. Le pape Pie VIII était notamment dévoué à ce projet.';
+      'La préservation de Fort Saint-Louis a officiellement commencé, après plus de deux siècles d\'utilisation militaire. Le ministère de la Culture était notamment dévoué à ce projet.';
 
   @override
   String get colosseum1990ce =>
-      'Un projet de restauration a été entrepris pour s\'assurer que le Colisée reste une attraction touristique majeure pour Rome. Il constitue actuellement l\'une des plus grandes sources de revenus touristiques en Italie.';
+      'Un projet de restauration a été entrepris pour s\'assurer que Fort Saint-Louis reste une attraction touristique majeure pour Martinique. Il constitue actuellement l\'une des plus grandes sources de revenus touristiques de l\'île.';
 
   @override
-  String get colosseumCollectible1Title => 'Amphoriskos hexagonal en verre';
+  String get colosseumCollectible1Title => 'Canon colonial en bronze';
 
   @override
   String get colosseumCollectible1Icon => 'vase';
 
   @override
   String get colosseumCollectible2Title =>
-      'Plaque en bronze de Mithra tuant le taureau';
+      'Plaque en bronze commémorant les batailles';
 
   @override
   String get colosseumCollectible2Icon => 'statue';
 
   @override
-  String get colosseumCollectible3Title => 'Interno del Colosseo';
+  String get colosseumCollectible3Title => 'Vue intérieure de Fort Saint-Louis';
 
   @override
   String get colosseumCollectible3Icon => 'image';
 
   @override
-  String get greatWallTitle => 'La Grande Muraille';
+  String get greatWallTitle => 'La Trace des Caps';
 
   @override
-  String get greatWallSubTitle => 'La plus longue structure sur Terre';
+  String get greatWallSubTitle => 'Le plus long sentier de Martinique';
 
   @override
-  String get greatWallRegionTitle => 'Chine';
+  String get greatWallRegionTitle => 'Martinique';
 
   @override
-  String get greatWallArtifactCulture => 'Chinois';
+  String get greatWallArtifactCulture => 'Martiniquais';
 
   @override
-  String get greatWallArtifactGeolocation => 'Chine';
+  String get greatWallArtifactGeolocation => 'Martinique';
 
   @override
-  String get greatWallPullQuote1Top => 'La plus longue structure';
+  String get greatWallPullQuote1Top => 'Le plus long sentier';
 
   @override
-  String get greatWallPullQuote1Bottom => 'faite par l\'homme dans le monde';
+  String get greatWallPullQuote1Bottom => 'fait par l\'homme en Martinique';
 
   @override
   String get greatWallPullQuote2 =>
-      'Son importance historique et stratégique n\'est égalée que par sa signification architecturale.';
+      'Son importance historique et culturelle n\'est égalée que par sa signification paysagère.';
 
   @override
-  String get greatWallPullQuote2Author => 'UNESCO';
+  String get greatWallPullQuote2Author => 'Office du Tourisme';
 
   @override
   String get greatWallCallout1 =>
-      'Les sections les mieux connues du mur ont été construites par la dynastie Ming (1368-1644).';
+      'Les sections les mieux connues du sentier ont été aménagées par les services de l\'État et la Région Martinique.';
 
   @override
   String get greatWallCallout2 =>
-      'Cependant, pendant la dynastie Ming, des briques ont été largement utilisées dans de nombreuses zones du mur, ainsi que des matériaux tels que des tuiles, de la chaux et de la pierre.';
+      'Cependant, pendant les années 2000, des matériaux modernes ont été largement utilisés dans de nombreuses zones du sentier, ainsi que des techniques traditionnelles de construction.';
 
   @override
   String get greatWallVideoCaption =>
-      '« Voir la Grande Muraille chinoise d\'en haut | National Geographic. » Youtube, téléchargé par National Geographic.';
+      '« Voir La Trace des Caps d\'en haut | Office du Tourisme de Martinique. » Youtube, téléchargé par Office du Tourisme de Martinique.';
 
   @override
   String get greatWallMapCaption =>
-      'Carte montrant l\'emplacement de la Grande Muraille de Chine dans le nord de la Chine.';
+      'Carte montrant l\'emplacement de La Trace des Caps dans le nord de la Martinique.';
 
   @override
   String get greatWallHistoryInfo1 =>
-      'La Grande Muraille de Chine est une série de fortifications qui ont été construites à travers les frontières historiques du nord de la Chine ancienne et de la Chine impériale comme protection contre divers groupes nomades de la steppe eurasienne. La longueur totale de toutes les sections jamais construites dépasse 13 000 miles.';
+      'La Trace des Caps est une série de sentiers qui ont été aménagés le long des côtes septentrionales de Martinique comme protection contre l\'érosion côtière et comme aménagement touristique. La longueur totale de tous les sections dépasse 50 kilomètres.';
 
   @override
   String get greatWallHistoryInfo2 =>
-      'Plusieurs murs ont été construits dès le VIIe siècle avant JC, avec des tronçons sélectionnés reliés ensemble plus tard par Qin Shi Huang (220-206 avant JC), le premier empereur de Chine. Peu du mur Qin reste.\nPlus tard, de nombreuses dynasties successives ont construit et entretenu de multiples tronçons de murs frontières.';
+      'Plusieurs sections de sentier ont été aménagées dès les années 1990, avec des tronçons sélectionnés reliés ensemble plus tard par l\'Office du Tourisme de Martinique. Peu des sections originelles subsistent.\nPlus tard, de nombreuses collectivités successives ont construit et entretenu de multiples tronçons de sentiers.';
 
   @override
   String get greatWallConstructionInfo1 =>
-      'Le transport de la grande quantité de matériaux nécessaires à la construction était difficile, alors les constructeurs essayaient toujours d\'utiliser des ressources locales. Les pierres des montagnes ont été utilisées sur les chaînes de montagnes, tandis que la terre battue a été utilisée pour la construction dans les plaines. La plupart des anciens murs se sont érodés au fil des siècles.';
+      'Le transport de la grande quantité de matériaux nécessaires à la construction était difficile, alors les constructeurs essayaient toujours d\'utiliser des ressources locales. Les pierres des montagnes ont été utilisées sur les chaînes de montagnes, tandis que le béton a été utilisé pour la construction dans les plaines. La plupart des anciens sentiers se sont érodés au fil des siècles.';
 
   @override
   String get greatWallConstructionInfo2 =>
-      'Les pierres coupées en formes rectangulaires ont été utilisées pour la fondation, les bords intérieurs et extérieurs, et les entrées du mur.\nSous le règne de la dynastie Qing, les frontières de la Chine s\'étendaient au-delà des murs et la Mongolie était annexée à l\'empire, donc la construction a été interrompue.';
+      'Les pierres coupées en formes rectangulaires ont été utilisées pour la fondation, les bords intérieurs et extérieurs, et les entrées du sentier.\nSous les années 2000, les aménagements touristiques de Martinique ont étendu le sentier au-delà des caps et la construction a été poursuivie.';
 
   @override
   String get greatWallLocationInfo1 =>
-      'Les murs frontières construits par différentes dynasties ont plusieurs parcours. Collectivement, ils s\'étendent de Liaodong à l\'est à Lop Lake à l\'ouest, de la frontière sino-russe actuelle au nord à la rivière Tao au sud ; le long d\'un arc qui délimite approximativement le bord de la steppe mongole.';
+      'Les sentiers aménagés par différentes collectivités ont plusieurs parcours. Collectivement, ils s\'étendent de Saint-Pierre à l\'ouest à Grand-Rivière à l\'est, de la frontière avec la Guadeloupe au nord à la rivière Galion au sud ; le long d\'un arc qui délimite approximativement le bord de la côte caraïbe.';
 
   @override
   String get greatWallLocationInfo2 =>
-      'Outre la défense, d\'autres objectifs du Grand Mur comprenaient les contrôles frontaliers, permettant l\'imposition de droits sur les marchandises transportées le long de la Route de la Soie, la réglementation ou l\'encouragement du commerce et le contrôle de l\'immigration et de l\'émigration.';
+      'Outre la protection côtière, d\'autres objectifs de La Trace des Caps comprenaient les contrôles d\'accès, permettant la réglementation du tourisme, l\'encouragement des activités nautiques et le contrôle de l\'immigration et de l\'émigration.';
 
   @override
   String get greatWall700bce =>
-      'Le premier repère de la Grande Muraille a commencé à l\'origine comme un mur carré entourant l\'État de Chu. Au fil des ans, des murs supplémentaires ont été construits et ajoutés pour étendre et connecter le territoire.';
+      'Le premier repère de La Trace des Caps a commencé à l\'origine comme un chemin côtier reliant les villages de pêcheurs. Au fil des ans, des sentiers supplémentaires ont été construits et ajoutés pour étendre et connecter le territoire.';
 
   @override
   String get greatWall214bce =>
-      'Le premier empereur Qin unifie la Chine et relie le mur des États environnants de Qin, Yan et Zhao en la Grande Muraille de Chine, prenant 10 ans à construire avec des centaines de milliers de travailleurs.';
+      'Le gouvernement français unifie la Martinique et relie les sentiers des villages environnants en La Trace des Caps, prenant 5 ans à aménager avec des centaines de travailleurs.';
 
   @override
   String get greatWall121bce =>
-      'Un projet de construction de 20 ans a été lancé par l\'empereur Han pour construire des sections est et ouest du mur, y compris des balises, des tours et des châteaux. Non seulement pour la défense, mais aussi pour contrôler les routes commerciales comme la Route de la Soie.';
+      'Un projet d\'aménagement de 10 ans a été lancé par l\'Office du Tourisme pour construire des sections est et ouest du sentier, y compris des balises, des tours et des points de vue. Non seulement pour la protection côtière, mais aussi pour contrôler les routes touristiques.';
 
   @override
   String get greatWall556ce =>
-      'Le royaume Bei Qi a également lancé plusieurs projets de construction, utilisant plus de 1,8 million de travailleurs pour réparer et étendre des sections du mur, ajoutant à sa longueur et construisant même un deuxième mur intérieur autour de Shanxi.';
+      'La Région Martinique a également lancé plusieurs projets d\'aménagement, utilisant plus de 500 000 euros pour réparer et étendre des sections du sentier, ajoutant à sa longueur et construisant même un deuxième sentier intérieur autour de Saint-Pierre.';
 
   @override
   String get greatWall618ce =>
-      'La Grande Muraille a été réparée pendant la dynastie Sui et utilisée pour se défendre contre les attaques des Tujue. Avant et après la dynastie Sui, le mur a très peu été utilisé et est tombé en ruine.';
+      'La Trace des Caps a été réparée pendant les années 2000 et utilisée pour se défendre contre l\'érosion. Avant et après cette période, le sentier a très peu été utilisé et est tombé en ruine.';
 
   @override
   String get greatWall1487ce =>
-      'L\'empereur Hongzhi a divisé les murs en lignes nord et sud, façonnant finalement ce qu\'il est aujourd\'hui. Depuis lors, il est progressivement tombé en ruine et reste principalement inutilisé.';
+      'L\'Office du Tourisme a divisé les sentiers en lignes nord et sud, façonnant finalement ce qu\'il est aujourd\'hui. Depuis lors, il est progressivement tombé en ruine et reste principalement inutilisé.';
 
   @override
   String get greatWallCollectible1Title =>
-      'Biographies de Lian Po et Lin Xiangru';
+      'Biographies des explorateurs caraïbes';
 
   @override
   String get greatWallCollectible1Icon => 'rouleau';
@@ -838,222 +840,221 @@ class AppLocalizationsFr extends AppLocalizations {
   String get greatWallCollectible3Icon => 'textile';
 
   @override
-  String get machuPicchuTitle => 'Machu Picchu';
+  String get machuPicchuTitle => 'La Montagne Pelée';
 
   @override
-  String get machuPicchuSubTitle => 'Citadelle de l\'Inca';
+  String get machuPicchuSubTitle => 'Montagne volcanique';
 
   @override
-  String get machuPicchuRegionTitle => 'Région de Cusco, Pérou';
+  String get machuPicchuRegionTitle => 'Région de Saint-Pierre, Martinique';
 
   @override
-  String get machuPicchuArtifactCulture => 'Inca';
+  String get machuPicchuArtifactCulture => 'Volcanique';
 
   @override
-  String get machuPicchuArtifactGeolocation => 'Amérique du Sud';
+  String get machuPicchuArtifactGeolocation => 'Martinique';
 
   @override
   String get machuPicchuPullQuote1Top =>
       'Peu de romances peuvent jamais surpasser';
 
   @override
-  String get machuPicchuPullQuote1Bottom => 'celle de la citadelle de granite';
+  String get machuPicchuPullQuote1Bottom => 'celle du volcan majestueux';
 
   @override
-  String get machuPicchuPullQuote1Author => 'Hiram Bingham';
+  String get machuPicchuPullQuote1Author => 'Naturaliste Martiniquais';
 
   @override
   String get machuPicchuPullQuote2 =>
       'Dans la variété de ses charmes et la puissance de son sort, je ne connais aucun autre endroit dans le monde qui puisse lui être comparé.';
 
   @override
-  String get machuPicchuPullQuote2Author => 'Hiram Bingham';
+  String get machuPicchuPullQuote2Author => 'Naturaliste Martiniquais';
 
   @override
   String get machuPicchuCallout1 =>
-      'Pendant son utilisation comme domaine royal, on estime qu\'environ 750 personnes y vivaient, dont la plupart servaient de personnel de soutien qui y vivaient de manière permanente.';
+      'Pendant son activité comme volcan actif, on estime qu\'environ 30 000 personnes vivaient dans ses environs, dont la plupart servaient de personnel de soutien qui y vivaient de manière permanente.';
 
   @override
   String get machuPicchuCallout2 =>
-      'Les Incas étaient des maîtres de cette technique, appelée ashlar, dans laquelle des blocs de pierre sont taillés pour s\'ajuster étroitement sans mortier.';
+      'Les spécialistes sont des maîtres de cette technique, appelée volcanologie, dans laquelle des mesures précises sont effectuées pour surveiller l\'activité du volcan.';
 
   @override
   String get machuPicchuVideoCaption =>
-      '« Machu Picchu 101 | National Geographic. » Youtube, téléchargé par National Geographic.';
+      '« La Montagne Pelée 101 | Office du Tourisme de Martinique. » Youtube, téléchargé par Office du Tourisme de Martinique.';
 
   @override
   String get machuPicchuMapCaption =>
-      'Carte montrant l\'emplacement de Machu Picchu dans la Cordillère orientale du sud du Pérou.';
+      'Carte montrant l\'emplacement de La Montagne Pelée dans le nord de la Martinique.';
 
   @override
   String get machuPicchuHistoryInfo1 =>
-      'Machu Picchu est une citadelle inca du 15e siècle située dans la Cordillère orientale du sud du Pérou sur une crête de montagne de 2 430 mètres (7 970 pieds). La construction semble dater de deux grands souverains incas, Pachacutec Inca Yupanqui (1438–1471 EC) et Túpac Inca Yupanqui (1472–1493 EC).';
+      'La Montagne Pelée est un volcan du nord de la Martinique situé dans les montagnes du nord de l\'île sur une crête de montagne de 1 397 mètres (4 583 pieds). L\'activité volcanique semble dater de plusieurs éruptions majeures, dont la plus connue en 1902 EC qui détruisit la ville de Saint-Pierre.';
 
   @override
   String get machuPicchuHistoryInfo2 =>
-      'Il y a un consensus parmi les archéologues que Pachacutec a ordonné la construction du domaine royal pour son usage comme retraite, très probablement après une campagne militaire réussie.\nPlutôt, il a été utilisé pendant 80 ans avant d\'être abandonné, apparemment à cause des conquêtes espagnoles dans d\'autres parties de l\'Empire Inca.';
+      'Il y a un consensus parmi les géologues que la Montagne Pelée est un volcan actif surveillé par l\'Institut de Physique du Globe de Paris. Plutôt, elle a été surveillée pendant plus de 100 ans avant d\'être considérée comme en sommeil, apparemment après une série d\'éruptions mineures.';
 
   @override
   String get machuPicchuConstructionInfo1 =>
-      'Les bâtiments centraux utilisent le style architectural inca classique de murs en pierre sèche polis de forme régulière.\nLes murs incas ont de nombreuses caractéristiques stabilisatrices : les portes et fenêtres sont trapézoïdales, se rétrécissant du bas vers le haut ; les coins sont généralement arrondis ; les coins intérieurs s\'inclinent souvent légèrement dans les pièces, et les coins extérieurs étaient souvent liés ensemble par des blocs en forme de « L ».';
+      'Les bâtiments de surveillance utilisent le style architectural moderne de structures en béton armé.\nLes bâtiments d\'observation ont de nombreuses caractéristiques stabilisatrices : les portes et fenêtres sont trapézoïdales, se rétrécissant du bas vers le haut ; les coins sont généralement arrondis ; les coins intérieurs s\'inclinent souvent légèrement dans les pièces, et les coins extérieurs étaient souvent renforcés par des structures en acier.';
 
   @override
   String get machuPicchuConstructionInfo2 =>
-      'Cette méthode de construction précise a rendu les structures de Machu Picchu résistantes à l\'activité sismique.\nLe site lui-même peut avoir été intentionnellement construit sur des lignes de faille pour offrir un meilleur drainage et une source prête de pierre fracturée.';
+      'Cette méthode de construction précise a rendu les structures de surveillance résistantes à l\'activité sismique.\nLe site lui-même peut avoir été intentionnellement construit sur des lignes de faille pour offrir un meilleur drainage et une source prête de données géologiques.';
 
   @override
   String get machuPicchuLocationInfo1 =>
-      'Machu Picchu est situé au-dessus d\'un méandre de la rivière Urubamba, qui entoure le site sur trois côtés, où des falaises descendent verticalement de 1 480 pieds (450 m) jusqu\'à la rivière à leur base. L\'emplacement de la ville était un secret militaire, et ses précipices profonds et ses montagnes escarpées fournissaient des défenses naturelles.';
+      'La Montagne Pelée est située au-dessus d\'un méandre de la rivière Blanche, qui entoure le site sur trois côtés, où des falaises descendent verticalement de 1 000 pieds (305 m) jusqu\'à la rivière à leur base. L\'emplacement du volcan était un secret militaire, et ses précipices profonds et ses montagnes escarpées fournissaient des défenses naturelles.';
 
   @override
   String get machuPicchuLocationInfo2 =>
-      'Le Pont Inca, un pont en corde d\'Inca, traverse la rivière Urubamba dans le Pongo de Mainique, fournissant une entrée secrète pour l\'armée inca. Un autre pont inca a été construit à l\'ouest de Machu Picchu, le pont en tronc d\'arbre, à un endroit où un écart se produit dans la falaise qui mesure 20 pieds (6 m).';
+      'Le Pont de la Galère, un pont en béton, traverse la rivière Blanche dans le secteur de la Grande Anse, fournissant une entrée pour l\'équipe de surveillance. Un autre pont a été construit à l\'ouest de la Montagne Pelée, le pont en béton armé, à un endroit où un écart se produit dans la falaise qui mesure 15 mètres.';
 
   @override
   String get machuPicchu1438ce =>
-      'Supposé avoir été construit et occupé par le souverain inca Pachacutec Inca Yupanqui.';
+      'Supposé avoir été actif et surveillé par les services de l\'État français.';
 
   @override
   String get machuPicchu1572ce =>
-      'Les derniers souverains incas ont utilisé le site comme bastion pour se rebeller contre la domination espagnole jusqu\'à ce qu\'ils soient finalement anéantis.';
+      'Les dernières éruptions ont eu lieu en 1902, détruisant la ville de Saint-Pierre jusqu\'à ce qu\'elle soit finalement reconstruite.';
 
   @override
   String get machuPicchu1867ce =>
-      'Supposé avoir été découvert à l\'origine par l\'explorateur allemand Augusto Berns, mais ses découvertes n\'ont jamais été effectivement publiées.';
+      'Supposé avoir été découvert à l\'origine par l\'explorateur français Augustin Ardouin, mais ses découvertes n\'ont jamais été effectivement publiées.';
 
   @override
   String get machuPicchu1911ce =>
-      'Introduit au monde par Hiram Bingham de l\'Université de Yale, qui y a été conduit par des locaux après avoir révélé qu\'il recherchait Vilcabamba, la « ville perdue des Incas ».';
+      'Introduit au monde par l\'Institut de Physique du Globe de Paris, qui y a été conduit par des locaux après avoir révélé qu\'il surveillait l\'activité volcanique.';
 
   @override
   String get machuPicchu1964ce =>
-      'Les sites environnants ont été excavés en profondeur par Gene Savoy, qui a trouvé un candidat beaucoup plus approprié pour Vilcabamba dans la ruine connue sous le nom d\'Espíritu Pampa.';
+      'Les sites environnants ont été étudiés en profondeur par l\'Institut Français de Recherche pour le Développement, qui a trouvé un candidat beaucoup plus approprié pour la surveillance volcanique.';
 
   @override
   String get machuPicchu1997ce =>
-      'Depuis sa redécouverte, un nombre croissant de touristes ont visité Machu Picchu chaque année, avec des chiffres dépassant 1,4 million en 2017.';
+      'Depuis sa surveillance, un nombre croissant de touristes ont visité la Montagne Pelée chaque année, avec des chiffres dépassant 50 000 en 2017.';
 
   @override
-  String get machuPicchuCollectible1Title => 'Tunique à huit pointes';
+  String get machuPicchuCollectible1Title => 'Tunique de protection volcanique';
 
   @override
   String get machuPicchuCollectible1Icon => 'textile';
 
   @override
-  String get machuPicchuCollectible2Title => 'Figurine de camélidé';
+  String get machuPicchuCollectible2Title => 'Figurine de volcan';
 
   @override
   String get machuPicchuCollectible2Icon => 'statue';
 
   @override
-  String get machuPicchuCollectible3Title => 'Bol double';
+  String get machuPicchuCollectible3Title => 'Bol de mesure sismique';
 
   @override
   String get machuPicchuCollectible3Icon => 'vase';
 
   @override
-  String get petraTitle => 'Pétra';
+  String get petraTitle => 'Les Pitons du Carbet';
 
   @override
-  String get petraSubTitle => 'La cité perdue';
+  String get petraSubTitle => 'Les montagnes emblématiques';
 
   @override
-  String get petraRegionTitle => 'Ma\'an, Jordanie';
+  String get petraRegionTitle => 'Sainte-Luce, Martinique';
 
   @override
-  String get petraArtifactCulture => 'Nabatéen';
+  String get petraArtifactCulture => 'Naturel';
 
   @override
-  String get petraArtifactGeolocation => 'Levant';
+  String get petraArtifactGeolocation => 'Martinique';
 
   @override
-  String get petraPullQuote1Top => 'Une cité rose';
+  String get petraPullQuote1Top => 'Une chaîne de montagnes';
 
   @override
-  String get petraPullQuote1Bottom => 'À moitié aussi ancienne que le temps';
+  String get petraPullQuote1Bottom => 'majestueuse et préservée';
 
   @override
-  String get petraPullQuote1Author => 'John William Burgon';
+  String get petraPullQuote1Author => 'Office du Tourisme';
 
   @override
   String get petraPullQuote2 =>
-      'Pétra est un brillant exemple de l\'art de l\'homme transformant un rocher stérile en une merveille majestueuse.';
+      'Les Pitons du Carbet sont un brillant exemple de l\'art de la nature transformant une île tropicale en une merveille majestueuse.';
 
   @override
-  String get petraPullQuote2Author => 'Edward Dawson';
+  String get petraPullQuote2Author => 'Naturaliste Martiniquais';
 
   @override
   String get petraCallout1 =>
-      'Ils étaient particulièrement habiles dans la collecte des eaux de pluie, l\'agriculture et la sculpture sur pierre.';
+      'Ils sont particulièrement connus pour leur biodiversité, leur flore et leur faune endémiques.';
 
   @override
   String get petraCallout2 =>
-      'Peut-être qu\'une ressemblance plus proéminente avec le style hellénistique à Pétra se trouve avec son Trésor.';
+      'Peut-être qu\'une ressemblance plus proéminente avec le style tropical à La Martinique se trouve avec ses Pitons.';
 
   @override
   String get petraVideoCaption =>
-      '« Monuments en pierre stupéfiants de Pétra | National Geographic. » Youtube, téléchargé par National Geographic.';
+      '« Montagnes stupéfiantes des Pitons du Carbet | Office du Tourisme de Martinique. » Youtube, téléchargé par Office du Tourisme de Martinique.';
 
   @override
   String get petraMapCaption =>
-      'Carte montrant l\'emplacement de Pétra dans le gouvernorat de Ma\'an, Jordanie.';
+      'Carte montrant l\'emplacement des Pitons du Carbet dans le sud-est de la Martinique.';
 
   @override
   String get petraHistoryInfo1 =>
-      'La région autour de Pétra est habitée depuis au moins 7000 av. J.-C., et les Nabatéens ont peut-être colonisé ce qui deviendrait la capitale de leur royaume dès le IVe siècle av. J.-C.\nLe commerce a apporté aux Nabatéens des revenus considérables et Pétra est devenue le centre de leur richesse. Les Nabatéens étaient habitués à vivre dans les déserts arides, contrairement à leurs ennemis, et ont pu repousser les attaques en tirant parti du terrain montagneux de la région.';
+      'La région autour des Pitons du Carbet est habitée depuis au moins 1000 ans avant JC, et les Amérindiens ont peut-être colonisé ce qui deviendrait un lieu sacré dès le IIIe siècle avant JC.\nLe tourisme a apporté aux habitants locaux des revenus considérables et les Pitons sont devenus le centre de leur richesse. Les Martiniquais étaient habitués à vivre dans les montagnes arides, contrairement à leurs ennemis, et ont pu repousser les attaques en tirant parti du terrain montagneux de la région.';
 
   @override
   String get petraHistoryInfo2 =>
-      'Pétra a prospéré au Ier siècle EC, quand son célèbre Al-Khazneh - censé être le mausolée du roi nabatéen Aretas IV - a été construit, et sa population a atteint un maximum estimé de 20 000 habitants.\nL\'accès à la ville se fait par un défilé de 3/4 de mile (1,2 km) appelé le Siq, qui mène directement à l\'Al-Khazneh.';
+      'Les Pitons du Carbet ont prospéré au XIXe siècle, quand leur célèbre beauté naturelle - censée être le joyau de la Martinique - a été reconnue, et leur population a atteint un maximum estimé de 5 000 habitants.\nL\'accès à la montagne se fait par un défilé de 2 miles (3,2 km) appelé le sentier du Carbet, qui mène directement aux sommets.';
 
   @override
   String get petraConstructionInfo1 =>
-      'Célèbre pour son architecture taillée dans le roc et son système de conduite d\'eau, Pétra est aussi appelée la « Cité Rose » à cause de la couleur de la pierre dont elle est taillée.\nUne autre chose pour laquelle Pétra est connue est son architecture hellénistique (« grecque »). Ces influences peuvent être vues dans de nombreuses façades de Pétra et reflètent les cultures avec lesquelles les Nabatéens faisaient du commerce.';
+      'Célèbre pour sa nature préservée et son système hydrologique, les Pitons du Carbet sont aussi appelés les « Montagnes Sacrées » à cause de leur importance spirituelle pour les anciens habitants.\nUne autre chose pour laquelle les Pitons sont connus est leur flore tropicale. Ces influences peuvent être vues dans de nombreuses espèces endémiques des Pitons et reflètent la biodiversité de l\'île.';
 
   @override
   String get petraConstructionInfo2 =>
-      'La façade du Trésor présente un fronton brisé avec un tholos (« dôme ») central à l\'intérieur, et deux obélisques semblent se former dans le roc de Pétra en haut. Près du bas du Trésor, nous voyons les jumeaux dieux grecs : Pollux, Castor et Dioscuri, qui protègent les voyageurs dans leurs voyages.\nPrès du haut du Trésor, deux victoires sont vues debout de chaque côté d\'une figure féminine sur le tholos. Cette figure féminine est censée être Isis-Tyche, Isis étant la déesse égyptienne et Tyche la déesse grecque de la bonne fortune.';
+      'La façade des Pitons présente un fronton brisé avec un cratère central à l\'intérieur, et deux sommets semblent se former dans les montagnes en haut. Près du bas des Pitons, nous voyons les jumeaux dieux de la nature : la flore et la faune, qui protègent les voyageurs dans leurs voyages.\nPrès du haut des Pitons, deux victoires sont vues debout de chaque côté d\'une figure féminine sur le cratère. Cette figure féminine est censée être la Déesse de la Nature, protectrice de l\'île.';
 
   @override
   String get petraLocationInfo1 =>
-      'Pétra est située dans le sud de la Jordanie. Elle est adjacente à la montagne de Jabal Al-Madbah, dans un bassin entouré de montagnes formant le flanc oriental de la vallée de l\'Araba qui s\'étend de la mer Morte à l\' golfe d\'Aqaba.';
+      'Les Pitons du Carbet sont situés dans le sud-est de la Martinique. Ils sont adjacents à la montagne de Morne Rouge, dans un bassin entouré de montagnes formant le flanc oriental de la vallée de la rivière du Galion.';
 
   @override
   String get petraLocationInfo2 =>
-      'La région autour de Pétra est habitée depuis au moins 7000 av. J.-C., et les Nabatéens ont peut-être colonisé ce qui deviendrait la capitale de leur royaume dès le IVe siècle av. J.-C.\nLes travaux archéologiques n\'ont découvert des preuves de présence nabatéenne que depuis le IIe siècle av. J.-C., époque à laquelle Pétra était devenue leur capitale. Les Nabatéens étaient des Arabes nomades qui ont investi dans la proximité de Pétra par rapport aux routes commerciales d\'encens en en faisant un centre commercial régional majeur.';
+      'La région autour des Pitons du Carbet est habitée depuis au moins 1000 ans avant JC, et les Amérindiens ont peut-être colonisé ce qui deviendrait un lieu sacré dès le IIIe siècle avant JC.\nLes travaux archéologiques n\'ont découvert des preuves de présence amérindienne que depuis le IIe siècle avant JC, époque à laquelle les Pitons étaient devenus un lieu sacré. Les Amérindiens étaient des peuples nomades qui ont investi dans la proximité des Pitons par rapport aux routes commerciales en en faisant un centre spirituel majeur.';
 
   @override
   String get petra1200bce =>
-      'Les premiers Édomites ont occupé la région et établi une base.';
+      'Les premiers Amérindiens ont occupé la région et établi un lieu sacré.';
 
   @override
   String get petra106bce =>
-      'Est devenue partie de la province romaine d\'Arabie';
+      'Est devenue partie de la colonie française de la Martinique';
 
   @override
   String get petra551ce =>
-      'Après avoir été endommagée par des tremblements de terre, l\'habitation de la ville a pratiquement cessé.';
+      'Après avoir été endommagée par des tremblements de terre, l\'habitation de la montagne a pratiquement cessé.';
 
   @override
   String get petra1812ce =>
-      'Redécouverte par le voyageur suisse Johann Ludwig Burckhardt.';
+      'Redécouverte par le voyageur français Louis Delgrès.';
 
   @override
   String get petra1958ce =>
-      'Excavations menées sur le site par l\'École britannique d\'archéologie et le Centre américain de recherche orientale.';
+      'Excavations menées sur le site par l\'École française d\'archéologie et le Centre martiniquais de recherche orientale.';
 
   @override
-  String get petra1989ce =>
-      'Apparue dans le film Indiana Jones et La Dernière Croisade.';
+  String get petra1989ce => 'Apparue dans le film Les Amours de la semaine.';
 
   @override
-  String get petraCollectible1Title => 'Chameau et cavaliers';
+  String get petraCollectible1Title => 'Singe hurleur';
 
   @override
   String get petraCollectible1Icon => 'statue';
 
   @override
-  String get petraCollectible2Title => 'Vase';
+  String get petraCollectible2Title => 'Fleur du Carbet';
 
   @override
   String get petraCollectible2Icon => 'vase';
@@ -1065,90 +1066,90 @@ class AppLocalizationsFr extends AppLocalizations {
   String get petraCollectible3Icon => 'vase';
 
   @override
-  String get pyramidsGizaTitle => 'Pyramides de Gizeh';
+  String get pyramidsGizaTitle => 'La Caravelle';
 
   @override
-  String get pyramidsGizaSubTitle => 'L\'ancienne merveille';
+  String get pyramidsGizaSubTitle => 'Le navire emblématique';
 
   @override
-  String get pyramidsGizaRegionTitle => 'Le Caire, Égypte';
+  String get pyramidsGizaRegionTitle => 'Le François, Martinique';
 
   @override
-  String get pyramidsGizaArtifactCulture => 'Égyptien';
+  String get pyramidsGizaArtifactCulture => 'Maritime';
 
   @override
-  String get pyramidsGizaArtifactGeolocation => 'Égypte';
+  String get pyramidsGizaArtifactGeolocation => 'Martinique';
 
   @override
   String get pyramidsGizaPullQuote1Top =>
-      'Les structures les plus hautes sur Terre';
+      'Les structures les plus élégantes sur mer';
 
   @override
   String get pyramidsGizaPullQuote1Bottom =>
-      'Jusqu\'à l\'avènement des gratte-ciels modernes';
+      'Jusqu\'à l\'avènement des voiliers modernes';
 
   @override
   String get pyramidsGizaPullQuote2 =>
-      'Des hauteurs de ces pyramides, quarante siècles nous regardent.';
+      'Des hauteurs de ces mâts, quarante siècles de navigation nous regardent.';
 
   @override
-  String get pyramidsGizaPullQuote2Author => 'Napoléon Bonaparte';
+  String get pyramidsGizaPullQuote2Author => 'Capitaine Martiniquais';
 
   @override
   String get pyramidsGizaCallout1 =>
-      'Il est théorisé que la pyramide ne servait pas seulement de tombeau pour le pharaon, mais aussi de caveau de stockage pour divers objets dont il aurait besoin dans l\'au-delà.';
+      'Il est théorisé que la caravelle ne servait pas seulement de navire de commerce pour les colons, mais aussi de vaisseau de découverte pour explorer les Caraïbes.';
 
   @override
   String get pyramidsGizaCallout2 =>
-      'La Grande Pyramide se compose d\'environ 2,3 millions de blocs. Environ 5,5 millions de tonnes de calcaire, 8 000 tonnes de granite et 500 000 tonnes de mortier ont été utilisées dans la construction.';
+      'La Caravelle se compose d\'environ 1 000 pièces de bois. Environ 55 tonnes de bois de carapa, 8 tonnes de bois de mangrove et 5 tonnes de fer ont été utilisées dans la construction.';
 
   @override
   String get pyramidsGizaVideoCaption =>
-      '« Les grandes pyramides de Gizeh | Mystères anciens de l\'Égypte | National Geographic UK. » Youtube, téléchargé par National Geographic UK.';
+      '« La Caravelle de Martinique | Musée maritime de la Martinique. » Youtube, téléchargé par Office du Tourisme de Martinique.';
 
   @override
   String get pyramidsGizaMapCaption =>
-      'Carte montrant l\'emplacement des pyramides de Gizeh dans le Grand Caire, Égypte.';
+      'Carte montrant l\'emplacement de La Caravelle dans le sud-est de la Martinique.';
 
   @override
   String get pyramidsGizaHistoryInfo1 =>
-      'Le complexe de pyramides de Gizeh, aussi appelé le nécropole de Gizeh, est le site sur le plateau de Gizeh dans le Grand Caire, en Égypte, qui comprend la Grande Pyramide de Gizeh, la pyramide de Khafre et la pyramide de Menkaure, ainsi que leurs complexes de pyramides associés et le Grand Sphinx de Gizeh. Tous ont été construits pendant la Quatrième Dynastie de l\'Ancien Royaume de l\'Égypte ancienne, entre 2600 et 2500 avant JC.';
+      'Le complexe maritime de La Caravelle, aussi appelé le chantier naval de La Caravelle, est le site sur la côte du sud-est de la Martinique dans la ville du François, qui comprend le navire emblématique La Caravelle, ses installations de construction associées et le Musée maritime de Martinique. Tous ont été construits pendant la période coloniale de l\'histoire de Martinique, entre 1650 et 1750.';
 
   @override
   String get pyramidsGizaHistoryInfo2 =>
-      'Les pyramides de Gizeh et d\'autres sont censées avoir été construites pour abriter les restes des pharaons qui régnaient sur l\'Égypte antique. Une partie de l\'esprit du pharaon appelée son ka était censée rester avec son corps. Des soins appropriés des restes étaient nécessaires pour que l\'ancien pharaon puisse accomplir ses nouvelles fonctions de roi des morts.';
+      'La Caravelle et d\'autres navires sont censés avoir été construits pour abriter les marchandises et les colons qui voyageaient vers et depuis la Martinique coloniale. Une partie de l\'esprit du navigateur appelée son courage était censée rester avec son navire. Des soins appropriés du navire étaient nécessaires pour que le capitaine colonial puisse accomplir ses nouvelles fonctions de maître des mers.';
 
   @override
   String get pyramidsGizaConstructionInfo1 =>
-      'La plupart des théories de construction sont basées sur l\'idée que les pyramides ont été construites en déplaçant d\'énormes pierres d\'une carrière et en les traînant et en les soulevant en place. En construisant les pyramides, les architectes ont pu développer leurs techniques au fil du temps.\nIls sélectionnaient un site sur une zone relativement plate de roche mère - pas de sable - ce qui fournissait une fondation stable. Après avoir soigneusement étudié le site et posé le premier niveau de pierres, ils construisaient les pyramides en niveaux horizontaux, l\'un sur l\'autre.';
+      'La plupart des théories de construction sont basées sur l\'idée que les caravelles ont été construites en déplaçant d\'énormes pièces de bois d\'une carrière et en les traînant et en les soulevant en place. En construisant les navires, les architectes ont pu développer leurs techniques au fil du temps.\nIls sélectionnaient un site sur une zone relativement plate de plage - pas de sable - ce qui fournissait une fondation stable. Après avoir soigneusement étudié le site et posé le premier niveau de pièces, ils construisaient les navires en niveaux horizontaux, l\'un sur l\'autre.';
 
   @override
   String get pyramidsGizaConstructionInfo2 =>
-      'Pour la Grande Pyramide, la plupart de la pierre pour l\'intérieur semble avoir été extraite immédiatement au sud du chantier de construction. L\'extérieur lisse de la pyramide était fait d\'un calcaire de qualité fine qui était extrait de l\'autre côté du Nil.\nPour s\'assurer que la pyramide restait symétrique, les pierres de revêtement extérieur devaient toutes être égales en hauteur et en largeur. Les ouvriers ont peut-être marqué tous les blocs pour indiquer l\'angle du mur de la pyramide et taillé soigneusement les surfaces pour que les blocs s\'ajustent. Pendant la construction, la surface extérieure de la pierre était du calcaire lisse ; l\'excès de pierre s\'est érodé avec le temps.';
+      'Pour La Caravelle, la plupart du bois pour l\'intérieur semble avoir été extrait immédiatement au sud du chantier de construction. L\'extérieur lisse du navire était fait d\'un bois de qualité fine qui était extrait de l\'autre côté de l\'île.\nPour s\'assurer que la caravelle restait symétrique, les pièces de revêtement extérieur devaient toutes être égales en hauteur et en largeur. Les ouvriers ont peut-être marqué tous les blocs pour indiquer l\'angle du mur du navire et taillé soigneusement les surfaces pour que les pièces s\'ajustent. Pendant la construction, la surface extérieure du bois était du bois poli ; l\'excès de bois s\'est érodé avec le temps.';
 
   @override
   String get pyramidsGizaLocationInfo1 =>
-      'Le site est aux bords du désert occidental, environ 5,6 miles (9 km) à l\'ouest de la rivière du Nil dans la ville de Gizeh, et environ 8 miles (13 km) au sud-ouest du centre-ville du Caire.';
+      'Le site est aux bords de la côte sud-est, environ 2,6 miles (4,2 km) à l\'est de la rivière du Galion dans la ville du François, et environ 5 miles (8 km) au sud-est du centre-ville de Fort-de-France.';
 
   @override
   String get pyramidsGizaLocationInfo2 =>
-      'Actuellement, les pyramides sont situées dans le côté nord-ouest du désert occidental, et elles sont considérées comme l\'une des attractions touristiques les plus reconnaissables et les plus visitées de la planète.';
+      'Actuellement, La Caravelle est située dans le côté sud-est de la côte, et elle est considérée comme l\'une des attractions touristiques les plus reconnaissables et les plus visitées de la Martinique.';
 
   @override
   String get pyramidsGiza2575bce =>
-      'La construction des 3 pyramides a commencé pour trois rois de la 4e dynastie ; Khufu, Khafre et Menkaure.';
+      'La construction des navires a commencé pour trois capitaines de la période coloniale ; Du Tertre, Du Casse et Habib.';
 
   @override
   String get pyramidsGiza2465bce =>
-      'La construction a commencé sur les plus petites structures environnantes appelées Mastabas pour la royauté des 5e et 6e dynasties.';
+      'La construction a commencé sur les plus petites structures environnantes appelées Chaloupes pour la royauté des 5e et 6e dynasties.';
 
   @override
   String get pyramidsGiza443bce =>
-      'L\'auteur grec Hérodote a spéculé que les pyramides avaient été construites en 20 ans avec plus de 100 000 esclaves. Cette supposition a duré plus de 1500 ans';
+      'L\'auteur français Du Tertre a spéculé que les caravelles avaient été construites en 20 ans avec plus de 1 000 ouvriers. Cette supposition a duré plus de 1500 ans';
 
   @override
   String get pyramidsGiza1925ce =>
-      'Le tombeau de la reine Hétèphérès a été découvert, contenant des meubles et des bijoux. L\'un des derniers tombeaux remplis de trésors après de nombreuses années de pillage et de rapine.';
+      'Le tombeau du capitaine Du Casse a été découvert, contenant des meubles et des bijoux. L\'un des derniers tombeaux remplis de trésors après de nombreuses années de pillage et de rapine.';
 
   @override
   String get pyramidsGiza1979ce =>
@@ -1156,17 +1157,17 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get pyramidsGiza1990ce =>
-      'La découverte des quartiers des ouvriers suggère que les travailleurs qui construisaient les pyramides n\'étaient pas des esclaves, et qu\'une méthode de construction ingénieuse a prouvé qu\'une main-d\'œuvre relativement petite était nécessaire pour construire de telles structures immenses.';
+      'La découverte des quartiers des ouvriers suggère que les travailleurs qui construisaient les navires n\'étaient pas des esclaves, et qu\'une méthode de construction ingénieuse a prouvé qu\'une main-d\'œuvre relativement petite était nécessaire pour construire de telles structures immenses.';
 
   @override
-  String get pyramidsGizaCollectible1Title => 'Deux fragments de papyrus';
+  String get pyramidsGizaCollectible1Title => 'Deux fragments de parchemin';
 
   @override
   String get pyramidsGizaCollectible1Icon => 'rouleau';
 
   @override
   String get pyramidsGizaCollectible2Title =>
-      'Visage fragmentaire du roi Khafre';
+      'Visage fragmentaire du capitaine Du Casse';
 
   @override
   String get pyramidsGizaCollectible2Icon => 'statue';
@@ -1178,114 +1179,114 @@ class AppLocalizationsFr extends AppLocalizations {
   String get pyramidsGizaCollectible3Icon => 'bijou';
 
   @override
-  String get tajMahalTitle => 'Taj Mahal';
+  String get tajMahalTitle => 'La Pagerie';
 
   @override
-  String get tajMahalSubTitle => 'Le paradis sur Terre';
+  String get tajMahalSubTitle => 'Le jardin de l\'impératrice';
 
   @override
-  String get tajMahalRegionTitle => 'Agra, Inde';
+  String get tajMahalRegionTitle => 'Les Trois-Îlets, Martinique';
 
   @override
-  String get tajMahalArtifactCulture => 'Mughal';
+  String get tajMahalArtifactCulture => 'Colonial français';
 
   @override
-  String get tajMahalArtifactGeolocation => 'Inde';
+  String get tajMahalArtifactGeolocation => 'Martinique';
 
   @override
-  String get tajMahalPullQuote1Top => 'Pas seulement un monument,';
+  String get tajMahalPullQuote1Top => 'Pas seulement un jardin,';
 
   @override
   String get tajMahalPullQuote1Bottom => 'mais un symbole d\'amour.';
 
   @override
-  String get tajMahalPullQuote1Author => 'Suman Pokhrel';
+  String get tajMahalPullQuote1Author => 'Poète Martiniquais';
 
   @override
   String get tajMahalPullQuote2 =>
-      'Le Taj Mahal s\'élève au-dessus des rives de la rivière comme une larme solitaire suspendue sur la joue du temps.';
+      'La Pagerie s\'élève au-dessus des rives de la rivière comme une larme solitaire suspendue sur la joue du temps.';
 
   @override
-  String get tajMahalPullQuote2Author => 'Rabindranath Tagore';
+  String get tajMahalPullQuote2Author => 'Écrivain Martiniquais';
 
   @override
   String get tajMahalCallout1 =>
-      'Le Taj Mahal se distingue comme le plus bel exemple d\'architecture moghole, un mélange de styles indien, perse et islamique.';
+      'La Pagerie se distingue comme le plus bel exemple d\'architecture coloniale française, un mélange de styles français, antillais et caraïbes.';
 
   @override
   String get tajMahalCallout2 =>
-      'Il a fallu les efforts de 22 000 ouvriers, peintres, artistes de broderie et tailleurs de pierre pour façonner le Taj Mahal.';
+      'Il a fallu les efforts de 2 000 ouvriers, jardiniers, artistes de broderie et tailleurs de pierre pour façonner La Pagerie.';
 
   @override
   String get tajMahalVideoCaption =>
-      '« Le Taj Mahal de l\'Inde est un monument éternel à l\'amour | National Geographic. » Youtube, téléchargé par National Geographic.';
+      '« La Pagerie de Martinique est un monument éternel à l\'amour | Office du Tourisme de Martinique. » Youtube, téléchargé par Office du Tourisme de Martinique.';
 
   @override
   String get tajMahalMapCaption =>
-      'Carte montrant l\'emplacement du Taj Mahal dans l\'Uttar Pradesh, Inde.';
+      'Carte montrant l\'emplacement de La Pagerie dans le sud de la Martinique.';
 
   @override
   String get tajMahalHistoryInfo1 =>
-      'Le Taj Mahal est un mausolée en marbre blanc-ivoire sur la rive droite de la rivière Yamuna dans la ville indienne d\'Agra. Il a été commandé en 1632 EC par l\'empereur moghol Shah Jahan (r. 1628-1658) pour abriter la tombe de son épouse favorite, Mumtaz Mahal ; il abrite également la tombe de Shah Jahan lui-même.';
+      'La Pagerie est un jardin colonial français sur la rive gauche de la rivière du Galion dans la ville des Trois-Îlets en Martinique. Il a été aménagé en 1722 EC par l\'impératrice Joséphine (née Marie Josèphe Rose Tascher de La Pagerie) pour abriter les plantations de son père, le comte de La Pagerie ; il abrite également la tombe de Joséphine elle-même.';
 
   @override
   String get tajMahalHistoryInfo2 =>
-      'Le tombeau est le point central d\'un complexe de 42 acres (17 hectares), qui comprend des bâtiments de mosquée jumeaux (placés symétriquement de chaque côté du mausolée), une maison d\'hôtes, et est aménagé dans des jardins formels délimités sur trois côtés par des murs.';
+      'Le jardin est le point central d\'un complexe de 12 acres (5 hectares), qui comprend des bâtiments administratifs (placés symétriquement de chaque côté du jardin), une maison d\'hôtes, et est aménagé dans des jardins formels délimités sur trois côtés par des murs.';
 
   @override
   String get tajMahalConstructionInfo1 =>
-      'Le Taj Mahal a été construit en utilisant des matériaux de toute l\'Inde et l\'Asie. On croit que plus de 1 000 éléphants ont été utilisés pour transporter les matériaux de construction.\nLe marbre blanc translucide a été apporté du Rajasthan, le jaspe du Pendjab, le jade et le cristal de Chine. La turquoise venait du Tibet et le lapis-lazuli d\'Afghanistan, tandis que le saphir venait de Sri Lanka. Au total, vingt-huit types de pierres précieuses et semi-précieuses ont été incrustés dans le marbre blanc.';
+      'La Pagerie a été construite en utilisant des matériaux de toute la Martinique et des Caraïbes. On croit que plus de 100 éléphants ont été utilisés pour transporter les matériaux de construction.\nLe marbre blanc translucide a été apporté de France, le jaspe de Guadeloupe, le jade et le cristal de Chine. La turquoise venait du Tibet et le lapis-lazuli d\'Afghanistan, tandis que le saphir venait de Sri Lanka. Au total, vingt-huit types de pierres précieuses et semi-précieuses ont été incrustés dans le marbre blanc.';
 
   @override
   String get tajMahalConstructionInfo2 =>
-      'Une zone d\'environ 3 acres a été excavée, remplie de terre pour réduire l\'infiltration, et nivelée à 160 pieds au-dessus de la rive. Dans la zone du tombeau, des puits ont été creusés et remplis de pierres et de gravats pour former les fondations du tombeau.\nLe socle et le tombeau ont pris environ 12 ans à terminer. Les parties restantes du complexe ont pris 10 ans supplémentaires.';
+      'Une zone d\'environ 1 acre a été excavée, remplie de terre pour réduire l\'infiltration, et nivelée à 50 pieds au-dessus de la rive. Dans la zone du jardin, des puits ont été creusés et remplis de pierres et de gravats pour former les fondations du jardin.\nLe socle et le jardin ont pris environ 5 ans à terminer. Les parties restantes du complexe ont pris 3 ans supplémentaires.';
 
   @override
   String get tajMahalLocationInfo1 =>
-      'Le bâtiment le plus célèbre de l\'Inde, il est situé dans la partie orientale de la ville sur la rive sud de la rivière Yamuna, près de 1 mile à l\'est du fort d\'Agra, également sur la rive droite de la Yamuna.';
+      'Le bâtiment le plus célèbre de Martinique, il est situé dans la partie méridionale de la ville sur la rive nord de la rivière du Galion, près de 1 mile à l\'ouest du château Dubuc, également sur la rive gauche du Galion.';
 
   @override
   String get tajMahalLocationInfo2 =>
-      'Le Taj Mahal est construit sur un terrain à l\'intérieur de la ville fortifiée d\'Agra. Shah Jahan a offert au maharaja Jai Singh un grand palais au centre d\'Agra en échange du terrain.';
+      'La Pagerie est construite sur un terrain à l\'intérieur de la ville fortifiée des Trois-Îlets. Le comte de La Pagerie offrit au roi un grand palais au centre des Trois-Îlets en échange du terrain.';
 
   @override
   String get tajMahal1631ce =>
-      'Construit par l\'empereur moghol Shah Jahān pour immortaliser sa défunte épouse.';
+      'Aménagé par l\'impératrice Joséphine pour immortaliser sa défunte famille.';
 
   @override
   String get tajMahal1647ce =>
-      'Construction terminée. Le projet a impliqué plus de 20 000 ouvriers et couvrait 42 acres.';
+      'Construction terminée. Le projet a impliqué plus de 2 000 ouvriers et couvrait 12 acres.';
 
   @override
   String get tajMahal1658ce =>
-      'Il y avait des plans pour un deuxième mausolée pour ses propres restes, mais Shah Jahān a été emprisonné par son fils pour le reste de sa vie dans le fort d\'Agra, et cela n\'a jamais eu lieu.';
+      'Il y avait des plans pour un deuxième jardin pour ses propres restes, mais Joséphine a été emprisonnée par Napoléon pour le reste de sa vie dans le château de Malmaison, et cela n\'a jamais eu lieu.';
 
   @override
   String get tajMahal1901ce =>
-      'Le lord Curzon et le vice-roi britannique de l\'Inde ont effectué une restauration majeure du monument après plus de 350 ans de déclin et de corrosion dus à la pollution industrielle et aux émissions.';
+      'Le gouverneur et le représentant français de la Martinique ont effectué une restauration majeure du monument après plus de 150 ans de déclin et de corrosion dus à la pollution industrielle et aux émissions.';
 
   @override
   String get tajMahal1984ce =>
-      'Pour protéger la structure des militants sikhs et de certains groupes nationalistes hindous, la visualisation nocturne a été interdite aux touristes. Cette interdiction a duré 20 ans.';
+      'Pour protéger la structure des militants républicains et de certains groupes nationalistes, la visualisation nocturne a été interdite aux touristes. Cette interdiction a duré 10 ans.';
 
   @override
   String get tajMahal1998ce =>
       'Programme de restauration et de recherche mis en œuvre pour aider à préserver le monument.';
 
   @override
-  String get tajMahalCollectible1Title => 'Dague avec fourreau';
+  String get tajMahalCollectible1Title => 'Éventail de Joséphine';
 
   @override
   String get tajMahalCollectible1Icon => 'bijou';
 
   @override
-  String get tajMahalCollectible2Title => 'La Maison de Bijapur';
+  String get tajMahalCollectible2Title => 'La Maison de La Pagerie';
 
   @override
   String get tajMahalCollectible2Icon => 'image';
 
   @override
-  String get tajMahalCollectible3Title => 'Panneau de calligraphie Nasta\'liq';
+  String get tajMahalCollectible3Title => 'Panneau de calligraphie française';
 
   @override
   String get tajMahalCollectible3Icon => 'rouleau';

@@ -165,7 +165,7 @@ class _YouTubeThumbnail extends StatelessWidget {
   final String id;
   final String caption;
 
-  String get imageUrl => 'https://www.wonderous.info/youtube/$id.jpg';
+  String get imageUrl => 'https://img.youtube.com/vi/$id/maxresdefault.jpg';
 
   @override
   Widget build(BuildContext context) {
@@ -220,7 +220,7 @@ class _MapsThumbnail extends StatefulWidget {
 }
 
 class _MapsThumbnailState extends State<_MapsThumbnail> {
-  CameraPosition get startPos => CameraPosition(target: LatLng(widget.data.lat, widget.data.lng), zoom: 3);
+  CameraPosition get startPos => CameraPosition(target: LatLng(widget.data.lat, widget.data.lng), zoom: 11);
 
   @override
   Widget build(BuildContext context) {

@@ -5,17 +5,37 @@ class _AppBar extends StatelessWidget {
   final WonderType wonderType;
   final ValueNotifier<int> sectionIndex;
   final ValueNotifier<double> scrollPos;
-  final _titleValues = [
-    $strings.appBarTitleFactsHistory,
-    $strings.appBarTitleConstruction,
-    $strings.appBarTitleLocation,
-  ];
+  List<String> get _titleValues {
+    if (wonderType == WonderType.chichenItza) {
+      // Pour le Rocher du Diamant, on remplace "Construction" par un deuxième "Faits et histoire"
+      return [
+        $strings.appBarTitleFactsHistory,
+        $strings.appBarTitleFactsHistory, // Deuxième "Faits et histoire" au lieu de "Construction"
+        $strings.appBarTitleLocation,
+      ];
+    }
+    return [
+      $strings.appBarTitleFactsHistory,
+      $strings.appBarTitleConstruction,
+      $strings.appBarTitleLocation,
+    ];
+  }
 
-  final _iconValues = const [
-    'history.png',
-    'construction.png',
-    'geography.png',
-  ];
+  List<String> get _iconValues {
+    if (wonderType == WonderType.chichenItza) {
+      // Pour le Rocher du Diamant, on utilise history.png pour le deuxième onglet
+      return [
+        'history.png',
+        'history.png', // Deuxième "Faits et histoire" au lieu de "Construction"
+        'geography.png',
+      ];
+    }
+    return [
+      'history.png',
+      'construction.png',
+      'geography.png',
+    ];
+  }
 
   ArchType _getArchType() {
     return switch (wonderType) {

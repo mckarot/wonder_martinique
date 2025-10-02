@@ -2,7 +2,6 @@ part of '../timeline_screen.dart';
 
 class _ScrollingViewport extends StatefulWidget {
   const _ScrollingViewport({
-    this.onInit,
     required this.scroller,
     required this.minSize,
     required this.maxSize,
@@ -14,7 +13,7 @@ class _ScrollingViewport extends StatefulWidget {
   final ScrollController scroller;
   final WonderType? selectedWonder;
   final void Function(int year)? onYearChanged;
-  final void Function(_ScrollingViewportController controller)? onInit;
+  final void Function(_ScrollingViewportController controller)? onInit = null;
 
   @override
   State<_ScrollingViewport> createState() => _ScalingViewportState();
