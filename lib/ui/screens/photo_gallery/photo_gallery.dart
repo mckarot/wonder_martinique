@@ -7,7 +7,7 @@ import 'package:wonders/logic/data/unsplash_photo_data.dart';
 import 'package:wonders/ui/common/controls/app_loading_indicator.dart';
 import 'package:wonders/ui/common/controls/eight_way_swipe_detector.dart';
 import 'package:wonders/ui/common/fullscreen_keyboard_listener.dart';
-import 'package:wonders/ui/common/hidden_collectible.dart';
+
 import 'package:wonders/ui/common/modals/fullscreen_url_img_viewer.dart';
 import 'package:wonders/ui/common/unsplash_photo.dart';
 import 'package:wonders/ui/common/utils/app_haptics.dart';
@@ -269,7 +269,7 @@ class _PhotoGalleryState extends State<PhotoGallery> {
                 onDecrease: () => _handleImageTapped(_index - 1, false),
                 child: _checkCollectibleIndex(index)
                     ? Center(
-                        child: HiddenCollectible(widget.wonderType, index: 1, size: 100, focus: _focusNodes[index]),
+                        child: SizedBox.shrink(), // Widget vide - fonctionnalité de recherche d'artefacts désactivée
                       )
                     : AppBtn.basic(
                         semanticLabel: semanticLbl,

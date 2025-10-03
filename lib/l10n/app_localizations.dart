@@ -1591,7 +1591,7 @@ abstract class AppLocalizations {
   /// No description provided for @machuPicchuMapCaption.
   ///
   /// In en, this message translates to:
-  /// **'Map showing location of Machu Picchu in the Eastern Cordillera of southern Peru.'**
+  /// **'Map showing location of La Montagne Pelée in the north of Martinique.'**
   String get machuPicchuMapCaption;
 
   /// No description provided for @machuPicchuHistoryInfo1.
