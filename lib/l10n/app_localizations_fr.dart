@@ -1179,114 +1179,114 @@ class AppLocalizationsFr extends AppLocalizations {
   String get pyramidsGizaCollectible3Icon => 'bijou';
 
   @override
-  String get tajMahalTitle => 'La Pagerie';
+  String get tajMahalTitle => 'Église des Anses d\'Arlet';
 
   @override
-  String get tajMahalSubTitle => 'Le jardin de l\'impératrice';
+  String get tajMahalSubTitle => 'Architecture religieuse du sud';
 
   @override
-  String get tajMahalRegionTitle => 'Les Trois-Îlets, Martinique';
+  String get tajMahalRegionTitle => 'Les Anses d\'Arlet, Martinique';
 
   @override
-  String get tajMahalArtifactCulture => 'Colonial français';
+  String get tajMahalArtifactCulture => 'Religieux Martiniquais';
 
   @override
   String get tajMahalArtifactGeolocation => 'Martinique';
 
   @override
-  String get tajMahalPullQuote1Top => 'Pas seulement un jardin,';
+  String get tajMahalPullQuote1Top => 'Un lieu de paix';
 
   @override
-  String get tajMahalPullQuote1Bottom => 'mais un symbole d\'amour.';
+  String get tajMahalPullQuote1Bottom => 'au bord de l\'océan.';
 
   @override
-  String get tajMahalPullQuote1Author => 'Poète Martiniquais';
+  String get tajMahalPullQuote1Author => 'Historien Martiniquais';
 
   @override
   String get tajMahalPullQuote2 =>
-      'La Pagerie s\'élève au-dessus des rives de la rivière comme une larme solitaire suspendue sur la joue du temps.';
+      'L\'église des Anses d\'Arlet se dresse face à l\'océan comme un témoignage de la foi des habitants de cette baie paisible.';
 
   @override
   String get tajMahalPullQuote2Author => 'Écrivain Martiniquais';
 
   @override
   String get tajMahalCallout1 =>
-      'La Pagerie se distingue comme le plus bel exemple d\'architecture coloniale française, un mélange de styles français, antillais et caraïbes.';
+      'L\'église des Anses d\'Arlet se distingue par son architecture néo-classique, un mélange harmonieux de styles religieux et caraïbes.';
 
   @override
   String get tajMahalCallout2 =>
-      'Il a fallu les efforts de 2 000 ouvriers, jardiniers, artistes de broderie et tailleurs de pierre pour façonner La Pagerie.';
+      'Il a fallu les efforts de charpentiers, sculpteurs, artisans locaux et maçons pour façonner cette église emblématique.';
 
   @override
   String get tajMahalVideoCaption =>
-      '« La Pagerie de Martinique est un monument éternel à l\'amour | Office du Tourisme de Martinique. » Youtube, téléchargé par Office du Tourisme de Martinique.';
+      '« L\'église des Anses d\'Arlet - Un joyau architectural de Martinique | Office du Tourisme de Martinique. » Youtube, téléchargé par Office du Tourisme de Martinique.';
 
   @override
   String get tajMahalMapCaption =>
-      'Carte montrant l\'emplacement de La Pagerie dans le sud de la Martinique.';
+      'Carte montrant l\'emplacement de l\'église des Anses d\'Arlet dans le sud de la Martinique.';
 
   @override
   String get tajMahalHistoryInfo1 =>
-      'La Pagerie est un jardin colonial français sur la rive gauche de la rivière du Galion dans la ville des Trois-Îlets en Martinique. Il a été aménagé en 1722 EC par l\'impératrice Joséphine (née Marie Josèphe Rose Tascher de La Pagerie) pour abriter les plantations de son père, le comte de La Pagerie ; il abrite également la tombe de Joséphine elle-même.';
+      'L\'église des Anses d\'Arlet est une église paroissiale catholique construite au bord de la baie des Anses d\'Arlet dans la commune du Robert, en Martinique. Elle a été édifiée en 1824 par les habitants de la région pour honorer saint Pierre, le patron des pêcheurs, et servir de lieu de culte aux habitants de cette baie tranquille ; elle abrite également un cimetière maritime et quelques statues religieuses datant du XIXe siècle.';
 
   @override
   String get tajMahalHistoryInfo2 =>
-      'Le jardin est le point central d\'un complexe de 12 acres (5 hectares), qui comprend des bâtiments administratifs (placés symétriquement de chaque côté du jardin), une maison d\'hôtes, et est aménagé dans des jardins formels délimités sur trois côtés par des murs.';
+      'L\'église est le point central d\'un complexe religieux comprenant une chapelle, un presbytère (placés symétriquement de chaque côté de l\'église), et un cimetière, entouré d\'un jardin tropical délimité sur deux côtés par des murs en pierre.';
 
   @override
   String get tajMahalConstructionInfo1 =>
-      'La Pagerie a été construite en utilisant des matériaux de toute la Martinique et des Caraïbes. On croit que plus de 100 éléphants ont été utilisés pour transporter les matériaux de construction.\nLe marbre blanc translucide a été apporté de France, le jaspe de Guadeloupe, le jade et le cristal de Chine. La turquoise venait du Tibet et le lapis-lazuli d\'Afghanistan, tandis que le saphir venait de Sri Lanka. Au total, vingt-huit types de pierres précieuses et semi-précieuses ont été incrustés dans le marbre blanc.';
+      'L\'église a été construite en utilisant des matériaux locaux de Martinique et des îles voisines. On croit que plusieurs dizaines de charpentiers et artisans locaux ont participé à sa construction.\nLe calcaire volcanique a été extrait localement, le bois de goyavier et de latanier provenait de la forêt de la montagne Pelée, les tôles ondulées venaient de France. Les cloches ont été forgées en métal local et décorées de motifs caraïbes, tandis que les vitraux colorés provenaient d\'atelier de la Martinique. Au total, une dizaine de matériaux locaux ont été assemblés dans l\'église.';
 
   @override
   String get tajMahalConstructionInfo2 =>
-      'Une zone d\'environ 1 acre a été excavée, remplie de terre pour réduire l\'infiltration, et nivelée à 50 pieds au-dessus de la rive. Dans la zone du jardin, des puits ont été creusés et remplis de pierres et de gravats pour former les fondations du jardin.\nLe socle et le jardin ont pris environ 5 ans à terminer. Les parties restantes du complexe ont pris 3 ans supplémentaires.';
+      'Une zone d\'environ un demi-acre a été nivelée à flanc de colline à 30 mètres au-dessus de la plage. Les fondations reposent sur des blocs de corail et de pierre volcanique.\nLa structure et la toiture ont pris environ 3 ans à terminer. Les parties intérieures décorées ont pris 2 ans supplémentaires.';
 
   @override
   String get tajMahalLocationInfo1 =>
-      'Le bâtiment le plus célèbre de Martinique, il est situé dans la partie méridionale de la ville sur la rive nord de la rivière du Galion, près de 1 mile à l\'ouest du château Dubuc, également sur la rive gauche du Galion.';
+      'L\'église la plus photographiée de Martinique, elle est située au bord de la baie des Anses d\'Arlet, surplombant les eaux turquoise de l\'Atlantique, face à la pointe du Bout de la Jalousie.';
 
   @override
   String get tajMahalLocationInfo2 =>
-      'La Pagerie est construite sur un terrain à l\'intérieur de la ville fortifiée des Trois-Îlets. Le comte de La Pagerie offrit au roi un grand palais au centre des Trois-Îlets en échange du terrain.';
+      'L\'église est construite sur un terrain en pente dominant la baie des Anses d\'Arlet. Des habitants du village ont cédé des terrains pour permettre la construction.';
 
   @override
   String get tajMahal1631ce =>
-      'Aménagé par l\'impératrice Joséphine pour immortaliser sa défunte famille.';
+      'Première chapelle érigée par les colons pour les pêcheurs du lieu.';
 
   @override
   String get tajMahal1647ce =>
-      'Construction terminée. Le projet a impliqué plus de 2 000 ouvriers et couvrait 12 acres.';
+      'Construction d\'une chapelle plus grande pour répondre à la demande croissante des fidèles.';
 
   @override
   String get tajMahal1658ce =>
-      'Il y avait des plans pour un deuxième jardin pour ses propres restes, mais Joséphine a été emprisonnée par Napoléon pour le reste de sa vie dans le château de Malmaison, et cela n\'a jamais eu lieu.';
+      'Planification d\'un nouvel édifice plus vaste pour accueillir la population grandissante du village.';
 
   @override
   String get tajMahal1901ce =>
-      'Le gouverneur et le représentant français de la Martinique ont effectué une restauration majeure du monument après plus de 150 ans de déclin et de corrosion dus à la pollution industrielle et aux émissions.';
+      'Un curé passionné de conservation entreprit une restauration majeure du bâtiment après plus de 75 ans d\'existence.';
 
   @override
   String get tajMahal1984ce =>
-      'Pour protéger la structure des militants républicains et de certains groupes nationalistes, la visualisation nocturne a été interdite aux touristes. Cette interdiction a duré 10 ans.';
+      'Pour protéger l\'église des intempéries et de l\'érosion côtière, des travaux de consolidation furent entrepris.';
 
   @override
   String get tajMahal1998ce =>
-      'Programme de restauration et de recherche mis en œuvre pour aider à préserver le monument.';
+      'Programme de rénovation et de documentation mis en œuvre pour préserver les éléments historiques.';
 
   @override
-  String get tajMahalCollectible1Title => 'Éventail de Joséphine';
+  String get tajMahalCollectible1Title => 'Vieille cloche en bronze';
 
   @override
   String get tajMahalCollectible1Icon => 'bijou';
 
   @override
-  String get tajMahalCollectible2Title => 'La Maison de La Pagerie';
+  String get tajMahalCollectible2Title => 'Vue de l\'église des Anses d\'Arlet';
 
   @override
   String get tajMahalCollectible2Icon => 'image';
 
   @override
-  String get tajMahalCollectible3Title => 'Panneau de calligraphie française';
+  String get tajMahalCollectible3Title => 'Statue religieuse en bois';
 
   @override
   String get tajMahalCollectible3Icon => 'rouleau';
