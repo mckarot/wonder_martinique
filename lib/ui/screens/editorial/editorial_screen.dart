@@ -19,7 +19,7 @@ import 'package:wonders/ui/common/curved_clippers.dart';
 import 'package:wonders/ui/common/fullscreen_keyboard_list_scroller.dart';
 import 'package:wonders/ui/common/google_maps_marker.dart';
 import 'package:wonders/ui/common/gradient_container.dart';
-import 'package:wonders/ui/common/hidden_collectible.dart';
+
 import 'package:wonders/ui/common/pop_router_on_over_scroll.dart';
 import 'package:wonders/ui/common/scaling_list_item.dart';
 import 'package:wonders/ui/common/static_text_scale.dart';

@@ -877,7 +877,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get machuPicchuMapCaption =>
-      'Map showing location of Machu Picchu in the Eastern Cordillera of southern Peru.';
+      'Map showing location of La Montagne Pelée in the north of Martinique.';
 
   @override
   String get machuPicchuHistoryInfo1 =>

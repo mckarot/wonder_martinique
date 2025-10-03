@@ -62,21 +62,9 @@ class _ScrollingContent extends StatelessWidget {
     }
 
     Widget buildHiddenCollectible({required int slot}) {
-      List<WonderType> getTypesForSlot(slot) {
-        return switch (slot) {
-          0 => [WonderType.chichenItza, WonderType.colosseum],
-          1 => [WonderType.pyramidsGiza, WonderType.petra],
-          2 => [WonderType.machuPicchu, WonderType.christRedeemer],
-          _ => [WonderType.tajMahal, WonderType.greatWall]
-        };
-      }
-
-      return HiddenCollectible(
-        data.type,
-        index: 0,
-        matches: getTypesForSlot(slot),
-        size: 128,
-      );
+      // Fonctionnalité de recherche d'artefacts désactivée
+      // Anciennement: return HiddenCollectible(data.type, index: 0, matches: getTypesForSlot(slot), size: 128);
+      return SizedBox.shrink(); // Widget vide
     }
 
     return SliverBackgroundColor(
