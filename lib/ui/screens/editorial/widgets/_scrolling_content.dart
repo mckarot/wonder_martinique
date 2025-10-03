@@ -208,7 +208,7 @@ class _MapsThumbnail extends StatefulWidget {
 }
 
 class _MapsThumbnailState extends State<_MapsThumbnail> {
-  CameraPosition get startPos => CameraPosition(target: LatLng(widget.data.lat, widget.data.lng), zoom: 11);
+  CameraPosition get startPos => CameraPosition(target: LatLng(widget.data.lat, widget.data.lng), zoom: 10);
 
   @override
   Widget build(BuildContext context) {
