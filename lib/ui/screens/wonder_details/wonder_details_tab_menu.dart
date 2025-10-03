@@ -13,14 +13,12 @@ class WonderDetailsTabMenu extends StatelessWidget {
     required this.wonderType,
     this.axis = Axis.horizontal,
     required this.onTap,
-    this.isRocherDuDiamant = false,
   });
 
   final TabController tabController;
   final bool showBg;
   final WonderType wonderType;
   final Axis axis;
-  final bool isRocherDuDiamant;
   bool get isVertical => axis == Axis.vertical;
 
   final void Function(int index) onTap;
@@ -104,7 +102,7 @@ class WonderDetailsTabMenu extends StatelessWidget {
                               0,
                               tabController,
                               iconImg: 'editorial',
-                              label: isRocherDuDiamant ? $strings.appBarTitleFactsHistory : $strings.wonderDetailsTabLabelInformation,
+                              label: $strings.wonderDetailsTabLabelInformation,
                               color: iconColor,
                               axis: axis,
                               mainAxisSize: tabBtnSize,
@@ -130,18 +128,16 @@ class WonderDetailsTabMenu extends StatelessWidget {
                               mainAxisSize: tabBtnSize,
                               onTap: onTap,
                             ),
-                            if (!isRocherDuDiamant) ...[
-                              _TabBtn(
-                                3,
-                                tabController,
-                                iconImg: 'timeline',
-                                label: $strings.wonderDetailsTabLabelEvents,
-                                color: iconColor,
-                                axis: axis,
-                                mainAxisSize: tabBtnSize,
-                                onTap: onTap,
-                              ),
-                            ],
+                            _TabBtn(
+                              3,
+                              tabController,
+                              iconImg: 'timeline',
+                              label: $strings.wonderDetailsTabLabelEvents,
+                              color: iconColor,
+                              axis: axis,
+                              mainAxisSize: tabBtnSize,
+                              onTap: onTap,
+                            ),
                           ]),
                     ),
                   ],

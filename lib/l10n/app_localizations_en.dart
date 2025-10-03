@@ -873,7 +873,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get machuPicchuVideoCaption =>
-      '“Machu Picchu 101 | National Geographic.” Youtube, uploaded by National Geographic.';
+      '“La Montagne Pelée 101 | Office du Tourisme de Martinique.” Youtube, uploaded by Office du Tourisme de Martinique.';
 
   @override
   String get machuPicchuMapCaption =>

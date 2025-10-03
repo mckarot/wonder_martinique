@@ -1585,7 +1585,7 @@ abstract class AppLocalizations {
   /// No description provided for @machuPicchuVideoCaption.
   ///
   /// In en, this message translates to:
-  /// **'“Machu Picchu 101 | National Geographic.” Youtube, uploaded by National Geographic.'**
+  /// **'“La Montagne Pelée 101 | Office du Tourisme de Martinique.” Youtube, uploaded by Office du Tourisme de Martinique.'**
   String get machuPicchuVideoCaption;
 
   /// No description provided for @machuPicchuMapCaption.
