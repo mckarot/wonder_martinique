@@ -97,9 +97,9 @@ class TajMahalIllustration extends StatelessWidget {
       IllustrationPiece(
         fileName: 'foreground-left.png',
         alignment: Alignment.bottomLeft,
-        initialScale: .9,
+        initialScale: .6, // Réduit l'échelle initiale
         initialOffset: Offset(-40, 60),
-        heightFactor: .6 + .3 * mangoScale,
+        heightFactor: .5 + .3 * mangoScale, // Réduit le facteur de hauteur
         fractionalOffset: Offset(-.3, 0),
         zoomAmt: .25,
         dynamicHzOffset: 0,
