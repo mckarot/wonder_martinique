@@ -11,6 +11,7 @@ import 'package:wonders/ui/common/pop_navigator_underlay.dart';
 import 'package:wonders/ui/common/utils/duration_utils.dart';
 import 'package:wonders/ui/common/wonderous_logo.dart';
 import 'package:wonders/ui/screens/home_menu/about_dialog_content.dart';
+import 'package:wonders/utils/responsive_image_widget.dart';
 
 class HomeMenu extends StatefulWidget {
   const HomeMenu({super.key, required this.data});
@@ -182,7 +183,12 @@ class _HomeMenuState extends State<HomeMenu> {
           onPressed: () => _handleWonderPressed(context, btnData),
           padding: EdgeInsets.zero,
           semanticLabel: btnData.title,
-          child: SizedBox.expand(child: Image.asset(btnData.type.homeBtn, fit: BoxFit.cover)),
+          child: ResponsiveImage(
+            imagePath: btnData.type.homeBtn,
+            fit: BoxFit.cover,
+            baseWidth: _btnSize(context),
+            baseHeight: _btnSize(context),
+          ),
         ),
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:wonders/common_libs.dart';
 import 'package:wonders/logic/common/platform_info.dart';
+import 'utils/responsive_image_widget.dart';
 
 /// Loads bitmap assets into memory that may be required later
 class AppBitmaps {
@@ -61,4 +62,47 @@ extension WonderAssetExtensions on WonderType {
   String get photo3 => '$assetPath/photo-3.jpg';
   String get photo4 => '$assetPath/photo-4.jpg';
   String get flattened => '$assetPath/flattened.jpg';
+}
+
+/// Extension pour utiliser les images de manière responsive
+extension ResponsiveImageExtension on WonderType {
+  /// Afficher l'image d'accueil de la merveille de manière responsive
+  ResponsiveImage responsiveHomeBtn({
+    BoxFit fit = BoxFit.cover,
+    Alignment alignment = Alignment.center,
+    double baseWidth = 100,
+    double baseHeight = 100,
+  }) {
+    return ResponsiveImage(
+      imagePath: homeBtn,
+      fit: fit,
+      alignment: alignment,
+      baseWidth: baseWidth,
+      baseHeight: baseHeight,
+    );
+  }
+
+  /// Afficher une image photo de manière responsive
+  ResponsiveImage responsivePhoto(int photoNumber, {
+    BoxFit fit = BoxFit.cover,
+    Alignment alignment = Alignment.center,
+    double baseWidth = 300,
+    double baseHeight = 200,
+  }) {
+    String imagePath = switch (photoNumber) {
+      1 => photo1,
+      2 => photo2,
+      3 => photo3,
+      4 => photo4,
+      _ => photo1, // Valeur par défaut
+    };
+
+    return ResponsiveImage(
+      imagePath: imagePath,
+      fit: fit,
+      alignment: alignment,
+      baseWidth: baseWidth,
+      baseHeight: baseHeight,
+    );
+  }
 }
