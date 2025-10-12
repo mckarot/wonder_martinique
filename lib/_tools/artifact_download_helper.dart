@@ -17,6 +17,7 @@ import 'package:wonders/logic/data/wonders_data/machu_picchu_data.dart';
 import 'package:wonders/logic/data/wonders_data/petra_data.dart';
 import 'package:wonders/logic/data/wonders_data/pyramids_giza_data.dart';
 import 'package:wonders/logic/data/wonders_data/taj_mahal_data.dart';
+import 'package:wonders/services/firestore_artifact_service.dart';
 
 class ArtifactDownloadHelper extends StatefulWidget {
   const ArtifactDownloadHelper({super.key});
@@ -67,7 +68,9 @@ class _ArtifactDownloadHelperState extends State<ArtifactDownloadHelper> {
     }
 
     /// Download Highights
-    for (var h in HighlightData.all) {
+    final firestoreArtifacts = await FirestoreArtifactService().getAllArtifacts().first;
+    final highlights = HighlightData.fromFirestoreArtifacts(firestoreArtifacts);
+    for (var h in highlights) {
       if (await downloadImageAndJson(h.artifactId) == false) {
         missingIds.add(h.artifactId);
       }

@@ -65,6 +65,7 @@ List<String> _searchSuggestions = const [
 
 // Chichen Itza (189)
 List<SearchData> _searchData = const [
+  SearchData(900, 313341, 'Pendentif disque', 'pendant|shell|shell-ornaments'),
   SearchData(500, 317885, 'Bowl', 'bowl|ceramic|ceramics-containers'),
   SearchData(1550, 310589, 'Figure Vessel', 'vessel|ceramic|ceramics-containers'),
   SearchData(8, 312915, 'Maize God emerging from a flower', 'figure|ceramic, pigment|ceramics-sculpture'),

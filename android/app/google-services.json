@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "423368961031",
+    "project_id": "wonders-martinique",
+    "storage_bucket": "wonders-martinique.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423368961031:android:a1944d1c6a054b4d4d0ea2",
+        "android_client_info": {
+          "package_name": "com.gskinner.flutter.wonders"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4NgAPvRIp7tNKdngHIXaSEYP240gKxbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'responsive_image.dart';
+import 'package:wonders/utils/responsive_image.dart';
 
 /// Widget d'image responsive qui s'adapte automatiquement à la taille de l'écran
 class ResponsiveImage extends StatelessWidget {
@@ -17,7 +17,7 @@ class ResponsiveImage extends StatelessWidget {
   final bool excludeFromSemantics;
 
   const ResponsiveImage({
-    Key? key,
+    super.key,
     required this.imagePath,
     this.fit = BoxFit.cover,
     this.alignment = Alignment.center,
@@ -30,7 +30,7 @@ class ResponsiveImage extends StatelessWidget {
     this.errorWidget,
     this.semanticLabel,
     this.excludeFromSemantics = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +98,7 @@ class ResponsiveImage extends StatelessWidget {
     }
 
     // Ajouter un conteneur avec les dimensions exactes pour garantir la proportionnalité
-    return Container(
+    return SizedBox(
       width: calculatedWidth,
       height: calculatedHeight,
       child: imageWidget,
@@ -120,7 +120,7 @@ class ResponsiveImagePercent extends StatelessWidget {
   final bool excludeFromSemantics;
 
   const ResponsiveImagePercent({
-    Key? key,
+    super.key,
     required this.imagePath,
     this.fit = BoxFit.cover,
     this.alignment = Alignment.center,
@@ -131,7 +131,7 @@ class ResponsiveImagePercent extends StatelessWidget {
     this.errorWidget,
     this.semanticLabel,
     this.excludeFromSemantics = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -211,7 +211,7 @@ class ResponsiveImageByScreenType extends StatelessWidget {
   final bool excludeFromSemantics;
 
   const ResponsiveImageByScreenType({
-    Key? key,
+    super.key,
     required this.imagePath,
     this.fit = BoxFit.cover,
     this.alignment = Alignment.center,
@@ -221,7 +221,7 @@ class ResponsiveImageByScreenType extends StatelessWidget {
     this.errorWidget,
     this.semanticLabel,
     this.excludeFromSemantics = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -2,7 +2,6 @@ import 'dart:typed_data';
 import 'dart:ui';
 
 import 'package:wonders/common_libs.dart';
-import 'package:wonders/logic/data/wonders_data/search/search_data.dart';
 import 'package:wonders/ui/screens/artifact/artifact_search/artifact_search_screen.dart';
 
 class TimeRangePainter extends CustomPainter {
@@ -14,7 +13,7 @@ class TimeRangePainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    List<SearchData> results = controller.value;
+    List<({int year})> results = controller.value;
     int l = results.length;
     if (l == 0) return;
 
@@ -24,7 +23,7 @@ class TimeRangePainter extends CustomPainter {
     double height = size.height, width = size.width;
     int minYr = controller.minYear, delta = controller.maxYear - minYr;
     for (int i = 0; i < l; i++) {
-      SearchData o = results[i];
+      final o = results[i];
       double x = width * (o.year - minYr) / delta;
       var j = i * 12;
       positions[j] = x - 1;

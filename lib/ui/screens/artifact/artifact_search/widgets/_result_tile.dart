@@ -3,8 +3,8 @@ part of '../artifact_search_screen.dart';
 class _ResultTile extends StatelessWidget {
   const _ResultTile({required this.onPressed, required this.data});
 
-  final void Function(SearchData data) onPressed;
-  final SearchData data;
+  final void Function(FirestoreArtifact data) onPressed;
+  final FirestoreArtifact data;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class _ResultTile extends StatelessWidget {
     );
 
     return AspectRatio(
-      aspectRatio: (data.aspectRatio == 0) ? (data.id % 10) / 15 + 0.6 : max(0.5, data.aspectRatio),
+      aspectRatio: 0.7, // Utiliser un ratio fixe car FirestoreArtifact n'a pas cette info
       child: ClipRRect(
         borderRadius: BorderRadius.circular($styles.insets.xs),
         child: AppBtn.basic(

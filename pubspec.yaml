@@ -55,11 +55,16 @@ dependencies:
   url_launcher: ^6.1.14
   webview_flutter: ^4.0.2
   youtube_player_iframe: ^5.1.2
+  firebase_core: ^3.1.0
+  cloud_firestore: ^5.0.3
+  firebase_storage: ^12.1.1
 
 dev_dependencies:
   icons_launcher: ^3.0.0
   flutter_lints: ^4.0.0
   dependency_validator: ^4.0.0
+  firebase_core: ^3.1.0
+  cloud_firestore: ^5.0.3
 
 icons_launcher:
   image_path: "assets/marketing/app-icon-1024.png"

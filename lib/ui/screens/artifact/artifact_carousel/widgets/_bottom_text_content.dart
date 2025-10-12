@@ -1,14 +1,25 @@
 part of '../artifact_carousel_screen.dart';
 
 class _BottomTextContent extends StatelessWidget {
-  const _BottomTextContent(
-      {required this.artifact, required this.height, required this.state, required this.shortMode});
+  const _BottomTextContent({
+    required this.artifact,
+    required this.height,
+    required this.shortMode,
+    required this.count,
+    required this.pageController,
+    required this.onSearchTap,
+    required this.onArtifactTap,
+  });
 
   final HighlightData artifact;
   final double height;
-  final _ArtifactScreenState state;
   final bool shortMode;
-  int get _currentPage => state._currentPage.value.round();
+  final int count;
+  final PageController pageController;
+  final VoidCallback onSearchTap;
+  final void Function(int) onArtifactTap;
+
+  int get _currentPage => pageController.page?.round() ?? 0;
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +40,9 @@ class _BottomTextContent extends StatelessWidget {
                   IgnorePointerKeepSemantics(
                     child: Semantics(
                       button: true,
-                      onIncrease: () => state._handleArtifactTap(_currentPage + 1),
-                      onDecrease: () => state._handleArtifactTap(_currentPage - 1),
-                      onTap: () => state._handleArtifactTap(_currentPage),
+                      onIncrease: () => onArtifactTap(_currentPage + 1),
+                      onDecrease: () => onArtifactTap(_currentPage - 1),
+                      onTap: () => onArtifactTap(_currentPage),
                       liveRegion: true,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -66,15 +77,15 @@ class _BottomTextContent extends StatelessWidget {
               Spacer(),
               if (!shortMode)
                 AppPageIndicator(
-                  count: state._artifacts.length,
-                  controller: state._pageController!,
+                  count: count,
+                  controller: pageController,
                   semanticPageTitle: $strings.artifactsSemanticArtifact,
                 ),
               Gap($styles.insets.md),
               AppBtn.from(
                 text: $strings.artifactsButtonBrowse,
                 expand: true,
-                onPressed: state._handleSearchTap,
+                onPressed: onSearchTap,
               ),
               Gap($styles.insets.lg),
             ],

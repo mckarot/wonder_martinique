@@ -12,6 +12,7 @@ import 'package:wonders/logic/timeline_logic.dart';
 import 'package:wonders/logic/unsplash_logic.dart';
 import 'package:wonders/logic/wonders_logic.dart';
 import 'package:wonders/ui/common/app_shortcuts.dart';
+import 'package:wonders/services/firebase_service.dart';
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +21,9 @@ void main() async {
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   }
   GoRouter.optionURLReflectsImperativeAPIs = true;
+
+  // Initialize Firebase
+  await FirebaseService().initialize();
 
   // Start app
   registerSingletons();

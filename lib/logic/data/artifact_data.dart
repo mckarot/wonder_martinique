@@ -1,3 +1,5 @@
+import 'package:wonders/models/firestore_artifact.dart';
+
 class ArtifactData {
   ArtifactData({
     required this.objectId,
@@ -14,11 +16,9 @@ class ArtifactData {
     required this.objectBeginYear,
     required this.objectEndYear,
   });
-  static const String baseSelfHostedImagePath =
-      'https://www.wonderous.info/met/';
 
   final String
-      objectId; // Artifact ID, used to identify through MET server calls.
+      objectId; // Artifact ID, used to identify through Firebase.
   final String title; // Artifact title / name
   final String image; // Artifact primary image URL (can have multiple)
   final int objectBeginYear; // Artifact creation year start.
@@ -33,14 +33,27 @@ class ArtifactData {
   final String classification; // Type of artifact
   final String culture; // Culture of artifact
 
-  String get selfHostedImageUrl => getSelfHostedImageUrl(objectId);
-  String get selfHostedImageUrlSmall => getSelfHostedImageUrlSmall(objectId);
-  String get selfHostedImageUrlMedium => getSelfHostedImageUrlMedium(objectId);
+  // Ces méthodes seront mises à jour pour utiliser Firebase Storage
+  String get selfHostedImageUrl => image; // L'URL est déjà fournie par Firestore
+  String get selfHostedImageUrlSmall => image; // L'URL est déjà fournie par Firestore
+  String get selfHostedImageUrlMedium => image; // L'URL est déjà fournie par Firestore
 
-  static String getSelfHostedImageUrl(String id) =>
-      '$baseSelfHostedImagePath$id.jpg';
-  static String getSelfHostedImageUrlSmall(String id) =>
-      '$baseSelfHostedImagePath${id}_600.jpg';
-  static String getSelfHostedImageUrlMedium(String id) =>
-      '$baseSelfHostedImagePath${id}_2000.jpg';
+  // Créer un ArtifactData depuis un FirestoreArtifact
+  factory ArtifactData.fromFirestoreArtifact(FirestoreArtifact fa) {
+    return ArtifactData(
+      objectId: fa.id,
+      title: fa.title,
+      image: fa.imageUrl,
+      date: fa.date,
+      period: fa.period,
+      country: fa.country,
+      medium: fa.medium,
+      dimension: fa.dimension,
+      classification: fa.classification,
+      culture: fa.culture,
+      objectType: fa.objectType,
+      objectBeginYear: fa.objectBeginYear,
+      objectEndYear: fa.objectEndYear,
+    );
+  }
 }

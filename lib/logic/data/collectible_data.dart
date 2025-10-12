@@ -28,8 +28,36 @@ class CollectibleData {
   String get id => artifactId;
   String get subtitle => wondersLogic.getData(wonder).artifactCulture;
 
-  String get imageUrl => ArtifactData.getSelfHostedImageUrl(id);
-  String get imageUrlSmall => ArtifactData.getSelfHostedImageUrlSmall(id);
+  String get imageUrl => ArtifactData(
+    objectId: id,
+    title: '',
+    image: '',
+    date: '',
+    period: '',
+    country: '',
+    medium: '',
+    dimension: '',
+    classification: '',
+    culture: '',
+    objectType: '',
+    objectBeginYear: 0,
+    objectEndYear: 0,
+  ).selfHostedImageUrl;
+  String get imageUrlSmall => ArtifactData(
+    objectId: id,
+    title: '',
+    image: '',
+    date: '',
+    period: '',
+    country: '',
+    medium: '',
+    dimension: '',
+    classification: '',
+    culture: '',
+    objectType: '',
+    objectBeginYear: 0,
+    objectEndYear: 0,
+  ).selfHostedImageUrlSmall;
 }
 
 // Note: look up a human readable page with:

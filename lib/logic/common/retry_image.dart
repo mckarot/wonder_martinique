@@ -63,12 +63,20 @@ class RetryImage extends ImageProvider<Object> {
       },
       onChunk: completer._reportChunkEvent,
       onError: (Object exception, StackTrace? stackTrace) {
-        completerToWrap.removeListener(listener);
+        try {
+          completerToWrap.removeListener(listener);
+        } on StateError {
+          // This error is expected if the stream is already disposed.
+        }
         if (count > maxRetries) {
           completer.reportError(exception: exception, stack: stackTrace);
           return;
         }
         Future<void>.delayed(duration).then((void v) {
+          // Do not attempt to retry if the widget is no longer mounted.
+          if (!completer.hasListeners) {
+            return;
+          }
           duration *= 2;
           completerToWrap = imageProvider.loadImage(key, decode);
           count += 1;
@@ -79,7 +87,11 @@ class RetryImage extends ImageProvider<Object> {
     completerToWrap.addListener(listener);
 
     completer.addOnLastListenerRemovedCallback(() {
-      completerToWrap.removeListener(listener);
+      try {
+        completerToWrap.removeListener(listener);
+      } on StateError {
+        // This error is expected if the stream is already disposed.
+      }
     });
 
     return completer;

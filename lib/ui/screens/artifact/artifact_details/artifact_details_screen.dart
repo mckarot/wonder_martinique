@@ -1,6 +1,8 @@
 import 'package:wonders/common_libs.dart';
 import 'package:wonders/logic/common/animate_utils.dart';
 import 'package:wonders/logic/data/artifact_data.dart';
+import 'package:wonders/models/firestore_artifact.dart';
+import 'package:wonders/services/firestore_artifact_service.dart';
 import 'package:wonders/ui/common/compass_divider.dart';
 import 'package:wonders/ui/common/controls/app_header.dart';
 import 'package:wonders/ui/common/controls/app_loading_indicator.dart';
@@ -20,27 +22,31 @@ class ArtifactDetailsScreen extends StatefulWidget {
 }
 
 class _ArtifactDetailsScreenState extends State<ArtifactDetailsScreen> {
-  late final _future = artifactLogic.getArtifactByID(widget.artifactId, selfHosted: true);
+  late final Stream<FirestoreArtifact?> _stream = FirestoreArtifactService().getArtifactById(widget.artifactId);
 
   @override
   Widget build(BuildContext context) {
     bool hzMode = context.isLandscape;
     return ColoredBox(
       color: $styles.colors.greyStrong,
-      child: FutureBuilder<ArtifactData?>(
-        future: _future,
+      child: StreamBuilder<FirestoreArtifact?>(
+        stream: _stream,
         builder: (_, snapshot) {
-          final data = snapshot.data;
           late Widget content;
-          if (snapshot.hasError || (snapshot.hasData && data == null)) {
+          // Handle error, waiting, and null data states
+          if (snapshot.hasError) {
             content = _buildError();
-          } else if (!snapshot.hasData) {
+          } else if (snapshot.connectionState == ConnectionState.waiting) {
             content = Center(child: AppLoadingIndicator());
+          } else if (snapshot.data == null) {
+            content = _buildError(); // Data is null, artifact not found
           } else {
+            // If we've gotten this far, data is guaranteed to be non-null.
+            final artifactData = ArtifactData.fromFirestoreArtifact(snapshot.data!);
             content = hzMode
                 ? Row(children: [
-                    Expanded(child: _ArtifactImageBtn(data: data!)),
-                    Expanded(child: Center(child: SizedBox(width: 600, child: _InfoColumn(data: data)))),
+                    Expanded(child: _ArtifactImageBtn(data: artifactData)),
+                    Expanded(child: Center(child: SizedBox(width: 600, child: _InfoColumn(data: artifactData)))),
                   ])
                 : CustomScrollView(
                     slivers: [
@@ -50,9 +56,9 @@ class _ArtifactDetailsScreenState extends State<ArtifactDetailsScreen> {
                         leading: SizedBox.shrink(),
                         expandedHeight: context.heightPx * .5,
                         collapsedHeight: context.heightPx * .35,
-                        flexibleSpace: _ArtifactImageBtn(data: data!),
+                        flexibleSpace: _ArtifactImageBtn(data: artifactData),
                       ),
-                      SliverToBoxAdapter(child: _InfoColumn(data: data)),
+                      SliverToBoxAdapter(child: _InfoColumn(data: artifactData)),
                     ],
                   );
           }
