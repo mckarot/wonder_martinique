@@ -43,7 +43,7 @@ class HighlightData {
     return HighlightData(
       title: fa.title,
       culture: fa.culture,
-      artifactId: fa.artifactId,
+      artifactId: fa.id, // Utiliser l'ID du document Firestore
       wonder: WonderType.values.firstWhere(
         (w) => w.toString().split('.').last == fa.wonderType,
         orElse: () => WonderType.chichenItza, // valeur par défaut

@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:wonders/common_libs.dart';
 import 'package:wonders/ui/common/modals//fullscreen_video_viewer.dart';
 import 'package:wonders/ui/common/modals/fullscreen_maps_viewer.dart';
-import 'package:wonders/ui/screens/artifact/artifact_details/artifact_details_screen.dart';
+import 'package:wonders/ui/screens/artifact/artifact_details_page.dart';
 import 'package:wonders/ui/screens/artifact/artifact_search/artifact_search_screen.dart';
 import 'package:wonders/ui/screens/collection/collection_screen.dart';
 import 'package:wonders/ui/screens/home/wonders_home_screen.dart';
@@ -27,7 +27,7 @@ class ScreenPaths {
   static String maps(WonderType type) => _appendToCurrentPath('/maps/${type.name}');
   static String timeline(WonderType? type) => _appendToCurrentPath('/timeline?type=${type?.name ?? ''}');
   static String artifact(String id, {bool append = true}) =>
-      append ? _appendToCurrentPath('/artifact/$id') : '/artifact/$id';
+      append ? _appendToCurrentPath('/artifact/$id/details') : '/artifact/$id/details';
   static String collection(String id) => _appendToCurrentPath('/collection${id.isEmpty ? '' : '?id=$id'}');
 
   static String _appendToCurrentPath(String newPath) {
@@ -42,8 +42,8 @@ class ScreenPaths {
 
 // Routes that are used multiple times
 AppRoute get _artifactRoute => AppRoute(
-  'artifact/:artifactId',
-  (s) => ArtifactDetailsScreen(artifactId: s.pathParameters['artifactId']!),
+  'artifact/:artifactId/details',
+  (s) => ArtifactDetailsPage(artifactId: s.pathParameters['artifactId']!),
 );
 
 AppRoute get _timelineRoute => AppRoute(
