@@ -38,26 +38,19 @@ class TajMahalData extends WonderData {
           constructionInfo2: $strings.tajMahalConstructionInfo2,
           locationInfo1: $strings.tajMahalLocationInfo1,
           locationInfo2: $strings.tajMahalLocationInfo2,
-          highlightArtifacts: const [
-            '453341',
-            '453243',
-            '73309',
-            '24932',
-            '56230',
-            '35633',
-          ],
-          hiddenArtifacts: const [
-            '24907',
-            '453183',
-            '453983',
-          ],
-          events: {
-            1631: $strings.tajMahal1631ce,
-            1647: $strings.tajMahal1647ce,
-            1658: $strings.tajMahal1658ce,
-            1901: $strings.tajMahal1901ce,
-            1984: $strings.tajMahal1984ce,
-            1998: $strings.tajMahal1998ce,
-          },
-        );
+    highlightArtifacts: const [
+      'taj-mahal-mughal-painting',
+      'taj-mahal-marble-inlay-box',
+      'taj-mahal-jade-wine-cup',
+      'taj-mahal-shah-jahan-dagger',
+    ],
+    localImagePaths: const [
+      'assets/images/wonder_galleries/taj_mahal/1.jpg',
+      'assets/images/wonder_galleries/taj_mahal/2.jpg',
+      'assets/images/wonder_galleries/taj_mahal/3.jpg',
+      'assets/images/wonder_galleries/taj_mahal/4.jpg',
+      'assets/images/wonder_galleries/taj_mahal/5.jpg',
+    ],
+    events: const {},
+  );
 }

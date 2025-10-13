@@ -38,25 +38,19 @@ class ChristRedeemerData extends WonderData {
           constructionInfo2: $strings.christRedeemerConstructionInfo2,
           locationInfo1: $strings.christRedeemerLocationInfo1,
           locationInfo2: $strings.christRedeemerLocationInfo2,
-          highlightArtifacts: const [
-            '501319',
-            '764815',
-            '502019',
-            '764814',
-            '764816',
-          ],
-          hiddenArtifacts: const [
-            '501302',
-            '157985',
-            '227759',
-          ],
-          events: {
-            1850: $strings.christRedeemer1850ce,
-            1921: $strings.christRedeemer1921ce,
-            1922: $strings.christRedeemer1922ce,
-            1926: $strings.christRedeemer1926ce,
-            1931: $strings.christRedeemer1931ce,
-            2006: $strings.christRedeemer2006ce,
-          },
-        );
+    highlightArtifacts: const [
+      'christ-the-redeemer-mosaic',
+      'christ-the-redeemer-postcard',
+      'christ-the-redeemer-sign',
+      'christ-the-redeemer-soapstone',
+    ],
+    localImagePaths: const [
+      'assets/images/wonder_galleries/christ_the_redeemer/1.jpg',
+      'assets/images/wonder_galleries/christ_the_redeemer/2.jpg',
+      'assets/images/wonder_galleries/christ_the_redeemer/3.jpg',
+      'assets/images/wonder_galleries/christ_the_redeemer/4.jpg',
+      'assets/images/wonder_galleries/christ_the_redeemer/5.jpg',
+    ],
+    events: const {},
+  );
 }

@@ -38,26 +38,19 @@ class ColosseumData extends WonderData {
           constructionInfo2: $strings.colosseumConstructionInfo2,
           locationInfo1: $strings.colosseumLocationInfo1,
           locationInfo2: $strings.colosseumLocationInfo2,
-          highlightArtifacts: const [
-            '251350',
-            '255960',
-            '247993',
-            '250464',
-            '251476',
-            '255960',
-          ],
-          hiddenArtifacts: const [
-            '245376',
-            '256570',
-            '286136',
-          ],
-          events: {
-            70: $strings.colosseum70ce,
-            82: $strings.colosseum82ce,
-            1140: $strings.colosseum1140ce,
-            1490: $strings.colosseum1490ce,
-            1829: $strings.colosseum1829ce,
-            1990: $strings.colosseum1990ce,
-          },
-        );
+    highlightArtifacts: const [
+      'colosseum-roman-coin',
+      'colosseum-gladiator-helmet',
+      'colosseum-oil-lamp',
+      'colosseum-travertine-block',
+    ],
+    localImagePaths: const [
+      'assets/images/wonder_galleries/colosseum/1.jpg',
+      'assets/images/wonder_galleries/colosseum/2.jpg',
+      'assets/images/wonder_galleries/colosseum/3.jpg',
+      'assets/images/wonder_galleries/colosseum/4.jpg',
+      'assets/images/wonder_galleries/colosseum/5.jpg',
+    ],
+    events: const {},
+  );
 }

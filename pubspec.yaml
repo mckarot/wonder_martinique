@@ -107,6 +107,13 @@ flutter:
     - assets/images/collectibles/
     - assets/images/widget/
     - assets/images/wonder_galleries/chichen_itza/
+    - assets/images/wonder_galleries/christ_the_redeemer/
+    - assets/images/wonder_galleries/colosseum/
+    - assets/images/wonder_galleries/great_wall_of_china/
+    - assets/images/wonder_galleries/machu_picchu/
+    - assets/images/wonder_galleries/petra/
+    - assets/images/wonder_galleries/pyramids/
+    - assets/images/wonder_galleries/taj_mahal/
 
   fonts:
     - family: Cinzel

@@ -38,26 +38,19 @@ class PetraData extends WonderData {
           constructionInfo2: $strings.petraConstructionInfo2,
           locationInfo1: $strings.petraLocationInfo1,
           locationInfo2: $strings.petraLocationInfo2,
-          highlightArtifacts: const [
-            '325900',
-            '325902',
-            '325919',
-            '325884',
-            '325887',
-            '325891',
-          ],
-          hiddenArtifacts: const [
-            '322592',
-            '325918',
-            '326243',
-          ],
-          events: {
-            -1200: $strings.petra1200bce,
-            -106: $strings.petra106bce,
-            551: $strings.petra551ce,
-            1812: $strings.petra1812ce,
-            1958: $strings.petra1958ce,
-            1989: $strings.petra1989ce,
-          },
-        );
+    highlightArtifacts: const [
+      'petra-nabataean-pottery',
+      'petra-limestone-relief',
+      'petra-camel-figurine',
+      'petra-roman-glass-perfume-bottle',
+    ],
+    localImagePaths: const [
+      'assets/images/wonder_galleries/petra/1.jpg',
+      'assets/images/wonder_galleries/petra/2.jpg',
+      'assets/images/wonder_galleries/petra/3.jpg',
+      'assets/images/wonder_galleries/petra/4.jpg',
+      'assets/images/wonder_galleries/petra/5.jpg',
+    ],
+    events: const {},
+  );
 }

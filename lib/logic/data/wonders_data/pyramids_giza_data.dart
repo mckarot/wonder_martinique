@@ -38,26 +38,19 @@ class PyramidsGizaData extends WonderData {
           constructionInfo2: $strings.pyramidsGizaConstructionInfo2,
           locationInfo1: $strings.pyramidsGizaLocationInfo1,
           locationInfo2: $strings.pyramidsGizaLocationInfo2,
-          highlightArtifacts: const [
-            '543864',
-            '546488',
-            '557137',
-            '543900',
-            '543935',
-            '544782',
-          ],
-          hiddenArtifacts: const [
-            '546510',
-            '543896',
-            '545728',
-          ],
-          events: {
-            -2575: $strings.pyramidsGiza2575bce,
-            -2465: $strings.pyramidsGiza2465bce,
-            -443: $strings.pyramidsGiza443bce,
-            1925: $strings.pyramidsGiza1925ce,
-            1979: $strings.pyramidsGiza1979ce,
-            1990: $strings.pyramidsGiza1990ce,
-          },
-        );
+    highlightArtifacts: const [
+      'pyramids-giza-khufu-ship',
+      'pyramids-giza-mummy-mask',
+      'pyramids-giza-canopic-jars',
+      'pyramids-giza-hieroglyphic-tablet',
+    ],
+    localImagePaths: const [
+      'assets/images/wonder_galleries/pyramids/1.jpg',
+      'assets/images/wonder_galleries/pyramids/2.jpg',
+      'assets/images/wonder_galleries/pyramids/3.jpg',
+      'assets/images/wonder_galleries/pyramids/4.jpg',
+      'assets/images/wonder_galleries/pyramids/5.jpg',
+    ],
+    events: const {},
+  );
 }

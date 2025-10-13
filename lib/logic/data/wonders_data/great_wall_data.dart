@@ -38,26 +38,25 @@ class GreatWallData extends WonderData {
           constructionInfo2: $strings.greatWallConstructionInfo2,
           locationInfo1: $strings.greatWallLocationInfo1,
           locationInfo2: $strings.greatWallLocationInfo2,
-          highlightArtifacts: const [
-            '79091',
-            '781812',
-            '40213',
-            '40765',
-            '57612',
-            '666573',
-          ],
-          hiddenArtifacts: const [
-            '39918',
-            '39666',
-            '39735',
-          ],
-          events: {
-            -700: $strings.greatWall700bce,
-            -214: $strings.greatWall214bce,
-            -121: $strings.greatWall121bce,
-            556: $strings.greatWall556ce,
-            618: $strings.greatWall618ce,
-            1487: $strings.greatWall1487ce,
-          },
-        );
+    highlightArtifacts: const [
+      'great-wall-ming-vase',
+      'great-wall-sancai-horse',
+      'great-wall-jade-pendant',
+      'great-wall-stone-soldier',
+    ],
+    localImagePaths: const [
+      'assets/images/wonder_galleries/great_wall_of_china/1.jpg',
+      'assets/images/wonder_galleries/great_wall_of_china/2.jpg',
+      'assets/images/wonder_galleries/great_wall_of_china/3.jpg',
+      'assets/images/wonder_galleries/great_wall_of_china/4.jpg',
+      'assets/images/wonder_galleries/great_wall_of_china/5.jpg',
+    ],
+    events: const {
+      -221: 'Qin Shi Huang unifies China and begins construction of the Great Wall.',
+      -206: 'The Han Dynasty expands and fortifies the wall.',
+      1368: 'The Ming Dynasty rebuilds and strengthens the wall to its most famous state.',
+      1644: 'The fall of the Ming Dynasty marks the end of the wall as a major military defense.',
+      1987: 'The Great Wall is declared a UNESCO World Heritage site.',
+    },
+  );
 }

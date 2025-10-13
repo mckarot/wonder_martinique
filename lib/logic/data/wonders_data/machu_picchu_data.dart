@@ -46,6 +46,13 @@ class MachuPicchuData extends WonderData {
             '309960',
             '316873',
           ],
+          localImagePaths: const [
+            'assets/images/wonder_galleries/machu_picchu/1.jpg',
+            'assets/images/wonder_galleries/machu_picchu/2.jpg',
+            'assets/images/wonder_galleries/machu_picchu/3.jpg',
+            'assets/images/wonder_galleries/machu_picchu/4.jpg',
+            'assets/images/wonder_galleries/machu_picchu/5.jpg',
+          ],
           hiddenArtifacts: const [
             '308120',
             '309960',
