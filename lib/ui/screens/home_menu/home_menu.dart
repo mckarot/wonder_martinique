@@ -41,8 +41,6 @@ class _HomeMenuState extends State<HomeMenu> {
     );
   }
 
-  void _handleCollectionPressed(BuildContext context) => context.go(ScreenPaths.collection(''));
-
   void _handleTimelinePressed(BuildContext context) => context.go(ScreenPaths.timeline(widget.data.type));
 
   void _handleWonderPressed(BuildContext context, WonderData data) => Navigator.pop(context, data.type);
@@ -140,10 +138,6 @@ class _HomeMenuState extends State<HomeMenu> {
                   label: $strings.homeMenuButtonExplore,
                   icon: AppIcons.timeline,
                   onPressed: () => _handleTimelinePressed(context)),
-              _MenuTextBtn(
-                  label: $strings.homeMenuButtonView,
-                  icon: AppIcons.collection,
-                  onPressed: () => _handleCollectionPressed(context)),
               _MenuTextBtn(
                 label: $strings.homeMenuButtonAbout,
                 icon: AppIcons.info,

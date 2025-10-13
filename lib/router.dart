@@ -5,7 +5,6 @@ import 'package:wonders/ui/common/modals//fullscreen_video_viewer.dart';
 import 'package:wonders/ui/common/modals/fullscreen_maps_viewer.dart';
 import 'package:wonders/ui/screens/artifact/artifact_details_page.dart';
 import 'package:wonders/ui/screens/artifact/artifact_search/artifact_search_screen.dart';
-import 'package:wonders/ui/screens/collection/collection_screen.dart';
 import 'package:wonders/ui/screens/home/wonders_home_screen.dart';
 import 'package:wonders/ui/screens/intro/intro_screen.dart';
 import 'package:wonders/ui/screens/page_not_found/page_not_found.dart';
@@ -28,7 +27,7 @@ class ScreenPaths {
   static String timeline(WonderType? type) => _appendToCurrentPath('/timeline?type=${type?.name ?? ''}');
   static String artifact(String id, {bool append = true}) =>
       append ? _appendToCurrentPath('/artifact/$id/details') : '/artifact/$id/details';
-  static String collection(String id) => _appendToCurrentPath('/collection${id.isEmpty ? '' : '?id=$id'}');
+  
 
   static String _appendToCurrentPath(String newPath) {
     final newPathUri = Uri.parse(newPath);
@@ -51,11 +50,7 @@ AppRoute get _timelineRoute => AppRoute(
   (s) => TimelineScreen(type: _tryParseWonderType(s.uri.queryParameters['type']!)),
 );
 
-AppRoute get _collectionRoute => AppRoute(
-  'collection',
-  (s) => CollectionScreen(fromId: s.uri.queryParameters['id'] ?? ''),
-  routes: [_artifactRoute],
-);
+
 
 /// Routing table, matches string paths to UI Screens, optionally parses params from the paths
 final appRouter = GoRouter(
@@ -71,7 +66,7 @@ final appRouter = GoRouter(
           AppRoute(ScreenPaths.intro, (_) => IntroScreen()),
           AppRoute(ScreenPaths.home, (_) => HomeScreen(), routes: [
             _timelineRoute,
-            _collectionRoute,
+            
             AppRoute(
               'wonder/:detailsType',
               (s) {
@@ -85,7 +80,7 @@ final appRouter = GoRouter(
               // Wonder sub-routes
               routes: [
                 _timelineRoute,
-                _collectionRoute,
+                
                 _artifactRoute,
                 // Youtube Video
                 AppRoute('video/:videoId', (s) {
