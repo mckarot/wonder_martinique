@@ -38,26 +38,19 @@ class ChichenItzaData extends WonderData {
           constructionInfo2: $strings.chichenItzaConstructionInfo2,
           locationInfo1: $strings.chichenItzaLocationInfo1,
           locationInfo2: $strings.chichenItzaLocationInfo2,
-          highlightArtifacts: const [
-            '503940',
-            '312595',
-            '310551',
-            '316304',
-            '313151',
-            '313256',
-          ],
-          hiddenArtifacts: const [
-            '701645',
-            '310555',
-            '286467',
-          ],
-          events: {
-            600: $strings.chichenItza600ce,
-            832: $strings.chichenItza832ce,
-            998: $strings.chichenItza998ce,
-            1100: $strings.chichenItza1100ce,
-            1527: $strings.chichenItza1527ce,
-            1535: $strings.chichenItza1535ce,
-          },
-        );
+    highlightArtifacts: const [
+      'chichen-itza-chac-mool',
+      'chichen-itza-obsidian-blade',
+      'chichen-itza-quetzalcoatl',
+      'chichen-itza-limestone-carving',
+    ],
+    localImagePaths: const [
+      'assets/images/wonder_galleries/chichen_itza/1.jpg',
+      'assets/images/wonder_galleries/chichen_itza/2.jpg',
+      'assets/images/wonder_galleries/chichen_itza/3.jpg',
+      'assets/images/wonder_galleries/chichen_itza/4.jpg',
+      'assets/images/wonder_galleries/chichen_itza/5.jpg',
+    ],
+    events: const {},
+  );
 }

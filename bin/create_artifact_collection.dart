@@ -91,31 +91,31 @@ Future<void> addMoreArtifacts(FirebaseFirestore firestore) async {
     
     print('Titre de l\'artefact :');
     String? title = stdin.readLineSync();
-    if (title == null) title = 'Titre inconnu';
+    title ??= 'Titre inconnu';
     
     print('Culture de l\'artefact :');
     String? culture = stdin.readLineSync();
-    if (culture == null) culture = 'Culture inconnue';
+    culture ??= 'Culture inconnue';
     
     print('Date de l\'artefact :');
     String? date = stdin.readLineSync();
-    if (date == null) date = 'Date inconnue';
+    date ??= 'Date inconnue';
     
     print('Type de merveille (wonderType) :');
     String? wonderType = stdin.readLineSync();
-    if (wonderType == null) wonderType = 'Type inconnu';
+    wonderType ??= 'Type inconnu';
     
     print('URL de l\'image principale :');
     String? imageUrl = stdin.readLineSync();
-    if (imageUrl == null) imageUrl = 'https://via.placeholder.com/400x600.png';
+    imageUrl ??= 'https://via.placeholder.com/400x600.png';
     
     print('URL de l\'image petite :');
     String? imageUrlSmall = stdin.readLineSync();
-    if (imageUrlSmall == null) imageUrlSmall = 'https://via.placeholder.com/200x300.png';
+    imageUrlSmall ??= 'https://via.placeholder.com/200x300.png';
     
     print('Description de l\'artefact :');
     String? description = stdin.readLineSync();
-    if (description == null) description = 'Description non fournie';
+    description ??= 'Description non fournie';
     
     print('Année de début de création (ex: 1500) :');
     String? beginYearInput = stdin.readLineSync();
@@ -127,27 +127,27 @@ Future<void> addMoreArtifacts(FirebaseFirestore firestore) async {
     
     print('Type d\'objet (objectType) :');
     String? objectType = stdin.readLineSync();
-    if (objectType == null) objectType = 'Objet inconnu';
+    objectType ??= 'Objet inconnu';
     
     print('Période :');
     String? period = stdin.readLineSync();
-    if (period == null) period = 'Période inconnue';
+    period ??= 'Période inconnue';
     
     print('Pays :');
     String? country = stdin.readLineSync();
-    if (country == null) country = 'Pays inconnu';
+    country ??= 'Pays inconnu';
     
     print('Médium :');
     String? medium = stdin.readLineSync();
-    if (medium == null) medium = 'Médium inconnu';
+    medium ??= 'Médium inconnu';
     
     print('Dimensions :');
     String? dimension = stdin.readLineSync();
-    if (dimension == null) dimension = 'Dimensions inconnues';
+    dimension ??= 'Dimensions inconnues';
     
     print('Classification :');
     String? classification = stdin.readLineSync();
-    if (classification == null) classification = 'Classification générique';
+    classification ??= 'Classification générique';
 
     // ID de l'artefact
     String artifactId = 'artifact_${DateTime.now().millisecondsSinceEpoch}';

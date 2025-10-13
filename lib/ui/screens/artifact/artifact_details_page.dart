@@ -9,7 +9,7 @@ import 'package:wonders/ui/common/gradient_container.dart';
 class ArtifactDetailsPage extends StatefulWidget {
   final String artifactId;
 
-  const ArtifactDetailsPage({Key? key, required this.artifactId}) : super(key: key);
+  const ArtifactDetailsPage({super.key, required this.artifactId});
 
   @override
   _ArtifactDetailsPageState createState() => _ArtifactDetailsPageState();

@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:wonders/common_libs.dart';
 import 'package:wonders/models/firestore_artifact.dart';
 import 'package:wonders/services/firebase_service.dart';
 

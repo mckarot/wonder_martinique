@@ -55,9 +55,12 @@ dependencies:
   url_launcher: ^6.1.14
   webview_flutter: ^4.0.2
   youtube_player_iframe: ^5.1.2
-  firebase_core: ^3.1.0
-  cloud_firestore: ^5.0.3
-  firebase_storage: ^12.1.1
+  # Firebase
+  firebase_core: ^3.15.2
+  cloud_firestore: ^5.6.12
+  firebase_storage: ^12.4.10
+  # Images
+  cached_network_image: ^3.3.1
 
 dev_dependencies:
   icons_launcher: ^3.0.0
@@ -103,6 +106,7 @@ flutter:
     - assets/images/taj_mahal/
     - assets/images/collectibles/
     - assets/images/widget/
+    - assets/images/wonder_galleries/chichen_itza/
 
   fonts:
     - family: Cinzel

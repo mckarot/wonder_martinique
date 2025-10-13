@@ -9,8 +9,8 @@ import 'package:wonders/logic/collectibles_logic.dart';
 import 'package:wonders/logic/locale_logic.dart';
 import 'package:wonders/logic/native_widget_service.dart';
 import 'package:wonders/logic/timeline_logic.dart';
-import 'package:wonders/logic/unsplash_logic.dart';
 import 'package:wonders/logic/wonders_logic.dart';
+import 'package:wonders/services/firebase_image_service.dart';
 import 'package:wonders/ui/common/app_shortcuts.dart';
 import 'package:wonders/services/firebase_service.dart';
 
@@ -88,14 +88,14 @@ void registerSingletons() {
   GetIt.I.registerLazySingleton<ArtifactAPIService>(() => ArtifactAPIService());
   // Settings
   GetIt.I.registerLazySingleton<SettingsLogic>(() => SettingsLogic());
-  // Unsplash
-  GetIt.I.registerLazySingleton<UnsplashLogic>(() => UnsplashLogic());
   // Collectibles
   GetIt.I.registerLazySingleton<CollectiblesLogic>(() => CollectiblesLogic());
   // Localizations
   GetIt.I.registerLazySingleton<LocaleLogic>(() => LocaleLogic());
   // Home Widget Service
   GetIt.I.registerLazySingleton<NativeWidgetService>(() => NativeWidgetService());
+  // Firebase Image Service
+  GetIt.I.registerLazySingleton<FirebaseImageService>(() => FirebaseImageService());
 }
 
 /// Add syntax sugar for quickly accessing the main "logic" controllers in the app
@@ -104,10 +104,10 @@ AppLogic get appLogic => GetIt.I.get<AppLogic>();
 WondersLogic get wondersLogic => GetIt.I.get<WondersLogic>();
 TimelineLogic get timelineLogic => GetIt.I.get<TimelineLogic>();
 SettingsLogic get settingsLogic => GetIt.I.get<SettingsLogic>();
-UnsplashLogic get unsplashLogic => GetIt.I.get<UnsplashLogic>();
 ArtifactAPILogic get artifactLogic => GetIt.I.get<ArtifactAPILogic>();
 CollectiblesLogic get collectiblesLogic => GetIt.I.get<CollectiblesLogic>();
 LocaleLogic get localeLogic => GetIt.I.get<LocaleLogic>();
+FirebaseImageService get firebaseImageService => GetIt.I.get<FirebaseImageService>();
 
 /// Global helpers for readability
 AppLocalizations get $strings => localeLogic.strings;

@@ -38,6 +38,7 @@ class WonderData extends Equatable {
     required this.events,
     this.highlightArtifacts = const [],
     this.hiddenArtifacts = const [],
+    this.localImagePaths = const [],
     this.searchData = const [],
     this.searchSuggestions = const [],
   });
@@ -75,6 +76,7 @@ class WonderData extends Equatable {
   final double lng;
   final List<String> highlightArtifacts; // IDs used to assemble HighlightsData, should not be used directly
   final List<String> hiddenArtifacts; // IDs used to assemble CollectibleData, should not be used directly
+  final List<String> localImagePaths;
   final Map<int, String> events;
   final List<SearchData> searchData;
   final List<String> searchSuggestions;
@@ -82,5 +84,5 @@ class WonderData extends Equatable {
   String get titleWithBreaks => title.replaceFirst(' ', '\n');
 
   @override
-  List<Object?> get props => [type, title, historyInfo1, imageIds, facts];
+  List<Object?> get props => [type, title, historyInfo1, imageIds, facts, localImagePaths];
 }

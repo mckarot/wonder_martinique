@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:wonders/logic/data/artifact_data.dart';
 
 class FirestoreArtifact {
   final String id;

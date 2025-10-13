@@ -1,62 +1,95 @@
-import 'dart:async';
-
 import 'package:flutter/foundation.dart';
+import 'package:provider/provider.dart';
 import 'package:wonders/common_libs.dart';
 import 'package:wonders/logic/common/animate_utils.dart';
-import 'package:wonders/logic/data/unsplash_photo_data.dart';
+import 'package:wonders/logic/photo_gallery_logic.dart';
+import 'package:wonders/ui/common/controls/app_image.dart';
 import 'package:wonders/ui/common/controls/app_loading_indicator.dart';
 import 'package:wonders/ui/common/controls/eight_way_swipe_detector.dart';
 import 'package:wonders/ui/common/fullscreen_keyboard_listener.dart';
-
-import 'package:wonders/ui/common/modals/fullscreen_url_img_viewer.dart';
-import 'package:wonders/ui/common/unsplash_photo.dart';
+import 'package:wonders/ui/common/modals/fullscreen_asset_img_viewer.dart';
 import 'package:wonders/ui/common/utils/app_haptics.dart';
 
 part 'widgets/_animated_cutout_overlay.dart';
 
-class PhotoGallery extends StatefulWidget {
-  const PhotoGallery({super.key, this.imageSize, required this.collectionId, required this.wonderType});
+class PhotoGallery extends StatelessWidget {
+  const PhotoGallery({super.key, this.imageSize, required this.wonderType});
   final Size? imageSize;
-  final String collectionId;
   final WonderType wonderType;
 
   @override
-  State<PhotoGallery> createState() => _PhotoGalleryState();
+  Widget build(BuildContext context) {
+    // Utilise un ChangeNotifierProvider pour créer et fournir une instance de PhotoGalleryLogic
+    // à ce widget et à ses enfants.
+    return ChangeNotifierProvider<PhotoGalleryLogic>(
+      create: (_) => PhotoGalleryLogic(wonderType: wonderType),
+      // Le Consumer écoute les changements dans PhotoGalleryLogic et reconstruit l'UI en conséquence.
+      child: Consumer<PhotoGalleryLogic>(
+        builder: (context, logic, child) {
+          // DEBUG: Affiche les chemins d'images reçus par l'UI.
+          print('[DEBUG UI] PhotoGallery rebuild. Nombre d\'images: ${logic.state.urls.length}');
+          print('[DEBUG UI] Chemins: ${logic.state.urls}');
+
+          final state = logic.state;
+          // Affiche un indicateur de chargement si les données ne sont pas encore prêtes.
+          if (state.isLoading) {
+            return Center(child: AppLoadingIndicator());
+          }
+          // Si la liste d'URLs est vide après le chargement, affiche un message.
+          if (state.urls.isEmpty) {
+            return Center(child: Text('Aucune image disponible.'));
+          }
+          // Une fois les données chargées, affiche la galerie.
+          return _PhotoGalleryContent(
+            imageSize: imageSize,
+            wonderType: wonderType,
+            urls: state.urls,
+          );
+        },
+      ),
+    );
+  }
 }
 
-class _PhotoGalleryState extends State<PhotoGallery> {
+// Le widget interne qui contient la logique d'affichage de la grille.
+// Il est maintenant un StatefulWidget pour gérer son propre état interne (index, swipe, etc.).
+class _PhotoGalleryContent extends StatefulWidget {
+  const _PhotoGalleryContent({
+    this.imageSize,
+    required this.wonderType,
+    required this.urls,
+  });
+  final Size? imageSize;
+  final WonderType wonderType;
+  final List<String> urls;
+
+  @override
+  State<_PhotoGalleryContent> createState() => _PhotoGalleryContentState();
+}
+
+class _PhotoGalleryContentState extends State<_PhotoGalleryContent> {
   static const int _gridSize = 5;
-  // Index starts in the middle of the grid (eg, 25 items, index will start at 13)
   int _index = ((_gridSize * _gridSize) / 2).round();
   Offset _lastSwipeDir = Offset.zero;
   final double _scale = 1;
   bool _skipNextOffsetTween = false;
   late Duration swipeDuration = $styles.times.med * .4;
-  final _photoIds = ValueNotifier<List<String>>([]);
-  int get _imgCount => pow(_gridSize, 2).round();
+  
+  // Le nombre total d'images est maintenant basé sur la longueur de la liste d'URLs.
+  int get _imgCount => widget.urls.length;
 
   late final List<FocusNode> _focusNodes = List.generate(_imgCount, (index) => FocusNode());
 
-  //TODO: Remove this field (and associated workarounds) once web properly supports ClipPath (https://github.com/flutter/flutter/issues/124675)
   final bool useClipPathWorkAroundForWeb = kIsWeb;
 
   @override
   void initState() {
     super.initState();
-    _initPhotoIds();
-    _focusNodes[_index].requestFocus();
-  }
-
-  Future<void> _initPhotoIds() async {
-    var ids = unsplashLogic.getCollectionPhotos(widget.collectionId);
-    if (ids != null && ids.isNotEmpty) {
-      // Ensure we have enough images to fill the grid, repeat if necessary
-      while (ids.length < _imgCount) {
-        ids.addAll(List.from(ids));
-        if (ids.length > _imgCount) ids.length = _imgCount;
-      }
+    // S'assure que l'index de départ est valide.
+    if (_index >= _imgCount) {
+      _index = 0;
     }
-    setState(() => _photoIds.value = ids ?? []);
+    _focusNodes[_index].requestFocus();
   }
 
   void _setIndex(int value, {bool skipAnimation = false}) {
@@ -66,21 +99,16 @@ class _PhotoGalleryState extends State<PhotoGallery> {
     _focusNodes[value].requestFocus();
   }
 
-  /// Determine the required offset to show the current selected index.
-  /// index=0 is top-left, and the index=max is bottom-right.
   Offset _calculateCurrentOffset(double padding, Size size) {
     double halfCount = (_gridSize / 2).floorToDouble();
     Size paddedImageSize = Size(size.width + padding, size.height + padding);
-    // Get the starting offset that would show the top-left image (index 0)
     final originOffset = Offset(halfCount * paddedImageSize.width, halfCount * paddedImageSize.height);
-    // Add the offset for the row/col
     int col = _index % _gridSize;
     int row = (_index / _gridSize).floor();
     final indexedOffset = Offset(-paddedImageSize.width * col, -paddedImageSize.height * row);
     return originOffset + indexedOffset;
   }
 
-  /// Used for hiding collectibles around the photo grid.
   int _getCollectibleIndex() {
     return switch (widget.wonderType) {
       WonderType.chichenItza || WonderType.petra => 0,
@@ -99,12 +127,10 @@ class _PhotoGalleryState extends State<PhotoGallery> {
       LogicalKeyboardKey.arrowLeft: -1,
     };
 
-    // Apply key action, exit early if no action is defined
     int? actionValue = keyActions[key];
     if (actionValue == null) return false;
     int newIndex = _index + actionValue;
 
-    // Block actions along edges of the grid
     bool isRightSide = _index % _gridSize == _gridSize - 1;
     bool isLeftSide = _index % _gridSize == 0;
     bool outOfBounds = newIndex < 0 || newIndex >= _imgCount;
@@ -117,22 +143,13 @@ class _PhotoGalleryState extends State<PhotoGallery> {
     return true;
   }
 
-  /// Converts a swipe direction into a new index
   void _handleSwipe(Offset dir) {
-    // Calculate new index, y swipes move by an entire row, x swipes move one index at a time
     int newIndex = _index;
     if (dir.dy != 0) newIndex += _gridSize * (dir.dy > 0 ? -1 : 1);
     if (dir.dx != 0) newIndex += (dir.dx > 0 ? -1 : 1);
-    // After calculating new index, exit early if we don't like it...
-    if (newIndex < 0 || newIndex > _imgCount - 1) {
-      return; // keep the index in range
-    }
-    if (dir.dx < 0 && newIndex % _gridSize == 0) {
-      return; // prevent right-swipe when at right side
-    }
-    if (dir.dx > 0 && newIndex % _gridSize == _gridSize - 1) {
-      return; // prevent left-swipe when at left side
-    }
+    if (newIndex < 0 || newIndex > _imgCount - 1) return;
+    if (dir.dx < 0 && newIndex % _gridSize == 0) return;
+    if (dir.dx > 0 && newIndex % _gridSize == _gridSize - 1) return;
     _lastSwipeDir = dir;
     AppHaptics.lightImpact();
     _setIndex(newIndex);
@@ -141,16 +158,12 @@ class _PhotoGalleryState extends State<PhotoGallery> {
   Future<void> _handleImageTapped(int index, bool isSelected) async {
     if (_checkCollectibleIndex(index) && isSelected) return;
     if (_index == index) {
-      final urls = _photoIds.value.map((e) {
-        return UnsplashPhotoData.getSelfHostedUrl(e, UnsplashPhotoSize.xl);
-      }).toList();
       int? newIndex = await appLogic.showFullscreenDialogRoute(
         context,
-        FullscreenUrlImgViewer(urls: urls, index: _index),
+        FullscreenAssetImgViewer(urls: widget.urls, index: _index),
       );
-
       if (newIndex != null) _setIndex(newIndex, skipAnimation: true);
-        } else {
+    } else {
       _setIndex(index);
     }
   }
@@ -169,17 +182,12 @@ class _PhotoGalleryState extends State<PhotoGallery> {
   Widget build(BuildContext context) {
     return FullscreenKeyboardListener(
       onKeyDown: _handleKeyDown,
-      child: ValueListenableBuilder<List<String>>(
-        valueListenable: _photoIds,
-        builder: (_, value, __) {
-          if (value.isEmpty) {
-            return Center(child: AppLoadingIndicator());
-          }
+      child: Builder(
+        builder: (context) {
           Size imgSize = context.isLandscape
               ? Size(context.widthPx * .5, context.heightPx * .66)
               : Size(context.widthPx * .66, context.heightPx * .5);
           imgSize = (widget.imageSize ?? imgSize) * _scale;
-          // Get transform offset for the current _index
           final padding = $styles.insets.md;
           var gridOffset = _calculateCurrentOffset(padding, imgSize);
           gridOffset += Offset(0, -context.mq.padding.top / 2);
@@ -194,23 +202,19 @@ class _PhotoGalleryState extends State<PhotoGallery> {
             enabled: useClipPathWorkAroundForWeb == false,
             child: SafeArea(
               bottom: false,
-              // Place content in overflow box, to allow it to flow outside the parent
               child: OverflowBox(
                 maxWidth: _gridSize * imgSize.width + padding * (_gridSize - 1),
                 maxHeight: _gridSize * imgSize.height + padding * (_gridSize - 1),
                 alignment: Alignment.center,
-                // Detect swipes in order to change index
                 child: EightWaySwipeDetector(
                   onSwipe: _handleSwipe,
                   threshold: 30,
-                  // A tween animation builder moves from image to image based on current offset
                   child: TweenAnimationBuilder<Offset>(
                     tween: Tween(begin: gridOffset, end: gridOffset),
                     duration: offsetTweenDuration,
                     curve: Curves.easeOut,
                     builder: (_, value, child) => Transform.translate(offset: value, child: child),
                     child: FocusTraversalGroup(
-                      //policy: OrderedTraversalPolicy(),
                       child: GridView.count(
                         physics: NeverScrollableScrollPhysics(),
                         crossAxisCount: _gridSize,
@@ -231,77 +235,19 @@ class _PhotoGalleryState extends State<PhotoGallery> {
   }
 
   Widget _buildImage(int index, Duration swipeDuration, Size imgSize) {
-    /// Bind to collectibles.statesById because we might need to rebuild if a collectible is found.
-    return FocusTraversalOrder(
-      order: NumericFocusOrder(index.toDouble()),
-      child: ValueListenableBuilder(
-          valueListenable: collectiblesLogic.statesById,
-          builder: (_, __, ___) {
-            bool isSelected = index == _index;
-            final imgUrl = _photoIds.value[index];
-            late String semanticLbl;
-            if (_checkCollectibleIndex(index)) {
-              semanticLbl = $strings.collectibleItemSemanticCollectible;
-            } else {
-              semanticLbl = !isSelected
-                  ? $strings.photoGallerySemanticFocus(index + 1, _imgCount)
-                  : $strings.photoGallerySemanticFullscreen(index + 1, _imgCount);
-            }
-
-            final photoWidget = TweenAnimationBuilder<double>(
-              duration: $styles.times.med,
-              curve: Curves.easeOut,
-              tween: Tween(begin: 1, end: isSelected ? 1.15 : 1),
-              builder: (_, value, child) => Transform.scale(scale: value, child: child),
-              child: UnsplashPhoto(
-                imgUrl,
-                fit: BoxFit.cover,
-                size: UnsplashPhotoSize.large,
-              ).maybeAnimate().fade(),
-            );
-
-            return MergeSemantics(
-              child: Semantics(
-                focused: isSelected,
-                image: !_checkCollectibleIndex(index),
-                liveRegion: isSelected,
-                onIncrease: () => _handleImageTapped(_index + 1, false),
-                onDecrease: () => _handleImageTapped(_index - 1, false),
-                child: _checkCollectibleIndex(index)
-                    ? Center(
-                        child: SizedBox.shrink(), // Widget vide - fonctionnalité de recherche d'artefacts désactivée
-                      )
-                    : AppBtn.basic(
-                        semanticLabel: semanticLbl,
-                        focusNode: _focusNodes[index],
-                        onFocusChanged: (isFocused) => _handleImageFocusChanged(index, isFocused),
-                        onPressed: () => _handleImageTapped(index, isSelected),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: SizedBox(
-                            width: imgSize.width,
-                            height: imgSize.height,
-                            child: (useClipPathWorkAroundForWeb == false)
-                                ? photoWidget
-                                : Stack(
-                                    children: [
-                                      photoWidget,
-                                      // Because the web platform doesn't support clipPath, we use a workaround to highlight the selected image
-                                      Positioned.fill(
-                                        child: AnimatedOpacity(
-                                          duration: $styles.times.med,
-                                          opacity: isSelected ? 0 : ($styles.highContrast ? 0.4 : 0.7),
-                                          child: ColoredBox(color: $styles.colors.black),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                          ),
-                        ),
-                      ),
-              ),
-            );
-          }),
+    final imgUrl = widget.urls[index];
+    // VERSION FONCTIONNELLE : Utilisation du widget Flutter le plus basique.
+    return Container(
+      color: Colors.red, // Ajout d'un fond rouge pour voir si le conteneur s'affiche
+      child: Image.asset(
+        imgUrl,
+        fit: BoxFit.cover,
+        // Ajout d'un errorBuilder pour forcer l'affichage des erreurs
+        errorBuilder: (context, error, stackTrace) {
+          print('ERREUR DE CHARGEMENT DE L\'ASSET: $error');
+          return Icon(Icons.error, color: Colors.yellow);
+        },
+      ),
     );
   }
 }
