@@ -14,12 +14,28 @@ class MerchantsListScreen extends StatefulWidget {
 }
 
 class _MerchantsListScreenState extends State<MerchantsListScreen> with TickerProviderStateMixin {
-  final List<Merchant> _merchants = MerchantsData.getAllMerchants();
+  late List<Merchant> _merchants;
   late AnimationController _animationController;
 
   @override
   void initState() {
     super.initState();
+    _merchants = MerchantsData.getAllMerchants();
+    _merchants.sort((a, b) {
+      if (widget.wonderType != null) {
+        if (a.wonderType == widget.wonderType && b.wonderType != widget.wonderType) {
+          return -1;
+        }
+        if (a.wonderType != widget.wonderType && b.wonderType == widget.wonderType) {
+          return 1;
+        }
+      }
+      int wonderCompare = a.wonderType.name.compareTo(b.wonderType.name);
+      if (wonderCompare != 0) {
+        return wonderCompare;
+      }
+      return a.name.compareTo(b.name);
+    });
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 500),
       vsync: this,
