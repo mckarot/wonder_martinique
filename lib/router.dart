@@ -7,6 +7,8 @@ import 'package:wonders/ui/screens/artifact/artifact_details_page.dart';
 import 'package:wonders/ui/screens/artifact/artifact_search/artifact_search_screen.dart';
 import 'package:wonders/ui/screens/home/wonders_home_screen.dart';
 import 'package:wonders/ui/screens/intro/intro_screen.dart';
+import 'package:wonders/ui/screens/merchants/merchant_details_screen.dart';
+import 'package:wonders/ui/screens/merchants/merchants_list_screen.dart';
 import 'package:wonders/ui/screens/page_not_found/page_not_found.dart';
 import 'package:wonders/ui/screens/timeline/timeline_screen.dart';
 import 'package:wonders/ui/screens/wonder_details/wonders_details_screen.dart';
@@ -17,6 +19,8 @@ class ScreenPaths {
   static String intro = '/welcome';
   static String home = '/home';
   static String settings = '/settings';
+  static String merchants = '/merchants';
+  static String merchantDetails(String id) => '$merchants/$id';
 
   static String wonderDetails(WonderType type, {required int tabIndex}) => '$home/wonder/${type.name}?t=$tabIndex';
 
@@ -64,51 +68,62 @@ final appRouter = GoRouter(
         routes: [
           AppRoute(ScreenPaths.splash, (_) => Container(color: $styles.colors.greyStrong)), // This will be hidden
           AppRoute(ScreenPaths.intro, (_) => IntroScreen()),
-          AppRoute(ScreenPaths.home, (_) => HomeScreen(), routes: [
-            _timelineRoute,
-            
-            AppRoute(
-              'wonder/:detailsType',
-              (s) {
-                int tab = int.tryParse(s.uri.queryParameters['t'] ?? '') ?? 0;
-                return WonderDetailsScreen(
-                  type: _parseWonderType(s.pathParameters['detailsType']),
-                  tabIndex: tab,
-                );
-              },
-              useFade: true,
-              // Wonder sub-routes
-              routes: [
-                _timelineRoute,
-                
-                _artifactRoute,
-                // Youtube Video
-                AppRoute('video/:videoId', (s) {
-                  return FullscreenVideoViewer(id: s.pathParameters['videoId']!);
-                }, useFade: true),
-
-                // Search
-                AppRoute(
-                  'search/:searchType',
-                  (s) {
-                    return ArtifactSearchScreen(type: _parseWonderType(s.pathParameters['searchType']));
-                  },
-                  routes: [
-                    _artifactRoute,
-                  ],
-                ),
-
-                // Maps
-                AppRoute(
-                    'maps/:mapsType',
-                    (s) => FullscreenMapsViewer(
-                          type: _parseWonderType(s.pathParameters['mapsType']),
-                        )),
-              ],
-            ),
-          ]),
-        ]),
-  ],
+                    AppRoute(ScreenPaths.home, (_) => HomeScreen(), routes: [
+                      _timelineRoute,
+                      
+                      AppRoute(
+                        'wonder/:detailsType',
+                        (s) {
+                          int tab = int.tryParse(s.uri.queryParameters['t'] ?? '') ?? 0;
+                          return WonderDetailsScreen(
+                            type: _parseWonderType(s.pathParameters['detailsType']),
+                            tabIndex: tab,
+                          );
+                        },
+                        useFade: true,
+                        // Wonder sub-routes
+                        routes: [
+                          _timelineRoute,
+                          
+                          _artifactRoute,
+                          // Youtube Video
+                          AppRoute('video/:videoId', (s) {
+                            return FullscreenVideoViewer(id: s.pathParameters['videoId']!);
+                          }, useFade: true),
+          
+                          // Search
+                          AppRoute(
+                            'search/:searchType',
+                            (s) {
+                              return ArtifactSearchScreen(type: _parseWonderType(s.pathParameters['searchType']));
+                            },
+                            routes: [
+                              _artifactRoute,
+                            ],
+                          ),
+          
+                          // Maps
+                          AppRoute(
+                              'maps/:mapsType',
+                              (s) => FullscreenMapsViewer(
+                                    type: _parseWonderType(s.pathParameters['mapsType']),
+                                  )),
+                        ],
+                      ),
+                    ]),
+                    AppRoute(
+                      ScreenPaths.merchants,
+                      (s) => MerchantsListScreen(wonderType: s.extra as WonderType?),
+                      routes: [
+                        AppRoute(
+                          ':id',
+                          (s) => MerchantDetailsScreen(
+                            merchantId: s.pathParameters['id']!,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),  ],
 );
 
 /// Custom GoRoute sub-class to make the router declaration easier to read

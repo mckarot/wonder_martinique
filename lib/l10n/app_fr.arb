@@ -74,6 +74,7 @@
     "homeMenuButtonExplore": "Explorer la chronologie",
     "homeMenuButtonView": "Voir votre collection",
     "homeMenuButtonAbout": "À propos de cette application",
+    "homeMenuButtonMerchants": "Commerçants",
     "homeMenuAboutWonderous": "Wonder Martinique est une vitrine visuelle des cinq merveilles de Martinique. ",
     "homeMenuAboutBuilt": "Construit avec {flutterUrl} par l'équipe de {gskinnerUrl}.",
     "@homeMenuAboutBuilt": {"placeholders": {"flutterUrl": {}, "gskinnerUrl": {}}},

@@ -226,6 +226,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homeMenuButtonAbout => 'About this app';
 
   @override
+  String get homeMenuButtonMerchants => 'Merchants';
+
+  @override
   String get homeMenuAboutWonderous =>
       'Wonderous is a visual showcase of eight wonders of the world. ';
 

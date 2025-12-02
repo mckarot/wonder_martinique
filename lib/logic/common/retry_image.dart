@@ -73,7 +73,7 @@ class RetryImage extends ImageProvider<Object> {
           return;
         }
         Future<void>.delayed(duration).then((void v) {
-          // Do not attempt to retry if the widget is no longer mounted.
+          // Do not attempt to retry if the completer has no listeners.
           if (!completer.hasListeners) {
             return;
           }
@@ -114,6 +114,23 @@ class RetryImage extends ImageProvider<Object> {
 }
 
 class _DelegatingImageStreamCompleter extends ImageStreamCompleter {
+  int _listenerCount = 0;
+
+  @override
+  void addListener(ImageStreamListener listener) {
+    _listenerCount++;
+    super.addListener(listener);
+  }
+
+  @override
+  void removeListener(ImageStreamListener listener) {
+    super.removeListener(listener);
+    _listenerCount--;
+  }
+
+  @override
+  bool get hasListeners => _listenerCount > 0;
+
   void addImage(ImageInfo info) {
     setImage(info);
   }

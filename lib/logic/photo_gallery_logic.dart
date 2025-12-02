@@ -1,6 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:wonders/common_libs.dart';
-import 'package:wonders/logic/data/wonder_data.dart';
 
 // Modèle pour représenter l'état de la galerie
 class PhotoGalleryState {

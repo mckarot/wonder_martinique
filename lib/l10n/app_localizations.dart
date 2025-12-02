@@ -478,6 +478,12 @@ abstract class AppLocalizations {
   /// **'About this app'**
   String get homeMenuButtonAbout;
 
+  /// No description provided for @homeMenuButtonMerchants.
+  ///
+  /// In en, this message translates to:
+  /// **'Merchants'**
+  String get homeMenuButtonMerchants;
+
   /// No description provided for @homeMenuAboutWonderous.
   ///
   /// In en, this message translates to:

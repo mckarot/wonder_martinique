@@ -67,11 +67,12 @@ class _AnimatedTranslate extends StatelessWidget {
   }
 }
 
-class _DoubleBorderImage extends StatelessWidget {
-  const _DoubleBorderImage(this.data);
-  final HighlightData data;
+class _MerchantImage extends StatelessWidget {
+  const _MerchantImage(this.merchant);
+  final Merchant merchant;
   @override
-  Widget build(BuildContext context) => Container(
+  Widget build(BuildContext context) {
+    return Container(
         // Add an outer border with the rounded ends.
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
@@ -85,9 +86,10 @@ class _DoubleBorderImage extends StatelessWidget {
             borderRadius: BorderRadius.circular(999),
             child: ColoredBox(
               color: $styles.colors.greyMedium,
-              child: AppImage(image: NetworkImage(data.imageUrlSmall), fit: BoxFit.cover, scale: 0.5),
+              child: Image.asset(merchant.imageUrl, fit: BoxFit.cover),
             ),
           ),
         ),
       );
+  }
 }

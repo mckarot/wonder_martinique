@@ -13,7 +13,7 @@ class PreviousNextNavigation extends StatefulWidget {
       this.maxWidth = 1000,
       this.nextBtnColor,
       this.previousBtnColor,
-      this.listenToMouseWheel = true});
+      this.listenToMouseWheel = true, required ScrollController controller});
   final VoidCallback? onPreviousPressed;
   final VoidCallback? onNextPressed;
   final Color? nextBtnColor;

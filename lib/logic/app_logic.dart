@@ -4,10 +4,13 @@ import 'dart:ui';
 import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
+import 'package:logging/logging.dart';
 import 'package:wonders/common_libs.dart';
 import 'package:wonders/logic/common/platform_info.dart';
 import 'package:wonders/ui/common/modals/fullscreen_video_viewer.dart';
 import 'package:wonders/ui/common/utils/page_routes.dart';
+
+final Logger _logger = Logger('AppLogic');
 
 class AppLogic {
   Size _appSize = Size.zero;
@@ -42,7 +45,7 @@ class AppLogic {
 
     if (kIsWeb) {
       // SB: This is intentionally not a debugPrint, as it's a message for users who open the console on web.
-      print(
+      _logger.info(
         '''Thanks for checking out Wonderous on the web!
         If you encounter any issues please report them at https://github.com/gskinnerTeam/flutter-wonderous-app/issues.''',
       );
@@ -164,7 +167,7 @@ class AppLogic {
 
     for (var url in urls) {
       precacheImage(AssetImage(url), context, onError: (error, stackTrace) {
-      print('Loading $url failed - ${error.toString()}');
+      _logger.warning('Loading $url failed - ${error.toString()}');
     });
     }
   }

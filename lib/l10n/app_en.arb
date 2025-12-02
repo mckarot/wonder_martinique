@@ -74,6 +74,7 @@
 	"homeMenuButtonExplore": "Explore the timeline",
 	"homeMenuButtonView": "View your collection",
 	"homeMenuButtonAbout": "About this app",
+    "homeMenuButtonMerchants": "Merchants",
 	"homeMenuAboutWonderous": "Wonderous is a visual showcase of eight wonders of the world. ",
 	"homeMenuAboutBuilt": "Built with {flutterUrl} by the team at {gskinnerUrl}.",
 	"@homeMenuAboutBuilt": {"placeholders": {"flutterUrl": {}, "gskinnerUrl": {}}},

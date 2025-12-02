@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wonders/common_libs.dart';
 import 'package:wonders/models/firestore_artifact.dart';
 import 'package:wonders/services/firestore_artifact_service.dart';
-import 'package:wonders/ui/common/controls/app_header.dart';
 import 'package:wonders/ui/common/controls/app_loading_indicator.dart';
-import 'package:wonders/ui/common/gradient_container.dart';
 
 class ArtifactDetailsPage extends StatefulWidget {
   final String artifactId;

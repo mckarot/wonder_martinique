@@ -89,6 +89,7 @@ class _IntroScreenState extends State<IntroScreen> {
             delay: 500.delayMs,
             effects: const [FadeEffect()],
             child: PreviousNextNavigation(
+              controller: ScrollController(),
               maxWidth: 600,
               nextBtnColor: _isOnLastPage ? $styles.colors.accent1 : null,
               onPreviousPressed: _isOnFirstPage ? null : () => _incrementPage(-1),

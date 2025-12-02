@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
+import 'package:logging/logging.dart';
 
 /// Un service dédié à la récupération des données d'images depuis Firestore.
 /// Centraliser cette logique ici permet de garder le reste de l'application propre
@@ -7,6 +8,8 @@ import 'package:flutter/foundation.dart';
 class FirebaseImageService {
   // Instance de Firestore, notre point d'accès à la base de données.
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+
+  static final Logger _logger = Logger('FirebaseImageService');
 
   /// Récupère une liste d'URLs pour la galerie d'une merveille spécifique.
   ///
@@ -19,8 +22,8 @@ class FirebaseImageService {
   /// dans la console de débogage.
   Future<List<String>> getImagesForWonder(String wonderId) async {
     // DEBUG: Affiche l'ID de la merveille demandée au début de la fonction.
-    print('[DEBUG] ---------------------------------------------------');
-    print('[DEBUG] Appel de getImagesForWonder pour wonderId: $wonderId');
+    _logger.fine('---------------------------------------------------');
+    _logger.fine('Appel de getImagesForWonder pour wonderId: $wonderId');
     try {
       // 1. Cible la sous-collection 'gallery_images' de la merveille demandée.
       final querySnapshot = await _firestore
@@ -31,12 +34,12 @@ class FirebaseImageService {
           .get();
 
       // DEBUG: Affiche le nombre de documents trouvés dans la sous-collection.
-      print('[DEBUG] Requête Firestore exécutée. Nombre de documents trouvés: ${querySnapshot.docs.length}');
+      _logger.fine('Requête Firestore exécutée. Nombre de documents trouvés: ${querySnapshot.docs.length}');
 
       // 3. Si aucun document n'est trouvé, retourne une liste vide.
       if (querySnapshot.docs.isEmpty) {
         debugPrint('Aucune image trouvée pour la merveille : $wonderId');
-        print('[DEBUG] ---------------------------------------------------');
+        _logger.fine('---------------------------------------------------');
         return [];
       }
 
@@ -44,21 +47,21 @@ class FirebaseImageService {
       final urls = querySnapshot.docs.map((doc) {
         final data = doc.data();
         // DEBUG: Affiche les données de chaque document trouvé.
-        print('[DEBUG] Traitement du document ${doc.id}: $data');
+        _logger.fine('Traitement du document ${doc.id}: $data');
         // Petite sécurité pour s'assurer que l'URL existe et est une chaîne.
         return (data.containsKey('url') && data['url'] is String) ? data['url'] as String : '';
       }).where((url) => url.isNotEmpty).toList(); // Filtre les URLs vides.
 
       // DEBUG: Affiche la liste finale d'URLs avant de la retourner.
-      print('[DEBUG] Liste d\'URLs extraite avec succès: $urls');
-      print('[DEBUG] ---------------------------------------------------');
+      _logger.fine('Liste d\'URLs extraite avec succès: $urls');
+      _logger.fine('---------------------------------------------------');
       return urls;
 
     } catch (e) {
       // 5. En cas d'erreur (problème de réseau, permissions, etc.),
       // on affiche l'erreur et on retourne une liste vide pour éviter que l'app ne crashe.
       debugPrint('❌ [ERREUR] Erreur lors de la récupération des images pour $wonderId: $e');
-      print('[DEBUG] ---------------------------------------------------');
+      _logger.fine('---------------------------------------------------');
       return [];
     }
   }

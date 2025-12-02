@@ -223,6 +223,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get homeMenuButtonAbout => '关于这个应用程序';
 
   @override
+  String get homeMenuButtonMerchants => 'Merchants';
+
+  @override
   String get homeMenuAboutWonderous => 'Wonderous是世界八大奇迹的视觉展示。';
 
   @override

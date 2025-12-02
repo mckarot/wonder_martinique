@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:logging/logging.dart';
 import 'package:wonders/services/firebase_service.dart';
 import 'package:wonders/models/firestore_artifact.dart';
+
+final Logger _logger = Logger('FirestoreSetupService');
 
 class FirestoreSetupService {
   static final FirestoreSetupService _instance = FirestoreSetupService._internal();
@@ -39,10 +42,10 @@ class FirestoreSetupService {
           .doc(sampleArtifact.id)
           .set(sampleArtifact.toFirestore());
 
-      print('Collection "artifacts" créée avec succès avec un artefact exemple');
-      print('Vous pouvez maintenant ajouter d\'autres artefacts à cette collection');
+      _logger.info('Collection "artifacts" créée avec succès avec un artefact exemple');
+      _logger.info('Vous pouvez maintenant ajouter d\'autres artefacts à cette collection');
     } catch (e) {
-      print('Erreur lors de la création de la collection "artifacts": $e');
+      _logger.severe('Erreur lors de la création de la collection "artifacts": $e');
     }
   }
 
@@ -57,9 +60,9 @@ class FirestoreSetupService {
       }
 
       await batch.commit();
-      print('Collection "artifacts" supprimée avec succès');
+      _logger.info('Collection "artifacts" supprimée avec succès');
     } catch (e) {
-      print('Erreur lors de la suppression de la collection "artifacts": $e');
+      _logger.severe('Erreur lors de la suppression de la collection "artifacts": $e');
     }
   }
 
@@ -67,16 +70,16 @@ class FirestoreSetupService {
   Future<void> checkCollectionStatus() async {
     try {
       QuerySnapshot snapshot = await _firestore.collection('artifacts').get();
-      print('La collection "artifacts" contient ${snapshot.docs.length} artefacts');
-      
+      _logger.info('La collection "artifacts" contient ${snapshot.docs.length} artefacts');
+
       if (snapshot.docs.isNotEmpty) {
-        print('Liste des IDs des artefacts:');
+        _logger.info('Liste des IDs des artefacts:');
         for (QueryDocumentSnapshot doc in snapshot.docs) {
-          print('- ${doc.id}');
+          _logger.info('- ${doc.id}');
         }
       }
     } catch (e) {
-      print('Erreur lors de la vérification de la collection "artifacts": $e');
+      _logger.severe('Erreur lors de la vérification de la collection "artifacts": $e');
     }
   }
 }

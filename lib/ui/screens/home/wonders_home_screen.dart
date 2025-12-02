@@ -156,6 +156,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           listenToMouseWheel: false,
           onPreviousPressed: () => _handlePrevNext(-1),
           onNextPressed: () => _handlePrevNext(1),
+          controller: ScrollController(),
           child: Stack(
             children: [
               /// Background

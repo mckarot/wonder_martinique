@@ -228,6 +228,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get homeMenuButtonAbout => 'À propos de cette application';
 
   @override
+  String get homeMenuButtonMerchants => 'Commerçants';
+
+  @override
   String get homeMenuAboutWonderous =>
       'Wonder Martinique est une vitrine visuelle des cinq merveilles de Martinique. ';
 

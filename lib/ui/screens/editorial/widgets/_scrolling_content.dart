@@ -120,6 +120,13 @@ class _ScrollingContent extends StatelessWidget {
                   _MapsThumbnail(data),
                   Gap($styles.insets.md),
                   ..._contentSection([Center(child: buildHiddenCollectible(slot: 3))]),
+                  Gap($styles.insets.lg),
+                  Center(
+                    child: FilledButton(
+                      onPressed: () => context.go(ScreenPaths.merchants, extra: data.type),
+                      child: const Text('VIEW MERCHANTS'),
+                    ),
+                  ),
                   Gap(150),
                 ]),
               ),

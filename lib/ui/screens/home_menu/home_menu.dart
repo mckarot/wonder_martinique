@@ -139,6 +139,11 @@ class _HomeMenuState extends State<HomeMenu> {
                   icon: AppIcons.timeline,
                   onPressed: () => _handleTimelinePressed(context)),
               _MenuTextBtn(
+                label: $strings.homeMenuButtonMerchants,
+                icon: AppIcons.collection,
+                onPressed: () => context.go(ScreenPaths.merchants),
+              ),
+              _MenuTextBtn(
                 label: $strings.homeMenuButtonAbout,
                 icon: AppIcons.info,
                 onPressed: () => _handleAboutPressed(context),

@@ -1,16 +1,11 @@
 import 'dart:ui';
-
 import 'package:wonders/common_libs.dart';
-import 'package:wonders/logic/common/animate_utils.dart';
-import 'package:wonders/logic/data/highlight_data.dart';
-import 'package:wonders/ui/common/app_icons.dart';
+import 'package:wonders/logic/data/merchants_data.dart';
+import 'package:wonders/models/merchant.dart';
 import 'package:wonders/ui/common/controls/app_header.dart';
-import 'package:wonders/ui/common/controls/app_page_indicator.dart';
-import 'package:wonders/ui/common/ignore_pointer.dart';
-import 'package:wonders/ui/common/static_text_scale.dart';
 
 part 'widgets/_blurred_image_bg.dart';
-part 'widgets/_bottom_text_content.dart';
+part 'widgets/_merchant_bottom_text_content.dart';
 part 'widgets/_collapsing_carousel_item.dart';
 
 class ArtifactCarouselScreen extends StatefulWidget {
@@ -24,153 +19,123 @@ class ArtifactCarouselScreen extends StatefulWidget {
 
 class _ArtifactScreenState extends State<ArtifactCarouselScreen> {
   PageController? _pageController;
-  final _currentPage = ValueNotifier<double>(9999);
-  late final Stream<List<HighlightData>> _artifactsStream = HighlightData.forWonderStream(widget.type);
-  late final _currentArtifactIndex = ValueNotifier<int>(_wrappedPageIndex);
-  List<HighlightData> _artifacts = [];
+  final _currentPage = ValueNotifier<double>(0);
+  late final _currentMerchantIndex = ValueNotifier<int>(0);
+  List<Merchant> _merchants = [];
 
   int get _wrappedPageIndex => _currentPage.value.round();
 
-  void _handlePageChanged() {
-    _currentPage.value = _pageController?.page ?? 0;
-    // Mise à jour de l'index en fonction de la page actuelle
-    _currentArtifactIndex.value = _wrappedPageIndex;
+  @override
+  void initState() {
+    super.initState();
+    _merchants = MerchantsData.getMerchantsForWonder(widget.type);
+    _currentPage.value = 0;
+    _currentMerchantIndex.value = 0;
   }
 
-  void _handleSearchTap() => context.go(ScreenPaths.search(widget.type));
+  void _handlePageChanged() {
+    _currentPage.value = _pageController?.page ?? 0;
+    _currentMerchantIndex.value = _wrappedPageIndex % _merchants.length;
+  }
 
-  void _handleArtifactTap(int index) {
-    if (_artifacts.isEmpty) return;
-    final int actualIndex = index % _artifacts.length;
-    if (actualIndex >= 0 && actualIndex < _artifacts.length) {
-      final HighlightData data = _artifacts[actualIndex];
-      context.go(ScreenPaths.artifact(data.artifactId));
+  void _handleMerchantTap(int index) {
+    if (_merchants.isEmpty) return;
+    final int actualIndex = index % _merchants.length;
+    if (actualIndex >= 0 && actualIndex < _merchants.length) {
+      final Merchant data = _merchants[actualIndex];
+      context.go(ScreenPaths.merchantDetails(data.id));
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    bool shortMode = context.heightPx <= 800;
-    final double bottomHeight = context.heightPx / 2.75; // Prev 340, dynamic seems to work better
-    // Allow objects to become wider as the screen becomes tall, this allows
-    // them to grow taller as well, filling the available space better.
+    final double bottomHeight = context.heightPx / 2.75;
     double itemHeight = (context.heightPx - 200 - bottomHeight).clamp(250, 400);
     double itemWidth = itemHeight * .666;
 
-    return StreamBuilder<List<HighlightData>>(
-      stream: _artifactsStream,
-      builder: (context, snapshot) {
-        if (snapshot.hasError) {
-          return Center(child: Text('Erreur de chargement: ${snapshot.error}'));
-        }
-        
-        if (!snapshot.hasData) {
-          return const Center(child: CircularProgressIndicator());
-        }
+    if (_merchants.isEmpty) {
+      return const Center(child: Text('No merchants found'));
+    }
 
-        _artifacts = snapshot.data!;
-        if (_artifacts.isEmpty) {
-          return const Center(child: Text('Aucun artefact trouvé'));
-        }
+    _pageController?.dispose();
+    _pageController = PageController(
+      viewportFraction: itemWidth / context.widthPx,
+      initialPage: _currentPage.value.round(),
+    );
+    _pageController?.addListener(_handlePageChanged);
 
-        // Mise à jour dynamique de l'index pour gérer le modulo
-        int wrappedPageIndex = _currentPage.value.round() % _artifacts.length;
-        _currentArtifactIndex.value = wrappedPageIndex;
+    final pages = _merchants.map((m) {
+      return Padding(
+        padding: const EdgeInsets.all(10),
+        child: _MerchantImage(m),
+      );
+    }).toList();
 
-        // Mise à jour du controller de page
-        _pageController?.dispose();
-        _pageController = PageController(
-          viewportFraction: itemWidth / context.widthPx,
-          initialPage: _currentPage.value.round(),
-        );
-        _pageController?.addListener(_handlePageChanged);
+    return Stack(
+      children: [
+        /// Blurred Bg
+        Positioned.fill(
+          child: ValueListenableBuilder<int>(
+              valueListenable: _currentMerchantIndex,
+              builder: (_, value, __) {
+                return _BlurredImageBg(assetPath: _merchants[value].imageUrl);
+              }),
+        ),
 
-        final pages = _artifacts.map((e) {
-          return Padding(
-            padding: EdgeInsets.all(10),
-            child: _DoubleBorderImage(e),
-          );
-        }).toList();
+        Padding(
+            padding: widget.contentPadding,
+            child: Stack(
+              children: [
+                /// BgCircle
+                _buildBgCircle(bottomHeight),
 
-        return Stack(
-          children: [
-            /// Blurred Bg
-            Positioned.fill(
-              child: ValueListenableBuilder<int>(
-                  valueListenable: _currentArtifactIndex,
-                  builder: (_, value, __) {
-                    int index = value % _artifacts.length;
-                    return _BlurredImageBg(url: _artifacts[index].imageUrl);
-                  }),
-            ),
-
-            Padding(
-                padding: widget.contentPadding,
-                child: Stack(
-                  children: [
-                    /// BgCircle
-                    _buildBgCircle(bottomHeight),
-
-                    /// Carousel Items
-                    PageView.builder(
-                      controller: _pageController,
-                      onPageChanged: (index) {
-                        _currentPage.value = index.toDouble();
-                      },
-                      itemBuilder: (_, index) {
-                        final wrappedIndex = index % pages.length;
-                        final child = pages[wrappedIndex];
-                        return ValueListenableBuilder<double>(
-                          valueListenable: _currentPage,
-                          builder: (_, value, __) {
-                            final int offset = (value.round() - index).abs();
-                            return _CollapsingCarouselItem(
-                              width: itemWidth,
-                              indexOffset: min(3, offset),
-                              onPressed: () => _handleArtifactTap(index),
-                              title: _artifacts[wrappedIndex].title,
-                              child: child,
-                            );
-                          },
+                /// Carousel Items
+                PageView.builder(
+                  controller: _pageController,
+                  itemCount: _merchants.length,
+                  onPageChanged: (index) {
+                    _currentPage.value = index.toDouble();
+                  },
+                  itemBuilder: (_, index) {
+                    final child = pages[index];
+                    return ValueListenableBuilder<double>(
+                      valueListenable: _currentPage,
+                      builder: (_, value, __) {
+                        final int offset = (value.round() - index).abs();
+                        return _CollapsingCarouselItem(
+                          width: itemWidth,
+                          indexOffset: min(3, offset),
+                          onPressed: () => _handleMerchantTap(index),
+                          title: _merchants[index].name,
+                          child: child,
                         );
                       },
-                    ),
+                    );
+                  },
+                ),
 
-                    /// Bottom Text
-                    BottomCenter(
-                      child: ValueListenableBuilder<int>(
-                        valueListenable: _currentArtifactIndex,
-                        builder: (_, value, __) {
-                          int index = value % _artifacts.length;
-                          return _BottomTextContent(
-                            artifact: _artifacts[index],
-                            height: bottomHeight,
-                            shortMode: shortMode,
-                            count: _artifacts.length,
-                            pageController: _pageController!,
-                            onSearchTap: _handleSearchTap,
-                            onArtifactTap: _handleArtifactTap,
-                          );
-                        },
-                      ),
-                    ),
+                /// Bottom Text
+                BottomCenter(
+                  child: ValueListenableBuilder<int>(
+                    valueListenable: _currentMerchantIndex,
+                    builder: (_, value, __) {
+                      return _MerchantBottomTextContent(
+                        merchant: _merchants[value],
+                        height: bottomHeight,
+                      );
+                    },
+                  ),
+                ),
 
-                    /// Header
-                    AppHeader(
-                      title: $strings.artifactsTitleArtifacts,
-                      showBackBtn: false,
-                      isTransparent: true,
-                      trailing: (context) => CircleBtn(
-                        semanticLabel: $strings.artifactsButtonBrowse,
-                        onPressed: _handleSearchTap,
-                        child: AppIcon(AppIcons.search),
-                      ),
-                    ),
-                  ],
-                ))
-          ],
-        );
-      },
+                /// Header
+                AppHeader(
+                  title: "Merchants",
+                  showBackBtn: false,
+                  isTransparent: true,
+                ),
+              ],
+            ))
+      ],
     );
   }
 
