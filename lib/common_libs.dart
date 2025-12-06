@@ -28,3 +28,4 @@ export 'package:wonders/ui/common/controls/app_image.dart';
 export 'package:wonders/ui/common/controls/buttons.dart';
 export 'package:wonders/ui/common/controls/circle_buttons.dart';
 export 'package:wonders/ui/common/controls/scroll_decorator.dart';
+export 'package:wonders/ui/common/hidden_collectible.dart';

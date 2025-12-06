@@ -129,7 +129,7 @@ class _ArtifactScreenState extends State<ArtifactCarouselScreen> {
 
                 /// Header
                 AppHeader(
-                  title: "Merchants",
+                  title: 'Merchants',
                   showBackBtn: false,
                   isTransparent: true,
                 ),

@@ -158,6 +158,7 @@ class AppBtn extends StatelessWidget {
               child: IgnorePointerAndSemantics(
                 child: Container(
                     decoration: BoxDecoration(
+                        color: Colors.transparent, // Explicitly set background color to transparent
                         borderRadius: BorderRadius.circular($styles.corners.md),
                         border: Border.all(color: $styles.colors.accent1, width: 3))),
               ),

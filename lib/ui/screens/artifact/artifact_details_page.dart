@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:wonders/common_libs.dart';
 import 'package:wonders/models/firestore_artifact.dart';
 import 'package:wonders/services/firestore_artifact_service.dart';

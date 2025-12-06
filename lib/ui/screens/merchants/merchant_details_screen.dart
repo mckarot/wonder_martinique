@@ -83,11 +83,11 @@ class MerchantDetailsScreen extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () => _launchUrl(merchant.website!),
-                child: const Text('Visit Website'),
                 style: ElevatedButton.styleFrom(
                   foregroundColor: $styles.colors.black,
                   backgroundColor: $styles.colors.white,
                 ),
+                child: const Text('Visit Website'),
               ),
             ),
           ],
