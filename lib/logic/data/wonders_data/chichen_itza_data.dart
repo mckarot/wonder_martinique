@@ -45,11 +45,11 @@ class ChichenItzaData extends WonderData {
       'chichen-itza-limestone-carving',
     ],
     localImagePaths: const [
-      'assets/images/wonder_galleries/chichen_itza/1.jpg',
-      'assets/images/wonder_galleries/chichen_itza/2.jpg',
-      'assets/images/wonder_galleries/chichen_itza/3.jpg',
       'assets/images/wonder_galleries/chichen_itza/4.jpg',
       'assets/images/wonder_galleries/chichen_itza/5.jpg',
+      'assets/images/wonder_galleries/chichen_itza/2.jpg',
+      'assets/images/wonder_galleries/chichen_itza/3.jpg',
+      'assets/images/wonder_galleries/chichen_itza/1.jpg',
     ],
     events: const {},
   );

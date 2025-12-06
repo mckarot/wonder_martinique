@@ -45,11 +45,11 @@ class PetraData extends WonderData {
       'petra-roman-glass-perfume-bottle',
     ],
     localImagePaths: const [
-      'assets/images/wonder_galleries/petra/1.jpg',
-      'assets/images/wonder_galleries/petra/2.jpg',
-      'assets/images/wonder_galleries/petra/3.jpg',
       'assets/images/wonder_galleries/petra/4.jpg',
       'assets/images/wonder_galleries/petra/5.jpg',
+      'assets/images/wonder_galleries/petra/2.jpg',
+      'assets/images/wonder_galleries/petra/3.jpg',
+      'assets/images/wonder_galleries/petra/1.jpg',
     ],
     events: const {},
   );

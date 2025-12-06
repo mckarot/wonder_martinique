@@ -45,11 +45,11 @@ class TajMahalData extends WonderData {
       'taj-mahal-shah-jahan-dagger',
     ],
     localImagePaths: const [
-      'assets/images/wonder_galleries/taj_mahal/1.jpg',
-      'assets/images/wonder_galleries/taj_mahal/2.jpg',
-      'assets/images/wonder_galleries/taj_mahal/3.jpg',
       'assets/images/wonder_galleries/taj_mahal/4.jpg',
       'assets/images/wonder_galleries/taj_mahal/5.jpg',
+      'assets/images/wonder_galleries/taj_mahal/2.jpg',
+      'assets/images/wonder_galleries/taj_mahal/3.jpg',
+      'assets/images/wonder_galleries/taj_mahal/1.jpg',
     ],
     events: const {},
   );

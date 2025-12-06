@@ -45,11 +45,15 @@ class ColosseumData extends WonderData {
       'colosseum-travertine-block',
     ],
     localImagePaths: const [
-      'assets/images/wonder_galleries/colosseum/1.jpg',
-      'assets/images/wonder_galleries/colosseum/2.jpg',
-      'assets/images/wonder_galleries/colosseum/3.jpg',
+      'assets/images/wonder_galleries/colosseum/334a26ffcc8.jpg',
+      'assets/images/wonder_galleries/colosseum/egrhst.jpg',
+      'assets/images/wonder_galleries/colosseum/6a65aef.jpg',
       'assets/images/wonder_galleries/colosseum/4.jpg',
       'assets/images/wonder_galleries/colosseum/5.jpg',
+      'assets/images/wonder_galleries/colosseum/65aef.jpg',
+      'assets/images/wonder_galleries/colosseum/2.jpg',
+      'assets/images/wonder_galleries/colosseum/3.jpg',
+      'assets/images/wonder_galleries/colosseum/1.jpg',
     ],
     events: const {},
   );

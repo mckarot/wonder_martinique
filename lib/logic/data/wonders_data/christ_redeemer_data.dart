@@ -45,11 +45,11 @@ class ChristRedeemerData extends WonderData {
       'christ-the-redeemer-soapstone',
     ],
     localImagePaths: const [
-      'assets/images/wonder_galleries/christ_the_redeemer/1.jpg',
-      'assets/images/wonder_galleries/christ_the_redeemer/2.jpg',
-      'assets/images/wonder_galleries/christ_the_redeemer/3.jpg',
       'assets/images/wonder_galleries/christ_the_redeemer/4.jpg',
       'assets/images/wonder_galleries/christ_the_redeemer/5.jpg',
+      'assets/images/wonder_galleries/christ_the_redeemer/2.jpg',
+      'assets/images/wonder_galleries/christ_the_redeemer/3.jpg',
+      'assets/images/wonder_galleries/christ_the_redeemer/1.jpg',
     ],
     events: const {},
   );

@@ -45,11 +45,11 @@ class GreatWallData extends WonderData {
       'great-wall-stone-soldier',
     ],
     localImagePaths: const [
-      'assets/images/wonder_galleries/great_wall_of_china/1.jpg',
-      'assets/images/wonder_galleries/great_wall_of_china/2.jpg',
-      'assets/images/wonder_galleries/great_wall_of_china/3.jpg',
       'assets/images/wonder_galleries/great_wall_of_china/4.jpg',
       'assets/images/wonder_galleries/great_wall_of_china/5.jpg',
+      'assets/images/wonder_galleries/great_wall_of_china/2.jpg',
+      'assets/images/wonder_galleries/great_wall_of_china/3.jpg',
+      'assets/images/wonder_galleries/great_wall_of_china/1.jpg',
     ],
     events: const {
       -221: 'Qin Shi Huang unifies China and begins construction of the Great Wall.',

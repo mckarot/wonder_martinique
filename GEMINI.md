@@ -8,7 +8,7 @@ Style de design : Proposer un design moderne et professionnel avec des animation
 Contexte du projet : J'ai accès à l'ensemble des fichiers du projet. Mon périmètre d'intervention principal pour le code source est le dossier /lib.
 
 Bonnes pratiques
-Après chaque modification de fichier, effectuer une vérification avec l'analyseur Dart (dart analyze) pour s'assurer qu'il n'y a pas d'erreurs ou d'avertissements.
+
 
 Porter une attention particulière aux problèmes de débordement (overflow) dans les deux orientations, portrait et paysage. S'assurer que les mises en page s'adaptent correctement pour éviter tout contenu tronqué.
 

@@ -27,6 +27,7 @@ class PhotoGallery extends StatelessWidget {
             return Center(child: AppLoadingIndicator()); // Show loading indicator if urls are empty
           }
           return _PhotoGalleryGrid(
+            key: ValueKey(wonderType), // Add key to force recreation
             imageSize: imageSize,
             wonderType: wonderType,
             photoUrls: state.urls,
@@ -53,15 +54,18 @@ class _PhotoGalleryGrid extends StatefulWidget {
 }
 
 class _PhotoGalleryGridState extends State<_PhotoGalleryGrid> {
-  static const int _gridSize = 5;
-  // Index starts in the middle of the grid (eg, 25 items, index will start at 13)
-  int _index = ((_gridSize * _gridSize) / 2).round();
+  int get _gridSize {
+    if (_imgCount <= 9) return 3;
+    if (_imgCount <= 16) return 4;
+    return 5;
+  }
+  late int _index;
   Offset _lastSwipeDir = Offset.zero;
   final double _scale = 1;
   bool _skipNextOffsetTween = false;
   late Duration swipeDuration = $styles.times.med * .4;
   late final List<String> _photoUrls; // Use widget.photoUrls directly
-  int get _imgCount => pow(_gridSize, 2).round();
+  int get _imgCount => _photoUrls.length;
 
   late final List<FocusNode> _focusNodes = List.generate(_imgCount, (index) => FocusNode());
 
@@ -72,17 +76,12 @@ class _PhotoGalleryGridState extends State<_PhotoGalleryGrid> {
   void initState() {
     super.initState();
     _photoUrls = _preparePhotoUrls(widget.photoUrls);
+    _index = (_imgCount / 2).round();
     _focusNodes[_index].requestFocus();
   }
 
   List<String> _preparePhotoUrls(List<String> urls) {
-    // Ensure we have enough images to fill the grid, repeat if necessary
-    List<String> preparedUrls = List.from(urls);
-    while (preparedUrls.length < _imgCount) {
-      preparedUrls.addAll(List.from(urls));
-      if (preparedUrls.length > _imgCount) preparedUrls.length = _imgCount;
-    }
-    return preparedUrls;
+    return urls;
   }
 
   void _setIndex(int value, {bool skipAnimation = false}) {

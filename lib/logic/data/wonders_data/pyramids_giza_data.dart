@@ -45,11 +45,11 @@ class PyramidsGizaData extends WonderData {
       'pyramids-giza-hieroglyphic-tablet',
     ],
     localImagePaths: const [
-      'assets/images/wonder_galleries/pyramids/1.jpg',
-      'assets/images/wonder_galleries/pyramids/2.jpg',
-      'assets/images/wonder_galleries/pyramids/3.jpg',
       'assets/images/wonder_galleries/pyramids/4.jpg',
       'assets/images/wonder_galleries/pyramids/5.jpg',
+      'assets/images/wonder_galleries/pyramids/2.jpg',
+      'assets/images/wonder_galleries/pyramids/3.jpg',
+      'assets/images/wonder_galleries/pyramids/1.jpg',
     ],
     events: const {},
   );
