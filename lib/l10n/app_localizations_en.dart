@@ -389,6 +389,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get wonderDetailsTabLabelEvents => 'events';
 
   @override
+  String get wonderDetailsTabLabelMap => 'map';
+
+  @override
   String get wonderDetailsTabSemanticBack => 'back to wonder selection';
 
   @override

@@ -5,7 +5,7 @@ import 'package:wonders/ui/screens/artifact/artifact_carousel/artifact_carousel_
 import 'package:wonders/ui/screens/editorial/editorial_screen.dart';
 import 'package:wonders/ui/screens/photo_gallery/photo_gallery.dart';
 import 'package:wonders/ui/screens/wonder_details/wonder_details_tab_menu.dart';
-import 'package:wonders/ui/screens/wonder_events/wonder_events.dart';
+import 'package:wonders/ui/screens/wonder_details/components/interactive_map.dart';
 
 class WonderDetailsScreen extends StatefulWidget with GetItStatefulWidgetMixin {
   WonderDetailsScreen({super.key, required this.type, this.tabIndex = 0});
@@ -80,7 +80,7 @@ class _WonderDetailsScreenState extends State<WonderDetailsScreen>
               WonderEditorialScreen(wonder, contentPadding: menuPadding),
               PhotoGallery(wonderType: wonder.type),
               ArtifactCarouselScreen(type: wonder.type, contentPadding: menuPadding),
-              WonderEvents(type: widget.type, contentPadding: menuPadding),
+              InteractiveMap(type: widget.type, contentPadding: menuPadding),
             ],
           ),
 

@@ -131,8 +131,8 @@ class WonderDetailsTabMenu extends StatelessWidget {
                             _TabBtn(
                               3,
                               tabController,
-                              iconImg: 'timeline',
-                              label: $strings.wonderDetailsTabLabelEvents,
+                              iconImg: 'map',
+                              label: $strings.wonderDetailsTabLabelMap,
                               color: iconColor,
                               axis: axis,
                               mainAxisSize: tabBtnSize,

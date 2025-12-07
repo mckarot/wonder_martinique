@@ -393,6 +393,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get wonderDetailsTabLabelEvents => 'événements';
 
   @override
+  String get wonderDetailsTabLabelMap => 'carte';
+
+  @override
   String get wonderDetailsTabSemanticBack =>
       'retour à la sélection des merveilles';
 

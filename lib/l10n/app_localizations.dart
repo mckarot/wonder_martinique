@@ -760,6 +760,12 @@ abstract class AppLocalizations {
   /// **'events'**
   String get wonderDetailsTabLabelEvents;
 
+  /// No description provided for @wonderDetailsTabLabelMap.
+  ///
+  /// In en, this message translates to:
+  /// **'map'**
+  String get wonderDetailsTabLabelMap;
+
   /// No description provided for @wonderDetailsTabSemanticBack.
   ///
   /// In en, this message translates to:

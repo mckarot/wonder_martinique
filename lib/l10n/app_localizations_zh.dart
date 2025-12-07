@@ -382,6 +382,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get wonderDetailsTabLabelEvents => '事件';
 
   @override
+  String get wonderDetailsTabLabelMap => '地图';
+
+  @override
   String get wonderDetailsTabSemanticBack => '回到 Wonder 选择';
 
   @override
