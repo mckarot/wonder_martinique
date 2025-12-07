@@ -36,7 +36,9 @@
 		<key>LSRequiresIPhoneOS</key>
 		<true/>
 		<key>NSLocationWhenInUseUsageDescription</key>
-		<string>Show a google maps view.</string>
+		<string>Cette application a besoin de votre position pour afficher votre emplacement sur la carte.</string>
+		<key>NSLocationAlwaysUsageDescription</key>
+		<string>Cette application a besoin de votre position pour afficher votre emplacement sur la carte.</string>
 		<key>NSPhotoLibraryAddUsageDescription</key>
 		<string>Save wallpapers to the gallery!</string>
 		<key>UIApplicationSupportsIndirectInputEvents</key>
