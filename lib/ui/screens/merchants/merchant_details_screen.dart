@@ -1,3 +1,4 @@
+
 import 'package:wonders/common_libs.dart';
 import 'package:wonders/logic/data/merchants_data.dart';
 import 'package:wonders/models/merchant.dart';
@@ -26,6 +27,14 @@ class MerchantDetailsScreen extends StatelessWidget {
             AppHeader(
               title: merchant.name,
               isTransparent: true,
+              onBack: () {
+                final extra = GoRouterState.of(context).extra as Map<String, dynamic>?;
+                if (extra != null && extra['from'] == 'map' && extra['type'] is WonderType) {
+                  context.go(ScreenPaths.wonderDetails(extra['type'] as WonderType, tabIndex: 3));
+                } else {
+                  context.pop();
+                }
+              },
             ),
             Expanded(
               child: ClipRRect(

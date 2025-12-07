@@ -10,6 +10,8 @@ class Merchant {
     required this.imageUrl,
     required this.description,
     required this.wonderType,
+    required this.lat,
+    required this.lng,
     this.website,
   });
 
@@ -19,5 +21,7 @@ class Merchant {
   final String imageUrl;
   final String description;
   final WonderType wonderType;
+  final double lat;
+  final double lng;
   final String? website;
 }

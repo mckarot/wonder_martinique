@@ -2,6 +2,8 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:wonders/common_libs.dart';
+import 'package:wonders/logic/data/merchants_data.dart';
+import 'package:wonders/models/merchant.dart';
 import 'package:wonders/logic/data/wonder_data.dart';
 
 class InteractiveMap extends StatefulWidget {
@@ -14,7 +16,7 @@ class InteractiveMap extends StatefulWidget {
 }
 
 class _InteractiveMapState extends State<InteractiveMap> {
-  final List<Marker> _markers = [];
+  final List<Marker> _userMarkers = [];
   final double _nearbyDistanceKm = 30;
 
   @override
@@ -57,7 +59,7 @@ class _InteractiveMapState extends State<InteractiveMap> {
 
       if ((distanceInMeters / 1000) <= _nearbyDistanceKm) {
         setState(() {
-          _markers.add(
+          _userMarkers.add(
             Marker(
               point: LatLng(position.latitude, position.longitude),
               width: 80,
@@ -80,8 +82,27 @@ class _InteractiveMapState extends State<InteractiveMap> {
   @override
   Widget build(BuildContext context) {
     final WonderData wonder = wondersLogic.getData(widget.type);
-    // Add wonder marker every build, but user marker is managed by state
-    final List<Marker> markers = [
+    final List<Merchant> merchants = MerchantsData.getMerchantsForWonder(widget.type);
+    
+    // Create merchant markers
+    final List<Marker> merchantMarkers = merchants.map((merchant) {
+      return Marker(
+        point: LatLng(merchant.lat, merchant.lng),
+        width: 80,
+        height: 80,
+        child: GestureDetector(
+          onTap: () => context.go(ScreenPaths.merchantDetails(merchant.id), extra: {'from': 'map', 'type': widget.type}),
+          child: const Icon(
+            Icons.store,
+            color: Colors.green,
+            size: 30,
+          ),
+        ),
+      );
+    }).toList();
+
+    // Add wonder marker, user marker, and merchant markers
+    final List<Marker> allMarkers = [
       Marker(
         point: LatLng(wonder.lat, wonder.lng),
         width: 80,
@@ -92,7 +113,8 @@ class _InteractiveMapState extends State<InteractiveMap> {
           size: 40,
         ),
       ),
-      ..._markers,
+      ..._userMarkers,
+      ...merchantMarkers,
     ];
 
     return Padding(
@@ -108,7 +130,7 @@ class _InteractiveMapState extends State<InteractiveMap> {
             userAgentPackageName: 'dev.fleaflet.flutter_map.example',
           ),
           MarkerLayer(
-            markers: markers,
+            markers: allMarkers,
           ),
         ],
       ),

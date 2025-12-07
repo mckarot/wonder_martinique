@@ -113,7 +113,13 @@ final appRouter = GoRouter(
                     ]),
                     AppRoute(
                       ScreenPaths.merchants,
-                      (s) => MerchantsListScreen(wonderType: s.extra as WonderType?),
+                      (s) {
+                        WonderType? type;
+                        if (s.extra is WonderType) {
+                          type = s.extra as WonderType;
+                        }
+                        return MerchantsListScreen(wonderType: type);
+                      },
                       routes: [
                         AppRoute(
                           ':id',

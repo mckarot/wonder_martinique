@@ -12,6 +12,8 @@ class MerchantsData {
         imageUrl: WonderType.chichenItza.photo2,
         description: 'Artisanat et souvenirs mayas authentiques.',
         wonderType: WonderType.chichenItza,
+        lat: 14.44,
+        lng: -61.03,
         website: 'https://example.com',
       ),
       Merchant(
@@ -21,6 +23,8 @@ class MerchantsData {
         imageUrl: WonderType.chichenItza.photo3,
         description: 'Les meilleurs tacos de la péninsule du Yucatan.',
         wonderType: WonderType.chichenItza,
+        lat: 14.45,
+        lng: -61.04,
       ),
     ],
     WonderType.colosseum: [
@@ -31,6 +35,8 @@ class MerchantsData {
         imageUrl: WonderType.colosseum.photo1,
         description: 'Devenez un gladiateur avec nos répliques d\'armures et d\'armes.',
         wonderType: WonderType.colosseum,
+        lat: 14.77,
+        lng: -60.89,
         website: 'https://example.com',
       ),
     ],
@@ -42,6 +48,8 @@ class MerchantsData {
         imageUrl: WonderType.greatWall.photo1,
         description: 'Randonnées guidées sur la Grande Muraille de Chine.',
         wonderType: WonderType.greatWall,
+        lat: 14.40,
+        lng: -60.87,
         website: 'https://example.com',
       ),
       Merchant(
@@ -51,6 +59,8 @@ class MerchantsData {
         imageUrl: WonderType.greatWall.photo2,
         description: 'Profitez d\'une cérémonie de thé chinoise traditionnelle.',
         wonderType: WonderType.greatWall,
+        lat: 14.41,
+        lng: -60.88,
       ),
     ],
     WonderType.machuPicchu: [
@@ -61,6 +71,8 @@ class MerchantsData {
         imageUrl: WonderType.machuPicchu.photo1,
         description: 'Textiles faits à la main des Andes.',
         wonderType: WonderType.machuPicchu,
+        lat: 14.49,
+        lng: -61.07,
       ),
     ],
     WonderType.petra: [
@@ -71,6 +83,8 @@ class MerchantsData {
         imageUrl: WonderType.petra.photo2,
         description: 'Explorez Petra à dos de chameau.',
         wonderType: WonderType.petra,
+        lat: 14.60,
+        lng: -61.07,
       ),
     ],
     WonderType.pyramidsGiza: [
@@ -81,6 +95,8 @@ class MerchantsData {
         imageUrl: WonderType.pyramidsGiza.photo1,
         description: 'Papyrus authentiques avec de l\'art égyptien ancien.',
         wonderType: WonderType.pyramidsGiza,
+        lat: 14.60,
+        lng: -60.90,
       ),
     ],
     WonderType.tajMahal: [
@@ -91,6 +107,8 @@ class MerchantsData {
         imageUrl: WonderType.tajMahal.photo1,
         description: 'Répliques en marbre du Taj Mahal.',
         wonderType: WonderType.tajMahal,
+        lat: 14.81,
+        lng: -61.11,
       ),
     ],
     WonderType.christRedeemer: [
@@ -101,6 +119,8 @@ class MerchantsData {
         imageUrl: WonderType.christRedeemer.photo1,
         description: 'Statues miniatures du Christ Rédempteur.',
         wonderType: WonderType.christRedeemer,
+        lat: 14.80,
+        lng: -61.17,
       ),
     ],
   };
