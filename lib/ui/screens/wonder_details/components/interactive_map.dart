@@ -92,12 +92,11 @@ class _InteractiveMapState extends State<InteractiveMap> {
         height: 80,
         child: GestureDetector(
           onTap: () => context.go(ScreenPaths.merchantDetails(merchant.id), extra: {'from': 'map', 'type': widget.type}),
-          child: const Icon(
-            Icons.store,
-            color: Colors.green,
-            size: 30,
-          ),
-        ),
+                  child: const Icon(
+                    Icons.shopping_bag,
+                    color: Colors.green,
+                    size: 30,
+                  ),        ),
       );
     }).toList();
 
@@ -122,7 +121,7 @@ class _InteractiveMapState extends State<InteractiveMap> {
       child: FlutterMap(
         options: MapOptions(
           initialCenter: LatLng(wonder.lat, wonder.lng),
-          initialZoom: 12.0,
+          initialZoom: 14.0,
         ),
         children: [
           TileLayer(
