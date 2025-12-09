@@ -50,9 +50,9 @@ AppRoute get _artifactRoute => AppRoute(
 );
 
 AppRoute get _timelineRoute => AppRoute(
-  'timeline',
-  (s) => TimelineScreen(type: _tryParseWonderType(s.uri.queryParameters['type']!)),
-);
+      'timeline',
+      (s) => const TimelineScreen(),
+    );
 
 
 

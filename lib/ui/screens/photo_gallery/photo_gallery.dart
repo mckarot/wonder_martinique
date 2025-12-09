@@ -5,7 +5,6 @@ import 'package:wonders/logic/photo_gallery_logic.dart';
 import 'package:wonders/ui/common/controls/app_loading_indicator.dart';
 import 'package:wonders/ui/common/controls/eight_way_swipe_detector.dart';
 import 'package:wonders/ui/common/fullscreen_keyboard_listener.dart';
-import 'package:wonders/ui/common/hidden_collectible.dart';
 import 'package:wonders/ui/common/modals/fullscreen_asset_img_viewer.dart';
 import 'package:wonders/ui/common/utils/app_haptics.dart';
 

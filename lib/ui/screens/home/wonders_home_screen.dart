@@ -237,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    fgColor.withOpacity(0),
+                    fgColor.withAlpha(0),
                     fgColor.withOpacity(.5 + fgColor.opacity * .25 + (isPointerDown ? .05 : 0) + swipeAmt * .20),
                   ],
                   stops: const [0, 1],
@@ -348,7 +348,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                             );
                           },
                           child: VtGradient(
-                            [$styles.colors.white.withOpacity(0), $styles.colors.white.withOpacity(1)],
+                            [$styles.colors.white.withAlpha(0), $styles.colors.white.withAlpha(255)],
                             const [.3, 1],
                             borderRadius: BorderRadius.circular(99),
                           ),
