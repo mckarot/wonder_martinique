@@ -88,15 +88,49 @@ class _InteractiveMapState extends State<InteractiveMap> {
     final List<Marker> merchantMarkers = merchants.map((merchant) {
       return Marker(
         point: LatLng(merchant.lat, merchant.lng),
-        width: 80,
-        height: 80,
+        width: 70,
+        height: 70,
         child: GestureDetector(
           onTap: () => context.go(ScreenPaths.merchantDetails(merchant.id), extra: {'from': 'map', 'type': widget.type}),
-                  child: const Icon(
-                    Icons.shopping_bag,
-                    color: Colors.green,
-                    size: 30,
-                  ),        ),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 5,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: const Icon(
+                  Icons.location_pin,
+                  color: Colors.green,
+                  size: 60,
+                ),
+              ),
+              Positioned(
+                top: 7,
+                child: Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    border: Border.all(color: Colors.white, width: 1.5),
+                    image: DecorationImage(
+                      image: AssetImage(merchant.imageUrl),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       );
     }).toList();
 
@@ -104,12 +138,12 @@ class _InteractiveMapState extends State<InteractiveMap> {
     final List<Marker> allMarkers = [
       Marker(
         point: LatLng(wonder.lat, wonder.lng),
-        width: 80,
-        height: 80,
+        width: 100,
+        height: 100,
         child: const Icon(
           Icons.location_pin,
           color: Colors.red,
-          size: 40,
+          size: 60,
         ),
       ),
       ..._userMarkers,
@@ -136,6 +170,5 @@ class _InteractiveMapState extends State<InteractiveMap> {
     );
   }
 }
-
 
 
