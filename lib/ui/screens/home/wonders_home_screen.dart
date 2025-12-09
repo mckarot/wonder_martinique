@@ -67,6 +67,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   }
 
   void _handlePageChanged(value) {
+    if (!mounted) return;
     final newIndex = value % _numWonders;
     if (newIndex == _wonderIndex) {
       return; // Exit early if we're already on this page
@@ -85,6 +86,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       HomeMenu(data: currentWonder),
       transparent: true,
     );
+    if (!mounted) return;
     setState(() => _isMenuOpen = false);
     if (pickedWonder != null) {
       _setPageIndex(_wonders.indexWhere((w) => w.type == pickedWonder));
@@ -126,6 +128,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         a.value = 0;
       }
       await Future.delayed(300.delayMs);
+      if (!mounted) return;
       for (var a in _fadeAnims) {
         a.forward();
       }
