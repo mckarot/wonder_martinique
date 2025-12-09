@@ -73,37 +73,34 @@ class _MerchantsListScreenState extends State<MerchantsListScreen> with TickerPr
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
                 titlePadding: const EdgeInsets.only(bottom: 16),
-                title: const SizedBox.shrink(),
-                background: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        $styles.colors.black.withAlpha(179),
-                        $styles.colors.greyStrong,
-                      ],
+                title: Text(
+                  'Nos commercants',
+                  style: $styles.text.h3.copyWith(color: $styles.colors.offWhite),
+                ),
+                background: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    WonderIllustration(
+                      widget.wonderType ?? WonderType.greatWall,
+                      config: const WonderIllustrationConfig(
+                        enableAnims: false,
+                        isShowing: true,
+                        zoom: 2,
+                      ),
                     ),
-                  ),
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.store,
-                          size: 60,
-                          color: $styles.colors.accent1,
+                    Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            $styles.colors.black.withOpacity(0.6),
+                            $styles.colors.black.withOpacity(0.8),
+                          ],
                         ),
-                        const SizedBox(height: 10),
-                        Text(
-                          'Discover our Wonders Collection',
-                          style: $styles.text.body.copyWith(
-                            color: $styles.colors.offWhite,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
             ),
@@ -133,89 +130,110 @@ class _MerchantsListScreenState extends State<MerchantsListScreen> with TickerPr
                     return SlideTransition(
                       position: animation,
                       child: Card(
-                        color: $styles.colors.greyMedium.withAlpha(179),
+                        color: $styles.colors.greyMedium,
                         elevation: 4,
                         margin: EdgeInsets.only(bottom: $styles.insets.md),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular($styles.corners.md),
-                          side: BorderSide(
-                            color: merchant.wonderType.bgColor.withAlpha(77),
-                            width: 2,
-                          ),
                         ),
                         child: InkWell(
                           borderRadius: BorderRadius.circular($styles.corners.md),
                           onTap: () => context.go(ScreenPaths.merchantDetails(merchant.id)),
-                          child: Padding(
-                            padding: EdgeInsets.all($styles.insets.md),
-                            child: Row(
-                              children: [
-                                Container(
-                                  width: 60,
-                                  height: 60,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 150,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular($styles.corners.md),
+                                    topRight: Radius.circular($styles.corners.md),
+                                  ),
+                                  image: DecorationImage(
+                                    image: AssetImage(merchant.imageUrl),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                child: Container(
                                   decoration: BoxDecoration(
-                                    color: $styles.colors.greyStrong,
-                                    borderRadius: BorderRadius.circular($styles.corners.md),
-                                    border: Border.all(
-                                      color: merchant.wonderType.bgColor,
-                                      width: 2,
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular($styles.corners.md),
+                                      topRight: Radius.circular($styles.corners.md),
+                                    ),
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [
+                                        Colors.transparent,
+                                        $styles.colors.black.withOpacity(0.7),
+                                      ],
                                     ),
                                   ),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular($styles.corners.md),
-                                    child: WonderIllustration(
-                                      merchant.wonderType,
-                                      config: WonderIllustrationConfig.fg(zoom: 0.5),
+                                  child: Padding(
+                                    padding: EdgeInsets.all($styles.insets.md),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          merchant.name,
+                                          style: $styles.text.h3.copyWith(
+                                            color: $styles.colors.offWhite,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 4),
+                                        Text(
+                                          merchant.category,
+                                          style: $styles.text.body.copyWith(
+                                            color: $styles.colors.greyMedium,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ),
-                                const SizedBox(width: 16),
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        merchant.name,
-                                        style: $styles.text.h3.copyWith(
+                              ),
+                              Divider(
+                                height: 1,
+                                color: $styles.colors.greyMedium.withOpacity(0.2),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all($styles.insets.md),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: $styles.insets.sm,
+                                        vertical: $styles.insets.xs,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: merchant.wonderType.bgColor.withOpacity(0.2),
+                                        borderRadius: BorderRadius.circular($styles.corners.md),
+                                        border: Border.all(
+                                          color: merchant.wonderType.bgColor,
+                                          width: 1,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        merchant.wonderType.name.toUpperCase(),
+                                        style: $styles.text.bodySmall.copyWith(
                                           color: $styles.colors.offWhite,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      const SizedBox(height: 4),
-                                      Text(
-                                        merchant.category,
-                                        style: $styles.text.bodySmall.copyWith(
-                                          color: $styles.colors.greyMedium,
-                                        ),
-                                      ),
-                                      const SizedBox(height: 8),
-                                      Container(
-                                        padding: EdgeInsets.symmetric(
-                                          horizontal: $styles.insets.sm,
-                                          vertical: $styles.insets.xs,
-                                        ),
-                                        decoration: BoxDecoration(
-                                          color: merchant.wonderType.bgColor.withAlpha(51),
-                                          borderRadius: BorderRadius.circular($styles.corners.md),
-                                        ),
-                                        child: Text(
-                                          merchant.wonderType.name.toUpperCase(),
-                                          style: $styles.text.bodySmall.copyWith(
-                                            color: merchant.wonderType.bgColor,
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                    ),
+                                    const Spacer(),
+                                    Icon(
+                                      Icons.arrow_forward_ios,
+                                      size: 16,
+                                      color: $styles.colors.greyMedium,
+                                    ),
+                                  ],
                                 ),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  size: 16,
-                                  color: $styles.colors.greyMedium,
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
